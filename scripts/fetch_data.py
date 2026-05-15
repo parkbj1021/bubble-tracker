@@ -94,6 +94,60 @@ def fetch_macro():
         result['buffett'] = round(mktcap / gdp * 100, 1)
         print(f"  Buffett: {result['buffett']}%")
 
+    # 10-Year Treasury Yield (DGS10) and Fed Funds Rate (DFF)
+    dgs10 = fred_latest('DGS10')
+    if dgs10:
+        result['treasury_10y'] = round(dgs10, 2)
+        print(f"  10-Yr Treasury: {result['treasury_10y']}%")
+
+    dff = fred_latest('DFF')
+    if dff:
+        result['fed_funds'] = round(dff, 2)
+        print(f"  Fed Funds: {result['fed_funds']}%")
+
+    return result
+
+# ─── TREASURY YIELD fallback via yfinance (no key needed) ────────────────────
+
+def fetch_treasury_yield():
+    """10-year US Treasury yield via ^TNX — works without FRED key."""
+    try:
+        t = yf.Ticker('^TNX')
+        info = t.info
+        price = info.get('regularMarketPrice') or info.get('currentPrice')
+        if price:
+            val = round(float(price), 2)
+            print(f"  10-Yr Yield (yfinance): {val}%")
+            return val
+    except Exception as e:
+        print(f"  Treasury yfinance error: {e}")
+    return None
+
+# ─── BUBBLE HISTORY (NVDA monthly, normalized to Jan 2023) ───────────────────
+
+def fetch_bubble_history():
+    """Monthly NVDA closes from Jan 2023, normalized to first close = 1.0."""
+    result = []
+    try:
+        t = yf.Ticker('NVDA')
+        hist = t.history(start='2023-01-01', auto_adjust=True)
+        if hist.empty:
+            return result
+        try:
+            monthly = hist['Close'].resample('ME').last()
+        except ValueError:
+            monthly = hist['Close'].resample('M').last()
+        baseline = float(monthly.iloc[0])
+        for i, (date, price) in enumerate(monthly.items()):
+            result.append({
+                'm':    i,
+                'date': date.strftime('%Y-%m'),
+                'v':    round(float(price) / baseline, 2),
+            })
+        latest = result[-1]
+        print(f"  NVDA bubble: {len(result)} months, now={latest['v']:.2f}x (m={latest['m']})")
+    except Exception as e:
+        print(f"  Bubble history error: {e}")
     return result
 
 # ─── NEWS (Google News RSS, no key needed) ────────────────────────────────────
@@ -185,6 +239,13 @@ def main():
     print("\nFetching macro indicators...")
     macro = fetch_macro()
 
+    # Fill in treasury yield via yfinance if FRED didn't provide it
+    if 'treasury_10y' not in macro:
+        print("\nFetching Treasury yield (yfinance fallback)...")
+        ty = fetch_treasury_yield()
+        if ty:
+            macro['treasury_10y'] = ty
+
     print("\nFetching news...")
     news = fetch_news()
     print(f"  Got {len(news)} articles")
@@ -193,12 +254,16 @@ def main():
     alerts = compute_alerts(market)
     print(f"  {len(alerts)} alerts generated")
 
+    print("\nFetching NVDA bubble history...")
+    bubble_history = fetch_bubble_history()
+
     data = {
-        'updated': datetime.now(timezone.utc).isoformat(),
-        'market':  market,
-        'macro':   macro,
-        'news':    news,
-        'alerts':  alerts,
+        'updated':        datetime.now(timezone.utc).isoformat(),
+        'market':         market,
+        'macro':          macro,
+        'news':           news,
+        'alerts':         alerts,
+        'bubble_history': bubble_history,
     }
 
     with open('data.json', 'w') as f:

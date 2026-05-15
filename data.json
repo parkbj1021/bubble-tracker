@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-15T13:00:00+00:00",
+  "updated": "2026-05-16T13:00:00+00:00",
   "market": {
     "NVDA": {
       "name": "Nvidia",
@@ -32,7 +32,9 @@
   },
   "macro": {
     "cape": 40.3,
-    "buffett": 234.0
+    "buffett": 234.0,
+    "treasury_10y": 4.45,
+    "fed_funds": 4.33
   },
   "news": [
     {
@@ -60,5 +62,6 @@
       "date": "Sun, 10 May 2026 18:00:00 GMT"
     }
   ],
-  "alerts": []
+  "alerts": [],
+  "bubble_history": []
 }

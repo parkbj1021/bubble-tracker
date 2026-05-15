@@ -175,6 +175,10 @@
     .ev-desc{font-size:10px;color:var(--sub);margin-top:3px;line-height:1.4}
     .ev-cd{font-size:11px;font-weight:700;padding:2px 8px;border-radius:8px;white-space:nowrap;flex-shrink:0;align-self:center}
 
+    /* BUBBLE COMPARISON */
+    .bubble-wrap{padding:14px 18px;border-bottom:1px solid var(--border)}
+    .bubble-note{font-size:10px;color:var(--sub);margin-top:8px;line-height:1.5}
+
     /* NEWS FEED */
     .news-wrap{padding:14px 18px;border-bottom:1px solid var(--border)}
     .news-list{display:flex;flex-direction:column}
@@ -272,6 +276,19 @@
     </div>
     <div class="chart-svg-wrap" id="chartWrap"></div>
     <div class="history-log" id="historyLog"></div>
+  </div>
+</div>
+
+<!-- BUBBLE COMPARISON -->
+<div class="bubble-wrap" id="bubbleSection">
+  <div class="section-label">Bubble Comparison — vs History</div>
+  <div class="chart-container">
+    <div class="chart-header">
+      <span class="chart-title">Price Multiple Since Bubble Start</span>
+      <span class="chart-trend" style="font-size:10px;color:var(--sub)" id="bubblePeakTag"></span>
+    </div>
+    <div id="bubbleChart"></div>
+    <div class="bubble-note" id="bubbleStat"></div>
   </div>
 </div>
 
@@ -425,7 +442,8 @@ const DEFAULT_INDICATORS = [
   {id:'soxx_pe',  icon:'🔧',name:'SOXX P/E Ratio',     desc:'iShares Semiconductor ETF P/E',      value:59,  unit:'x',min:15, warnAt:35, dangerAt:50, maxDisplay:80, r1l:'Normal',r1v:22, r2l:'Dot-com',r2v:80},
   {id:'soxx_ytd', icon:'📈',name:'SOXX YTD Gain',      desc:'Philadelphia Semiconductor Index YTD',value:75, unit:'%',min:0,  warnAt:30, dangerAt:50, maxDisplay:100,r1l:'Normal',r1v:15, r2l:'Burry flag',r2v:50},
   {id:'nvda_pe',  icon:'🖥️',name:'Nvidia P/E',         desc:'NVDA trailing price / earnings',     value:45,  unit:'x',min:15, warnAt:40, dangerAt:60, maxDisplay:120,r1l:'Normal',r1v:25, r2l:'2022 peak',r2v:70},
-  {id:'m7_capex', icon:'💰',name:'M7 Capex / Revenue', desc:'Meta 54% · MSFT 47% · GOOG 46% avg', value:48, unit:'%',min:10, warnAt:30, dangerAt:40, maxDisplay:65, r1l:'Normal',r1v:15, r2l:'Danger',r2v:40},
+  {id:'m7_capex',    icon:'💰',name:'M7 Capex / Revenue', desc:'Meta 54% · MSFT 47% · GOOG 46% avg',      value:48,  unit:'%',min:10, warnAt:30, dangerAt:40, maxDisplay:65, r1l:'Normal',r1v:15, r2l:'Danger',  r2v:40},
+  {id:'treasury10y', icon:'📋',name:'10-Yr Treasury',    desc:'Rising yield compresses equity valuations', value:4.45,unit:'%',min:0,  warnAt:3.5, dangerAt:4.5, maxDisplay:7,  r1l:'Low',   r1v:2.0, r2l:'Restrict.',r2v:5.0},
 ];
 
 const DEFAULT_SIGNALS = [
@@ -772,6 +790,90 @@ function renderEvents(){
   });
 }
 
+// ─── BUBBLE COMPARISON ────────────────────────────────────────────────────────
+
+const BUBBLE_REF = {
+  dotcom: {
+    label:'Dot-com NASDAQ', color:'#4a9fff', peakM:62,
+    pts:[[0,1.00],[6,1.19],[12,1.40],[18,1.43],[24,1.83],[30,2.11],
+         [36,2.08],[42,2.48],[48,2.90],[54,3.49],[60,5.39],[62,6.68],
+         [66,4.99],[72,3.67],[78,2.68],[84,1.76]]
+  },
+  japan: {
+    label:'Japan Nikkei', color:'#f5a030', peakM:59,
+    pts:[[0,1.00],[12,1.18],[24,1.70],[36,1.94],[48,2.77],
+         [54,3.16],[59,3.51],[66,2.80],[72,2.10],[84,1.99]]
+  }
+};
+
+// Approximate NVDA monthly multiples from Jan 2023 (fallback until data.json loads)
+const NVDA_FALLBACK = [
+  [0,1.00],[2,1.87],[5,2.80],[8,2.87],[10,3.33],[12,4.07],
+  [13,5.27],[14,6.00],[16,6.93],[17,8.67],[20,8.00],[21,9.33],
+  [24,8.93],[25,8.47],[27,5.80],[28,7.53],[32,8.00],[36,7.50],
+  [38,6.80],[39,7.20],[40,7.80]
+];
+
+function renderBubbleComparison(liveHistory) {
+  const aiPts = (liveHistory && liveHistory.length > 0)
+    ? liveHistory.map(h => [h.m, h.v])
+    : NVDA_FALLBACK;
+
+  const W=310,H=170,ML=26,MR=8,MT=10,MB=32;
+  const CW=W-ML-MR,CH=H-MT-MB;
+  const maxM=84,maxV=11;
+
+  function cx(m){return ML+(Math.min(m,maxM)/maxM)*CW;}
+  function cy(v){return MT+(1-Math.min(v,maxV)/maxV)*CH;}
+  function makePath(pts){
+    return 'M'+pts.map(p=>`${cx(p[0]).toFixed(1)},${cy(p[1]).toFixed(1)}`).join(' L');
+  }
+
+  const curM=aiPts[aiPts.length-1][0];
+  const curV=aiPts[aiPts.length-1][1];
+  const aiPeak=aiPts.reduce((b,p)=>p[1]>b[1]?p:b,aiPts[0]);
+
+  const yGrid=[2,4,6,8,10];
+  const xLabels=[{m:24,l:'2yr'},{m:48,l:'4yr'},{m:72,l:'6yr'}];
+  const dcPeak=BUBBLE_REF.dotcom.pts.find(p=>p[0]===BUBBLE_REF.dotcom.peakM);
+  const jpPeak=BUBBLE_REF.japan.pts.find(p=>p[0]===BUBBLE_REF.japan.peakM);
+
+  const svg=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="display:block">
+    <defs><clipPath id="bcp"><rect x="${ML}" y="${MT}" width="${CW}" height="${CH}"/></clipPath></defs>
+    ${yGrid.map(v=>`
+      <line x1="${ML}" y1="${cy(v).toFixed(1)}" x2="${W-MR}" y2="${cy(v).toFixed(1)}" stroke="#1a1a2e" stroke-width="1"/>
+      <text x="${ML-3}" y="${(cy(v)+3).toFixed(1)}" font-size="8" fill="#4a4a65" text-anchor="end">${v}x</text>
+    `).join('')}
+    ${xLabels.map(xl=>`
+      <line x1="${cx(xl.m).toFixed(1)}" y1="${MT}" x2="${cx(xl.m).toFixed(1)}" y2="${MT+CH}" stroke="#1a1a2e" stroke-width="1"/>
+      <text x="${cx(xl.m).toFixed(1)}" y="${MT+CH+9}" font-size="8" fill="#4a4a65" text-anchor="middle">${xl.l}</text>
+    `).join('')}
+    <line x1="${cx(curM).toFixed(1)}" y1="${MT}" x2="${cx(curM).toFixed(1)}" y2="${MT+CH}" stroke="#7c6aff" stroke-width="1" stroke-dasharray="3,2" opacity="0.7"/>
+    <text x="${(cx(curM)+3).toFixed(1)}" y="${MT+8}" font-size="7.5" fill="#7c6aff">now</text>
+    <path d="${makePath(BUBBLE_REF.dotcom.pts)}" fill="none" stroke="${BUBBLE_REF.dotcom.color}" stroke-width="1.8" opacity="0.7" clip-path="url(#bcp)"/>
+    <path d="${makePath(BUBBLE_REF.japan.pts)}"  fill="none" stroke="${BUBBLE_REF.japan.color}"  stroke-width="1.8" opacity="0.7" clip-path="url(#bcp)"/>
+    <path d="${makePath(aiPts)}" fill="none" stroke="#ff3b3b" stroke-width="2.5" clip-path="url(#bcp)"/>
+    ${dcPeak?`<circle cx="${cx(dcPeak[0]).toFixed(1)}" cy="${cy(dcPeak[1]).toFixed(1)}" r="3" fill="${BUBBLE_REF.dotcom.color}"/>
+    <text x="${(cx(dcPeak[0])-4).toFixed(1)}" y="${(cy(dcPeak[1])-5).toFixed(1)}" font-size="7" fill="${BUBBLE_REF.dotcom.color}" text-anchor="end">6.7x</text>`:''}
+    ${jpPeak?`<circle cx="${cx(jpPeak[0]).toFixed(1)}" cy="${cy(jpPeak[1]).toFixed(1)}" r="3" fill="${BUBBLE_REF.japan.color}"/>
+    <text x="${(cx(jpPeak[0])+4).toFixed(1)}" y="${(cy(jpPeak[1])-5).toFixed(1)}" font-size="7" fill="${BUBBLE_REF.japan.color}">3.5x</text>`:''}
+    <circle cx="${cx(curM).toFixed(1)}" cy="${cy(curV).toFixed(1)}" r="9" fill="#ff3b3b" fill-opacity="0.15"/>
+    <circle cx="${cx(curM).toFixed(1)}" cy="${cy(curV).toFixed(1)}" r="4.5" fill="#ff3b3b" stroke="#07070f" stroke-width="1.5"/>
+    <circle cx="${ML+5}" cy="${MT+CH+22}" r="4" fill="#ff3b3b"/>
+    <text x="${ML+12}" y="${MT+CH+26}" font-size="9" fill="#e8e8f0">NVDA / AI</text>
+    <circle cx="${ML+80}" cy="${MT+CH+22}" r="4" fill="${BUBBLE_REF.dotcom.color}" opacity="0.7"/>
+    <text x="${ML+87}" y="${MT+CH+26}" font-size="9" fill="#6b6b88">Dot-com '95</text>
+    <circle cx="${ML+168}" cy="${MT+CH+22}" r="4" fill="${BUBBLE_REF.japan.color}" opacity="0.7"/>
+    <text x="${ML+175}" y="${MT+CH+26}" font-size="9" fill="#6b6b88">Japan '85</text>
+  </svg>`;
+
+  document.getElementById('bubbleChart').innerHTML=svg;
+  document.getElementById('bubblePeakTag').textContent=
+    `NVDA peak: ${aiPeak[1].toFixed(1)}x (mo.${aiPeak[0]})`;
+  document.getElementById('bubbleStat').textContent=
+    `NVDA ${curV.toFixed(1)}x at month ${curM} · Dot-com peaked 6.7x at month 62 · Japan 3.5x at month 59`;
+}
+
 // ─── LIVE DATA ────────────────────────────────────────────────────────────────
 
 async function fetchLiveData() {
@@ -788,16 +890,18 @@ async function fetchLiveData() {
 
     // Auto-sync quantitative indicators
     const m = data.market || {}, mc = data.macro || {};
-    if (mc.buffett)              syncInd('buffett',  mc.buffett);
-    if (mc.cape)                 syncInd('cape',     mc.cape);
-    if (m.NVDA  && m.NVDA.pe)   syncInd('nvda_pe',  m.NVDA.pe);
-    if (m.SOXX  && m.SOXX.pe)   syncInd('soxx_pe',  m.SOXX.pe);
-    if (m.SOXX  && m.SOXX.ytd_pct !== undefined) syncInd('soxx_ytd', m.SOXX.ytd_pct);
+    if (mc.buffett)                               syncInd('buffett',     mc.buffett);
+    if (mc.cape)                                  syncInd('cape',        mc.cape);
+    if (mc.treasury_10y)                          syncInd('treasury10y', mc.treasury_10y);
+    if (m.NVDA  && m.NVDA.pe)                    syncInd('nvda_pe',     m.NVDA.pe);
+    if (m.SOXX  && m.SOXX.pe)                    syncInd('soxx_pe',     m.SOXX.pe);
+    if (m.SOXX  && m.SOXX.ytd_pct !== undefined) syncInd('soxx_ytd',   m.SOXX.ytd_pct);
     renderIndicators();
 
     if (data.alerts && data.alerts.length) renderAlerts(data.alerts);
     if (data.market) renderMarket(data.market, data.updated);
     if (data.news && data.news.length) renderNews(data.news);
+    renderBubbleComparison(data.bubble_history || null);
   } catch(e) {
     // data.json not available — graceful fallback to seed data
   }
@@ -951,6 +1055,7 @@ if(S.updated) document.getElementById('lastUpdated').textContent='Updated '+S.up
 renderPhase();
 renderGauge();
 renderHistory();
+renderBubbleComparison(null);
 renderCatalyst();
 renderIndicators();
 renderSignals();
