@@ -1,67 +1,345 @@
 {
-  "updated": "2026-05-16T13:00:00+00:00",
+  "updated": "2026-05-15T23:14:59.618647+00:00",
   "market": {
     "NVDA": {
       "name": "Nvidia",
-      "price": 117.93,
-      "pe": 45.0,
-      "change_pct": 0.0,
-      "ytd_pct": 12.0
+      "price": 225.32,
+      "pe": 46.0,
+      "change_pct": -4.42,
+      "ytd_pct": 19.3
     },
     "SOXX": {
       "name": "Semiconductor ETF",
-      "price": 204.80,
-      "pe": 59.0,
-      "change_pct": 0.0,
-      "ytd_pct": 18.0
+      "price": 508.52,
+      "pe": 46.7,
+      "change_pct": -4.06,
+      "ytd_pct": 62.2
     },
     "ORCL": {
       "name": "Oracle",
-      "price": 158.20,
-      "pe": 38.5,
-      "change_pct": 0.0,
-      "ytd_pct": 5.2
+      "price": 192.95,
+      "pe": 34.6,
+      "change_pct": -1.36,
+      "ytd_pct": -0.8
     },
     "CRWV": {
       "name": "CoreWeave",
-      "price": 44.80,
-      "pe": 0,
-      "change_pct": 0.0,
-      "ytd_pct": -18.0
+      "price": 107.3,
+      "pe": 0.0,
+      "change_pct": -6.05,
+      "ytd_pct": 35.3
     }
   },
   "macro": {
-    "cape": 40.3,
-    "buffett": 234.0,
-    "treasury_10y": 4.45,
-    "fed_funds": 4.33
+    "treasury_10y": 4.6
   },
   "news": [
     {
-      "title": "OpenAI unlikely to IPO in 2026, Morningstar analyst says",
-      "url": "",
-      "source": "Reuters",
-      "date": "Wed, 13 May 2026 10:00:00 GMT"
+      "title": "Ahead of IPOs, AI Giants Keep Making Circular Deals. Here\u2019s Why That\u2019s a Risk",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNMXdiYnhpb2JHQ080eUhfM3BrSnIwRDRuXzFxSVpZcWE4SkpZcnRzamJwOUhSSnBXTGRJX0FzV3RsTWdONHFHZFRDZ3M2OGROZjBJaGRrQzd1VnR6SlExclVDYnhtbjRsSGZNNFliUVZWU0sxd0JLTVl6NTBlZUdDMm1GQjJCZEpzd1V2MWxVNXZ6ZDZMTEdwSGd3YzdaNHlqSjZXaUxMRWZmSGV1V190Q3R3?oc=5",
+      "source": "Morningstar Canada",
+      "date": "Mon, 11 May 2026 10:03:30 GMT"
     },
     {
-      "title": "Microsoft, Google, Meta defend AI infrastructure spending to skeptical investors",
-      "url": "",
-      "source": "Bloomberg",
-      "date": "Tue, 12 May 2026 14:00:00 GMT"
+      "title": "OpenAI reportedly missed revenue targets. Shares of Oracle and these chip stocks are falling",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQUTh6UWN0LUdiWWpBLS0xSERXMjJLTldpV1BMLXRzaW5pZFNibWJFaTdrblJKd3RDVFl3Tm5DYVFQUXJUcXI3cXctR3VUOTk3eVFVYWxCanJ4X3NBVWFqZ2tIYXZ0VHdMSU81ZHFhVnpDRFJ3MHZNbTBwZVpSVnpBU194WmhTb3BfeXFaRjl0LU9wMHBnZkdmQ2xFQk9QTDRfT2paeFlGcDhMSmQ3eDRlZWQyR2ZyQWlPNTExQXlrT0ZqakNFb19Z0gHMAUFVX3lxTFBIckFiYlY0Tno4bWhiWjVCYlN6aDY5cl9HajVCZ21UdmlyQkRHZEg5YnF3d2ZsNFZ0Qi0zUnFjMlVSMkt5SVRtXzk2ZGhTaDR0TEh4NUt1MXBOYldic3dEdlNiR3ZnQ28xMjZiYUEyeVlkRk9GR0hkVmxObnhZaVhsa1N5QUNYbG1jdmd6TGZtTER5LWpkb2d4czhrcG5XOVR4UzZab1hEb1JXSUtzdjMwOE1KUXJLTWpucGNDci1wd0I5THNrZFJ4akRQLQ?oc=5",
+      "source": "CNBC",
+      "date": "Tue, 28 Apr 2026 07:00:00 GMT"
     },
     {
-      "title": "CoreWeave shares pressured as OpenAI dependency concerns mount",
-      "url": "",
-      "source": "Financial Times",
-      "date": "Mon, 11 May 2026 08:00:00 GMT"
+      "title": "OpenAI Misses Key Revenue, User Targets in High-Stakes Sprint Toward IPO",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOeDhJdk5kS0ZjcEV1MDF6U2piMWlUMzFYbGl2Y0hoQVEyajFzWDRLazF4U1p0alhaTWNnU0NKckM5c1dxVEc2WWZ4MDRsY19NR0Z3NGZYX3ZpV0E2XzB4RXpRRU1EcmltaEczcDJ4VzB6bGt6VUxzWENlcTh5NndmcFc5N2FuVzlvUHNfU3JTWHlJSllSNVJiRmhLSEhpNTdpSGhuRUxRNE9zQ2Np?oc=5",
+      "source": "WSJ",
+      "date": "Tue, 28 Apr 2026 07:00:00 GMT"
     },
     {
-      "title": "Nvidia earnings May 28: data center guidance will set AI capex tone",
-      "url": "",
-      "source": "Reuters",
-      "date": "Sun, 10 May 2026 18:00:00 GMT"
+      "title": "OpenAI CFO reportedly at odds with Sam Altman over missed revenue target\u2014even as AI capex is set to hit $660 billion",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQSXRONl9tX1lHM016SE5CUHdEbDBiWDZBdmR4cno0cEtJQlJmMHhBSTQ5YklKVE1FOEVsdE9WM21EQ2JUTEtyOTNYVktPWU9DbUlhNG9EMkJMb3lzay1WaEh4TmU0RDJhTVZSRXF2RXpKTUVUOC1kbDIyQ3ZhZVB1dg?oc=5",
+      "source": "Fortune",
+      "date": "Tue, 28 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Amazon leads Big Tech\u2019s $1 trillion wipeout as AI bubble fears ignite sell-off",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9TSk1FQkRzNFdxbGJrZkFOLTYwZFotaWhCa2hZb01YSldtZlZmVHNhRWpWdkJURlFrNC1zQVhHUXE2UGUxbXJULWM3MGV4RWZUQ2ktRi1wVTJHVF9STnZwWUhOYUljUGJpbnkwUENiOEFCS3ZhYjNoeNIBfkFVX3lxTE5za1ZBTjFYRmR6d09ZT2RIVG9JOTdzdjhmRHZwQk41QkFHN3pEeXNOdk12M1FBMkxnRXIyNDJDTGJEczQxVDRoU193aXFtVlBQRkw0TmJTeHZEQWdpc01nOUJQZllJWElMUnR2TjRtVW1mUWxOa1RpUTd5U0hCZw?oc=5",
+      "source": "CNBC",
+      "date": "Fri, 06 Feb 2026 08:00:00 GMT"
+    },
+    {
+      "title": "Big Tech To Wall Street: AI Spending Boom To Intensify",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNbTBSNFpxMkFZNDRfbEJJZnB4SVk3eTREZ1BYOXVQZU5UaXZDU3VaMzRmRjAyQ2pQalI5TnllS2dyNGk3VG4wVHY5Z3prYWFQTFZKa0FKVWFlVE9aVHJoREhNS1A3TE9XNS1yZWZILVhQX0pQVEszWFdFWWRMQ1RQdlNodFB4NWhGRGY2WGxrU1ZuQ0Q0a1NWdTdGNVRHWFBGYXZjeUZiOA?oc=5",
+      "source": "Investor's Business Daily",
+      "date": "Fri, 31 Oct 2025 07:00:00 GMT"
+    },
+    {
+      "title": "Premium: The AI Compute Demand Story Is A Lie",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFByRHpVWTRpQlBDV3Y2ckpvRl80UFFOVGxsOXdIcEpUVUN6OUpOSllsTFd1NEdkRlhyZHhMV2FuMUU1aFBmSmFFdVNZdFJMVl95cjNGVTd5XzcxN3JnZGtUU0lHQUpId1BRb1pPWlZmeXNldnlFYXhzd2lCemduUQ?oc=5",
+      "source": "Ed Zitron's Where's Your Ed At",
+      "date": "Mon, 04 May 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Big Tech\u2019s AI spend in 2026: following the money",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNb0w1V21mR21Xc1NzZUtFNGsyYlg5d2NsSVNqcGNFQ1FvQ2dEUmFTMDBpOEZXWmtMQzBMU0hCM2dFX2pMTE0tRVRCNW5EenZjeHJodTFKU1VLZVdGYmdhRENJcVBXbnIxdTFnYWdlTmZGWHBaNGIxbGVXdmltbnhUSzFOOUpWRkNhVlpmTg?oc=5",
+      "source": "Campaign US",
+      "date": "Tue, 10 Feb 2026 08:00:00 GMT"
+    },
+    {
+      "title": "Fears of an AI Bubble Are Growing. Should SMH Investors Be Worried?",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUGZ0WnVRNk00Q2ZHMkxVR3Q0Q0NUVmtXdHZRTzNqeU1LQ0RwbXdUMnpOeS1weHItOVN4emZ0dEl4SXVSdHJfaXdjSHA2UzF2Q1ZnaUMwdW90dUdsSFdKVUlMczhyX2tlSDZQMmpVSG9KOW8xYkJaT3NQX0lZOGRoVEZEcEJXZXcxdWdBX0xmaVlRaUt6YnRsQQ?oc=5",
+      "source": "The Motley Fool",
+      "date": "Wed, 22 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "As Tech Stocks Churn, Nvidia and Other Semiconductor Plays Look Cheap",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOVlBISDhCdUxldXBrWjR5V1BtSF9IOVpCamZQTjhRNVJYVEVHcGlTdDBZRW9vMWlyak85WlZIeVlkSDJtTGxfX2xIc001NXg5UU5Ya0dJRjZ5eTZRNGFVc05zY043SFFYM2RtSjJMX2dEcTFOeUlDS1JRQ2FCMF9zRVo4UWJRcE01VU1BQlFUZHJvRVc2ZGJ6REcwakJSOWNDZEdOalJ0MGE4QQ?oc=5",
+      "source": "Morningstar Canada",
+      "date": "Mon, 16 Feb 2026 08:00:00 GMT"
+    },
+    {
+      "title": "IO PE Ratio & Valuation, Is IO Overvalued",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9vMGtBa2lUYWZXZmxYdnFpMlpPVkU5WXR3a2VXbkpQcS13TEZJNWV4a2xrdk1oLXR0aFk1cG5UeEdoazFGWTJ2UWlnS19aVjNkV0NuU0p4QQ?oc=5",
+      "source": "Intellectia AI",
+      "date": "Sun, 10 May 2026 12:14:28 GMT"
+    },
+    {
+      "title": "Nvidia Stock Looks Like A Buy (Technical Analysis) (NASDAQ:NVDA)",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNRERhSXZNUXFwbXAyT3c0NS1QdS1uU0JYa01pdFVBN19SSk1jNnQyT1I4eXpuYlI5WWpJMFBFaTZGZzJZTmRTNGw1N0REa0dVUWhhN2hCTFNYYnU3TmUwUVd6S0FPWE1nbERzdDBJd3FyN0hPd0duaXR6UmNGbjlBeHcySWZzcjQxYVpaSXhCYmN4V0U?oc=5",
+      "source": "Seeking Alpha",
+      "date": "Fri, 17 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Oracle, CoreWeave back OpenAI after report says ChatGPT developer missed sales, user targets",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQMExGYTY4c29xM0h6SGdqcW8yMUhTTkFwZy1hSklnd0p1VHJhR0kxeWkxZERDM0h5WDZ1OGc1Y2FBV1NCN0xKckc3ckxyV2lKdVFIVjNwb2E1ckNHMXJmaHoxNm82WmI0SzNNQWxWcHEwbkJwNWYyTzdYREU1Sm95dmdoUXhxUkxNTzJIcnZTVHhaeExZVlV5aVBrUmhPN2lURHFGbDdPM2J3Z3EzSVRoN2hSYWJzVXhIYy12dGU4TmdWM3ZHRUYwd3FiSk5yLVgtNmJCcTZBZTNhNWhRbVhWdA?oc=5",
+      "source": "Yahoo Finance",
+      "date": "Tue, 28 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Oracle Stock Is Paying the Price for OpenAI\u2019s Failures",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPUEVwdWE1S3lVdE1NTG52NkFBWWF3SXgtekdGd2JQREt5WnQ5LU9yRkd5YjVMMTMwRk5ubXg4S3hNNlVwSlFOenJrYW5BbDJua0JJY0tZeW5GVmVQVV9sOWR4cTZURmJVLUM3cUZCM1Ywem51Q1VKcy1uYkVhekFHbGFQem1ncFBKZWV5WF9LSQ?oc=5",
+      "source": "Barron's",
+      "date": "Tue, 28 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Why OpenAI whiffs should still worry Oracle and CoreWeave investors",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPRWRWYU8yNEdIcFlKYkNYczg5X2Vka0ZiS2l1TThBVkZRS3NqeGpsU3RJamJaVXdCVmlONHhCa3labTVCaFJpejJfdmw1eFVKWjQ4MzlKdG1WOVE2WVRWSEJOR1kteS1LUFB6aldGczV1ZkZTTldLZWFwMGJJbTlZTmU0cmJON1RXR1pjSVoxczJLNTlFc2RiT1VFeTZuekZrRXhIMUVqbU8yZXNCRkZ0NWVxTQ?oc=5",
+      "source": "Yahoo Finance",
+      "date": "Wed, 29 Apr 2026 07:00:00 GMT"
     }
   ],
-  "alerts": [],
-  "bubble_history": []
+  "alerts": [
+    {
+      "level": "yellow",
+      "msg": "CRWV down -6.0% \u2014 CoreWeave under pressure"
+    },
+    {
+      "level": "yellow",
+      "msg": "SOXX up 62% YTD \u2014 entering Burry's danger zone"
+    }
+  ],
+  "bubble_history": [
+    {
+      "m": 0,
+      "date": "2023-01",
+      "v": 1.0
+    },
+    {
+      "m": 1,
+      "date": "2023-02",
+      "v": 1.19
+    },
+    {
+      "m": 2,
+      "date": "2023-03",
+      "v": 1.42
+    },
+    {
+      "m": 3,
+      "date": "2023-04",
+      "v": 1.42
+    },
+    {
+      "m": 4,
+      "date": "2023-05",
+      "v": 1.94
+    },
+    {
+      "m": 5,
+      "date": "2023-06",
+      "v": 2.17
+    },
+    {
+      "m": 6,
+      "date": "2023-07",
+      "v": 2.39
+    },
+    {
+      "m": 7,
+      "date": "2023-08",
+      "v": 2.53
+    },
+    {
+      "m": 8,
+      "date": "2023-09",
+      "v": 2.23
+    },
+    {
+      "m": 9,
+      "date": "2023-10",
+      "v": 2.09
+    },
+    {
+      "m": 10,
+      "date": "2023-11",
+      "v": 2.39
+    },
+    {
+      "m": 11,
+      "date": "2023-12",
+      "v": 2.54
+    },
+    {
+      "m": 12,
+      "date": "2024-01",
+      "v": 3.15
+    },
+    {
+      "m": 13,
+      "date": "2024-02",
+      "v": 4.05
+    },
+    {
+      "m": 14,
+      "date": "2024-03",
+      "v": 4.63
+    },
+    {
+      "m": 15,
+      "date": "2024-04",
+      "v": 4.42
+    },
+    {
+      "m": 16,
+      "date": "2024-05",
+      "v": 5.61
+    },
+    {
+      "m": 17,
+      "date": "2024-06",
+      "v": 6.33
+    },
+    {
+      "m": 18,
+      "date": "2024-07",
+      "v": 5.99
+    },
+    {
+      "m": 19,
+      "date": "2024-08",
+      "v": 6.11
+    },
+    {
+      "m": 20,
+      "date": "2024-09",
+      "v": 6.22
+    },
+    {
+      "m": 21,
+      "date": "2024-10",
+      "v": 6.8
+    },
+    {
+      "m": 22,
+      "date": "2024-11",
+      "v": 7.08
+    },
+    {
+      "m": 23,
+      "date": "2024-12",
+      "v": 6.88
+    },
+    {
+      "m": 24,
+      "date": "2025-01",
+      "v": 6.15
+    },
+    {
+      "m": 25,
+      "date": "2025-02",
+      "v": 6.4
+    },
+    {
+      "m": 26,
+      "date": "2025-03",
+      "v": 5.55
+    },
+    {
+      "m": 27,
+      "date": "2025-04",
+      "v": 5.58
+    },
+    {
+      "m": 28,
+      "date": "2025-05",
+      "v": 6.92
+    },
+    {
+      "m": 29,
+      "date": "2025-06",
+      "v": 8.09
+    },
+    {
+      "m": 30,
+      "date": "2025-07",
+      "v": 9.11
+    },
+    {
+      "m": 31,
+      "date": "2025-08",
+      "v": 8.92
+    },
+    {
+      "m": 32,
+      "date": "2025-09",
+      "v": 9.56
+    },
+    {
+      "m": 33,
+      "date": "2025-10",
+      "v": 10.37
+    },
+    {
+      "m": 34,
+      "date": "2025-11",
+      "v": 9.07
+    },
+    {
+      "m": 35,
+      "date": "2025-12",
+      "v": 9.56
+    },
+    {
+      "m": 36,
+      "date": "2026-01",
+      "v": 9.79
+    },
+    {
+      "m": 37,
+      "date": "2026-02",
+      "v": 9.08
+    },
+    {
+      "m": 38,
+      "date": "2026-03",
+      "v": 8.94
+    },
+    {
+      "m": 39,
+      "date": "2026-04",
+      "v": 10.23
+    },
+    {
+      "m": 40,
+      "date": "2026-05",
+      "v": 11.55
+    }
+  ]
 }
