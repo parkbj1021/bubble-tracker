@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#07070f">
+  <title>AI Bubble Tracker</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+    :root{
+      --bg:#07070f;--card:#0f0f1a;--card2:#141425;--border:#1e1e35;
+      --red:#ff3b3b;--red-bg:#1a0808;--red-dim:#3a1010;
+      --yellow:#f5c542;--yellow-bg:#1a1500;--yellow-dim:#2e2710;
+      --green:#2ecc71;--green-bg:#071a0e;--green-dim:#0d2b1a;
+      --accent:#7c6aff;--text:#e8e8f0;--sub:#6b6b88;--sub2:#4a4a65;
+    }
+    body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif;max-width:480px;margin:0 auto;padding-bottom:60px}
+    .hidden{display:none!important}
+
+    /* INSTALL BANNER */
+    .install-banner{background:linear-gradient(135deg,#1a1435,#0f1a35);border-bottom:1px solid var(--accent);padding:12px 16px;display:flex;gap:12px;align-items:flex-start}
+    .install-banner.hidden{display:none}
+    .install-body{flex:1}
+    .install-title{font-size:12px;font-weight:700;color:var(--accent)}
+    .install-step{font-size:11px;color:var(--sub);margin-top:5px;line-height:1.6;display:flex;gap:6px}
+    .install-step b{color:var(--text);flex-shrink:0}
+    .install-close{background:none;border:1px solid var(--border);color:var(--sub);font-size:16px;width:26px;height:26px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+
+    /* HEADER */
+    .header{display:flex;justify-content:space-between;align-items:center;padding:14px 18px 11px;border-bottom:1px solid var(--border)}
+    .header h1{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--accent);text-transform:uppercase}
+    .last-updated{font-size:10px;color:var(--sub)}
+
+    /* AUTO-ALERTS */
+    .alert-wrap{display:flex;flex-direction:column;gap:6px;padding:10px 16px;border-bottom:1px solid var(--border)}
+    .alert-item{display:flex;gap:8px;align-items:center;padding:8px 10px;border-radius:9px}
+    .alert-item.lv-red{background:var(--red-bg);border:1px solid var(--red-dim)}
+    .alert-item.lv-yellow{background:var(--yellow-bg);border:1px solid var(--yellow-dim)}
+    .al-badge{font-size:9px;font-weight:700;letter-spacing:.5px;padding:2px 6px;border-radius:5px;flex-shrink:0;text-transform:uppercase}
+    .lv-red .al-badge{background:var(--red-dim);color:var(--red)}
+    .lv-yellow .al-badge{background:var(--yellow-dim);color:var(--yellow)}
+    .al-msg{font-size:11px;line-height:1.4;flex:1}
+    .lv-red .al-msg{color:#ffaaaa}
+    .lv-yellow .al-msg{color:#f5d070}
+
+    /* TOP ROW: PHASE + PROB */
+    .top-row{display:flex;border-bottom:1px solid var(--border)}
+    .phase-block{flex:1;padding:18px 14px;border-right:1px solid var(--border);cursor:pointer;text-align:center}
+    .phase-block:active{opacity:.8}
+    .block-label{font-size:9px;letter-spacing:2px;color:var(--sub);text-transform:uppercase;margin-bottom:5px}
+    .phase-big{font-size:52px;font-weight:800;line-height:1;letter-spacing:-2px}
+    .phase-subtitle{font-size:11px;color:var(--sub);margin-top:3px}
+    .day-tag{display:inline-block;margin-top:7px;font-size:9px;color:var(--yellow);border:1px solid var(--yellow-dim);border-radius:10px;padding:2px 9px;letter-spacing:.5px}
+    .prob-block{flex:1;padding:18px 14px;text-align:center}
+    .gauge-wrap{position:relative;width:86px;height:86px;margin:0 auto}
+    .gauge-wrap svg{transform:rotate(-90deg)}
+    .gauge-bg{fill:none;stroke:var(--card2);stroke-width:9}
+    .gauge-fill{fill:none;stroke-width:9;stroke-linecap:round;transition:stroke-dashoffset .5s ease}
+    .gauge-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
+    .gauge-pct{font-size:21px;font-weight:800;line-height:1}
+    .gauge-unit{font-size:9px;color:var(--sub);letter-spacing:.5px;margin-top:1px}
+    .prob-delta{font-size:11px;font-weight:700;margin-top:4px}
+    .prob-controls{display:flex;justify-content:center;gap:10px;margin-top:8px}
+    .prob-btn{width:30px;height:30px;border-radius:50%;border:1px solid var(--border);background:var(--card2);color:var(--text);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+    .prob-btn:active{background:var(--border)}
+
+    /* PROBABILITY HISTORY */
+    .history-wrap{padding:14px 18px;border-bottom:1px solid var(--border)}
+    .section-label{font-size:9px;letter-spacing:2px;color:var(--sub);text-transform:uppercase;margin-bottom:10px}
+    .chart-container{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 14px 10px}
+    .chart-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+    .chart-title{font-size:12px;font-weight:600}
+    .chart-trend{font-size:12px;font-weight:700}
+    .chart-svg-wrap{width:100%}
+    .history-log{margin-top:12px;display:flex;flex-direction:column;gap:0}
+    .log-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid var(--border)}
+    .log-row:last-child{border-bottom:none}
+    .log-date{font-size:10px;color:var(--sub)}
+    .log-note{font-size:10px;color:var(--sub2);flex:1;padding:0 8px;font-style:italic;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .log-val{font-size:13px;font-weight:700}
+    .log-change{font-size:10px;font-weight:600;margin-left:6px}
+
+    /* LIVE MARKET */
+    .market-wrap{padding:14px 18px;border-bottom:1px solid var(--border)}
+    .market-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+    .mkt-time{font-size:10px;color:var(--sub)}
+    .mkt-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .mkt-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:11px;position:relative;overflow:hidden}
+    .mkt-stripe{height:3px;position:absolute;top:0;left:0;right:0;border-radius:3px 3px 0 0}
+    .mkt-ticker{font-size:15px;font-weight:800;margin-top:3px}
+    .mkt-cname{font-size:9px;color:var(--sub);margin-top:1px}
+    .mkt-price{font-size:16px;font-weight:700;margin-top:8px;color:var(--text)}
+    .mkt-chg{font-size:12px;font-weight:600;margin-top:2px}
+    .mkt-ytd{font-size:10px;margin-top:5px}
+    .mkt-pe{font-size:9px;color:var(--sub2);margin-top:2px}
+
+    /* CATALYST */
+    .catalyst-wrap{padding:14px 18px;border-bottom:1px solid var(--border)}
+    .catalyst-card{background:var(--card);border:1px solid var(--accent);border-radius:12px;padding:13px 15px;display:flex;justify-content:space-between;align-items:center}
+    .catalyst-name{font-size:14px;font-weight:700}
+    .catalyst-date{font-size:11px;color:var(--sub);margin-top:2px}
+    .days-big{font-size:28px;font-weight:800;line-height:1}
+    .days-lbl{font-size:9px;color:var(--sub);letter-spacing:1px;text-transform:uppercase;text-align:right}
+
+    /* BUBBLE INDICATORS */
+    .gauges-wrap{padding:14px 18px;border-bottom:1px solid var(--border)}
+    .gauge-grid{display:flex;flex-direction:column;gap:8px}
+    .ind-card{border-radius:12px;padding:12px 13px;position:relative;overflow:hidden;cursor:pointer}
+    .ind-card:active{opacity:.8}
+    .ind-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:3px 3px 0 0}
+    .ind-card.lv-red{background:var(--red-bg);border:1px solid var(--red-dim)}
+    .ind-card.lv-red::before{background:var(--red)}
+    .ind-card.lv-yellow{background:var(--yellow-bg);border:1px solid var(--yellow-dim)}
+    .ind-card.lv-yellow::before{background:var(--yellow)}
+    .ind-card.lv-green{background:var(--green-bg);border:1px solid var(--green-dim)}
+    .ind-card.lv-green::before{background:var(--green)}
+    .ind-top{display:flex;justify-content:space-between;align-items:flex-start}
+    .ind-name{font-size:11px;font-weight:600}
+    .ind-desc{font-size:10px;color:var(--sub);margin-top:1px}
+    .ind-val{font-size:19px;font-weight:800;line-height:1;text-align:right}
+    .ind-card.lv-red .ind-val{color:var(--red)}
+    .ind-card.lv-yellow .ind-val{color:var(--yellow)}
+    .ind-card.lv-green .ind-val{color:var(--green)}
+    .ind-badge{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.5px;padding:2px 6px;border-radius:6px;margin-top:2px;text-transform:uppercase}
+    .badge-red{background:var(--red-dim);color:var(--red)}
+    .badge-yellow{background:var(--yellow-dim);color:var(--yellow)}
+    .badge-green{background:var(--green-dim);color:var(--green)}
+    .ind-bar-wrap{margin-top:9px;height:4px;background:var(--card2);border-radius:2px;overflow:hidden}
+    .ind-bar-fill{height:100%;border-radius:2px;transition:width .5s ease;max-width:100%}
+    .ind-refs{display:flex;justify-content:space-between;margin-top:4px}
+    .ind-ref{font-size:9px;color:var(--sub2)}
+    .ind-ref.cur{font-weight:600}
+    .ind-card.lv-red .ind-ref.cur{color:var(--red)}
+    .ind-card.lv-yellow .ind-ref.cur{color:var(--yellow)}
+
+    /* SIGNALS */
+    .signals-wrap{padding:14px 18px;border-bottom:1px solid var(--border)}
+    .sig-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .sig-card{border-radius:12px;padding:11px;cursor:pointer;position:relative;-webkit-user-select:none;user-select:none}
+    .sig-card:active{opacity:.75}
+    .sig-dot{width:8px;height:8px;border-radius:50%;position:absolute;top:10px;right:10px}
+    .sig-icon{font-size:17px;margin-bottom:5px}
+    .sig-name{font-size:11px;font-weight:600;line-height:1.3}
+    .sig-val{font-size:10px;color:var(--sub);margin-top:2px;line-height:1.3}
+    .sig-red{background:var(--red-bg);border:1px solid var(--red-dim)}
+    .sig-red .sig-dot{background:var(--red);box-shadow:0 0 5px var(--red)}
+    .sig-yellow{background:var(--yellow-bg);border:1px solid var(--yellow-dim)}
+    .sig-yellow .sig-dot{background:var(--yellow);box-shadow:0 0 5px var(--yellow)}
+    .sig-green{background:var(--green-bg);border:1px solid var(--green-dim)}
+    .sig-green .sig-dot{background:var(--green);box-shadow:0 0 5px var(--green)}
+
+    /* SCENARIOS */
+    .scenarios-wrap{padding:14px 18px;border-bottom:1px solid var(--border)}
+    .sc-row{margin-bottom:11px}
+    .sc-header{display:flex;justify-content:space-between;margin-bottom:5px}
+    .sc-name{font-size:12px;font-weight:600}
+    .sc-tf{font-size:10px;color:var(--sub);margin-left:6px}
+    .sc-pct{font-size:13px;font-weight:700}
+    .sc-bg{height:5px;background:var(--card2);border-radius:3px;overflow:hidden}
+    .sc-fill{height:100%;border-radius:3px;transition:width .4s}
+
+    /* EVENTS */
+    .events-wrap{padding:14px 18px;border-bottom:1px solid var(--border)}
+    .ev-row{display:flex;gap:11px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border)}
+    .ev-row:last-child{border-bottom:none}
+    .ev-dot-col{display:flex;flex-direction:column;align-items:center;padding-top:2px}
+    .ev-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+    .ev-line{width:1px;flex:1;min-height:16px;background:var(--border);margin-top:3px}
+    .ev-content{flex:1}
+    .ev-name{font-size:12px;font-weight:600;line-height:1.3}
+    .ev-date{font-size:10px;color:var(--sub);margin-top:1px}
+    .ev-desc{font-size:10px;color:var(--sub);margin-top:3px;line-height:1.4}
+    .ev-cd{font-size:11px;font-weight:700;padding:2px 8px;border-radius:8px;white-space:nowrap;flex-shrink:0;align-self:center}
+
+    /* NEWS FEED */
+    .news-wrap{padding:14px 18px;border-bottom:1px solid var(--border)}
+    .news-list{display:flex;flex-direction:column}
+    .news-item{padding:9px 0;border-bottom:1px solid var(--border)}
+    .news-item:last-child{border-bottom:none}
+    .news-ttl{font-size:12px;font-weight:500;line-height:1.4}
+    .news-ttl a{color:var(--text);text-decoration:none}
+    .news-ttl a:active{opacity:.7}
+    .news-meta{font-size:10px;color:var(--sub);margin-top:3px}
+
+    /* NOTES */
+    .notes-wrap{padding:14px 18px}
+    .notes-area{width:100%;background:var(--card);border:1px solid var(--border);border-radius:12px;color:var(--text);font-size:13px;padding:12px;resize:none;font-family:inherit;line-height:1.5;min-height:80px}
+    .notes-area:focus{outline:none;border-color:var(--accent)}
+    .notes-area::placeholder{color:var(--sub)}
+
+    /* MODALS */
+    .modal-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:200;align-items:flex-end;justify-content:center}
+    .modal-ov.open{display:flex}
+    .modal{background:var(--card2);border:1px solid var(--border);border-top:1px solid var(--accent);border-radius:20px 20px 0 0;padding:20px 16px 44px;width:100%;max-width:480px}
+    .modal-title{font-size:15px;font-weight:700;margin-bottom:3px}
+    .modal-sub{font-size:11px;color:var(--sub);margin-bottom:14px;line-height:1.5}
+    .modal-opts{display:flex;flex-direction:column;gap:8px}
+    .modal-opt{display:flex;align-items:center;gap:11px;padding:12px 13px;border-radius:12px;border:1px solid var(--border);cursor:pointer;background:var(--card)}
+    .modal-opt:active{opacity:.75}
+    .modal-opt-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+    .modal-opt-lbl{font-size:13px;font-weight:600}
+    .modal-opt-desc{font-size:10px;color:var(--sub);margin-top:1px}
+    .modal-cancel{margin-top:12px;text-align:center;color:var(--sub);font-size:14px;cursor:pointer;padding:10px}
+    .log-input{width:100%;background:var(--card);border:1px solid var(--accent);border-radius:12px;color:var(--text);font-size:14px;padding:12px 14px;font-family:inherit;margin-bottom:12px}
+    .log-input:focus{outline:none}
+    .log-input::placeholder{color:var(--sub)}
+    .modal-row{display:flex;gap:8px}
+    .modal-btn{flex:1;padding:12px;border-radius:12px;border:1px solid var(--border);background:var(--card);cursor:pointer;text-align:center;font-size:13px;font-weight:600}
+    .modal-btn:active{opacity:.75}
+  </style>
+</head>
+<body>
+
+<!-- INSTALL BANNER -->
+<div class="install-banner" id="installBanner">
+  <div class="install-body">
+    <div class="install-title">Add to Android Home Screen</div>
+    <div class="install-step"><b>1.</b> Open this page in Chrome</div>
+    <div class="install-step"><b>2.</b> Tap ⋮ menu → "Add to Home screen"</div>
+    <div class="install-step"><b>3.</b> Opens like an app, refreshes live data daily</div>
+  </div>
+  <button class="install-close" onclick="dismissInstall()">×</button>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>AI Bubble Tracker</h1>
+  <div class="last-updated" id="lastUpdated">—</div>
+</div>
+
+<!-- AUTO-ALERTS (populated from data.json) -->
+<div class="alert-wrap hidden" id="alertWrap"></div>
+
+<!-- PHASE + PROBABILITY -->
+<div class="top-row">
+  <div class="phase-block" onclick="openPhaseModal()">
+    <div class="block-label">Current Phase</div>
+    <div class="phase-big" id="phaseNum">4</div>
+    <div class="phase-subtitle" id="phaseSubtitle">Insider Signals</div>
+    <div class="day-tag" id="dayTag">DAY —</div>
+  </div>
+  <div class="prob-block">
+    <div class="block-label">Crash Risk</div>
+    <div class="gauge-wrap">
+      <svg width="86" height="86" viewBox="0 0 86 86">
+        <circle class="gauge-bg" cx="43" cy="43" r="35"/>
+        <circle class="gauge-fill" id="gaugeFill" cx="43" cy="43" r="35" stroke-dasharray="220" stroke-dashoffset="220"/>
+      </svg>
+      <div class="gauge-center">
+        <div class="gauge-pct" id="gaugeText">35%</div>
+        <div class="gauge-unit">PROBABILITY</div>
+      </div>
+    </div>
+    <div class="prob-delta" id="probDelta"></div>
+    <div class="prob-controls">
+      <div class="prob-btn" onclick="adjustProb(-5)">−</div>
+      <div class="prob-btn" onclick="adjustProb(5)">+</div>
+    </div>
+  </div>
+</div>
+
+<!-- PROBABILITY HISTORY -->
+<div class="history-wrap">
+  <div class="section-label">Probability History</div>
+  <div class="chart-container">
+    <div class="chart-header">
+      <span class="chart-title">Crash Risk Over Time</span>
+      <span class="chart-trend" id="chartTrend"></span>
+    </div>
+    <div class="chart-svg-wrap" id="chartWrap"></div>
+    <div class="history-log" id="historyLog"></div>
+  </div>
+</div>
+
+<!-- LIVE MARKET (populated from data.json) -->
+<div class="market-wrap hidden" id="marketSection">
+  <div class="market-header">
+    <div class="section-label" style="margin:0">Live Market</div>
+    <div class="mkt-time" id="mktTime"></div>
+  </div>
+  <div class="mkt-grid" id="mktGrid"></div>
+</div>
+
+<!-- NEXT CATALYST -->
+<div class="catalyst-wrap">
+  <div class="section-label">Next Catalyst</div>
+  <div class="catalyst-card" id="catalystCard">
+    <div>
+      <div class="catalyst-name" id="catalystName">—</div>
+      <div class="catalyst-date" id="catalystDate">—</div>
+    </div>
+    <div>
+      <div class="days-big" id="catalystDays">—</div>
+      <div class="days-lbl">DAYS</div>
+    </div>
+  </div>
+</div>
+
+<!-- BUBBLE INDICATORS -->
+<div class="gauges-wrap">
+  <div class="section-label">Bubble Indicators — Tap to Edit</div>
+  <div class="gauge-grid" id="gaugeGrid"></div>
+</div>
+
+<!-- QUALITATIVE SIGNALS -->
+<div class="signals-wrap">
+  <div class="section-label">Key Signals — Tap to Update</div>
+  <div class="sig-grid" id="signalsGrid"></div>
+</div>
+
+<!-- SCENARIOS -->
+<div class="scenarios-wrap">
+  <div class="section-label">Scenario Probabilities</div>
+  <div id="scenariosEl"></div>
+</div>
+
+<!-- EVENTS TIMELINE -->
+<div class="events-wrap">
+  <div class="section-label">Upcoming Catalysts</div>
+  <div id="eventsEl"></div>
+</div>
+
+<!-- NEWS FEED (populated from data.json) -->
+<div class="news-wrap hidden" id="newsSection">
+  <div class="section-label">Latest News</div>
+  <div class="news-list" id="newsList"></div>
+</div>
+
+<!-- NOTES -->
+<div class="notes-wrap">
+  <div class="section-label">Today's Notes</div>
+  <textarea class="notes-area" id="notesArea" placeholder="Observations, news, signals you spotted today..."></textarea>
+</div>
+
+<!-- SIGNAL MODAL -->
+<div class="modal-ov" id="sigModal">
+  <div class="modal">
+    <div class="modal-title" id="sigModalTitle"></div>
+    <div class="modal-sub" id="sigModalSub"></div>
+    <div class="modal-opts">
+      <div class="modal-opt" onclick="setSignal('red')">
+        <div class="modal-opt-dot" style="background:var(--red);box-shadow:0 0 5px var(--red)"></div>
+        <div><div class="modal-opt-lbl" style="color:var(--red)">Red — Confirmed Danger</div><div class="modal-opt-desc">Clearly bearish / confirmed bad</div></div>
+      </div>
+      <div class="modal-opt" onclick="setSignal('yellow')">
+        <div class="modal-opt-dot" style="background:var(--yellow);box-shadow:0 0 5px var(--yellow)"></div>
+        <div><div class="modal-opt-lbl" style="color:var(--yellow)">Yellow — Warning</div><div class="modal-opt-desc">Concerning but not yet confirmed</div></div>
+      </div>
+      <div class="modal-opt" onclick="setSignal('green')">
+        <div class="modal-opt-dot" style="background:var(--green);box-shadow:0 0 5px var(--green)"></div>
+        <div><div class="modal-opt-lbl" style="color:var(--green)">Green — Clear</div><div class="modal-opt-desc">Neutral or bullish</div></div>
+      </div>
+    </div>
+    <div class="modal-cancel" onclick="closeModal('sigModal')">Cancel</div>
+  </div>
+</div>
+
+<!-- PHASE MODAL -->
+<div class="modal-ov" id="phaseModal">
+  <div class="modal">
+    <div class="modal-title">Set Phase</div>
+    <div class="modal-sub">Which stage of the bubble cycle are we in?</div>
+    <div class="modal-opts" id="phaseOpts"></div>
+    <div class="modal-cancel" onclick="closeModal('phaseModal')">Cancel</div>
+  </div>
+</div>
+
+<!-- INDICATOR EDIT MODAL -->
+<div class="modal-ov" id="indModal">
+  <div class="modal">
+    <div class="modal-title" id="indModalTitle"></div>
+    <div class="modal-sub" id="indModalSub"></div>
+    <input id="indInput" type="number" inputmode="decimal"
+      style="width:100%;background:var(--card);border:1px solid var(--accent);border-radius:12px;color:var(--text);font-size:24px;font-weight:700;padding:13px;font-family:inherit;text-align:center;margin-bottom:12px"/>
+    <div class="modal-row">
+      <div class="modal-btn" style="color:var(--accent);border-color:var(--accent)" onclick="saveIndValue()">Save</div>
+      <div class="modal-btn" style="color:var(--sub)" onclick="closeModal('indModal')">Cancel</div>
+    </div>
+  </div>
+</div>
+
+<!-- LOG NOTE MODAL -->
+<div class="modal-ov" id="logModal">
+  <div class="modal">
+    <div class="modal-title">Add Note to Log Entry</div>
+    <div class="modal-sub" id="logModalSub">Optionally describe what triggered this change.</div>
+    <input class="log-input" id="logNoteInput" type="text" placeholder="e.g. Nvidia earnings missed" maxlength="60"/>
+    <div class="modal-row">
+      <div class="modal-btn" style="color:var(--accent);border-color:var(--accent)" onclick="saveLogNote()">Add Note</div>
+      <div class="modal-btn" style="color:var(--sub)" onclick="closeModal('logModal')">Skip</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─── DATA ─────────────────────────────────────────────────────────────────────
+
+const PHASE4_START = new Date('2026-04-28');
+
+const PHASES = [
+  {n:1,title:'Real Innovation',   short:'Real Innovation',  color:'#2ecc71',desc:'Technology is genuine. Fundamentals support excitement.'},
+  {n:2,title:'Narrative Lock-In', short:'Narrative Lock-In',color:'#4a9fff',desc:'Everyone must participate. FOMO dominant.'},
+  {n:3,title:'Warnings Ignored',  short:'Warnings Ignored', color:'#f5c542',desc:'Smart money warns. Market ignores. The Greenspan moment.'},
+  {n:4,title:'Insider Signals',   short:'Insider Signals',  color:'#f5a030',desc:'Those closest to truth quietly move. Revenue misses, CFO rifts go public.'},
+  {n:5,title:'Trigger Event',     short:'Trigger Event',    color:'#ff3b3b',desc:'One event breaks the collective fiction. Cascade begins.'},
+  {n:6,title:'Cascade',           short:'Cascade',          color:'#ff1a1a',desc:'Second-order effects nobody modeled. Full repricing underway.'},
+];
+
+const SEED_HISTORY = [
+  {d:'2026-04-28', v:25, note:'Phase 4 starts — OpenAI revenue miss reported'},
+  {d:'2026-05-01', v:28, note:'CFO-CEO rift becomes public'},
+  {d:'2026-05-07', v:32, note:'Oracle & CoreWeave drop on OpenAI news'},
+  {d:'2026-05-13', v:35, note:'Morningstar: OpenAI unlikely to IPO this year'},
+  {d:'2026-05-15', v:35, note:''},
+];
+
+const DEFAULT_INDICATORS = [
+  {id:'buffett',  icon:'🧮',name:'Buffett Indicator',  desc:'Total Mkt Cap / GDP',               value:234, unit:'%',min:0,  warnAt:120,dangerAt:160,maxDisplay:260,r1l:'Avg',   r1v:85, r2l:'Dot-com',r2v:146},
+  {id:'cape',     icon:'📐',name:'Shiller CAPE',        desc:'Cyclically Adjusted P/E Ratio',     value:40.3,unit:'x',min:10, warnAt:30, dangerAt:36, maxDisplay:50, r1l:'Avg',   r1v:17, r2l:'Dot-com',r2v:44.2},
+  {id:'sp_conc',  icon:'🏔️',name:'S&P Top-10 Weight',  desc:'Top 10 stocks share of S&P 500',    value:40,  unit:'%',min:15, warnAt:28, dangerAt:34, maxDisplay:46, r1l:'Avg',   r1v:20, r2l:'2000 peak',r2v:27},
+  {id:'ai_gdp',   icon:'🏗️',name:'AI Capex / GDP',     desc:'AI infrastructure as % of US GDP',  value:3.5, unit:'%',min:0,  warnAt:1.0,dangerAt:1.5, maxDisplay:6,  r1l:'Safe',  r1v:0.5,r2l:'Dot-com',r2v:1.5},
+  {id:'soxx_pe',  icon:'🔧',name:'SOXX P/E Ratio',     desc:'iShares Semiconductor ETF P/E',      value:59,  unit:'x',min:15, warnAt:35, dangerAt:50, maxDisplay:80, r1l:'Normal',r1v:22, r2l:'Dot-com',r2v:80},
+  {id:'soxx_ytd', icon:'📈',name:'SOXX YTD Gain',      desc:'Philadelphia Semiconductor Index YTD',value:75, unit:'%',min:0,  warnAt:30, dangerAt:50, maxDisplay:100,r1l:'Normal',r1v:15, r2l:'Burry flag',r2v:50},
+  {id:'nvda_pe',  icon:'🖥️',name:'Nvidia P/E',         desc:'NVDA trailing price / earnings',     value:45,  unit:'x',min:15, warnAt:40, dangerAt:60, maxDisplay:120,r1l:'Normal',r1v:25, r2l:'2022 peak',r2v:70},
+  {id:'m7_capex', icon:'💰',name:'M7 Capex / Revenue', desc:'Meta 54% · MSFT 47% · GOOG 46% avg', value:48, unit:'%',min:10, warnAt:30, dangerAt:40, maxDisplay:65, r1l:'Normal',r1v:15, r2l:'Danger',r2v:40},
+];
+
+const DEFAULT_SIGNALS = [
+  {id:'openai_rev', icon:'📉',name:'OpenAI Revenue',   value:'Missed targets Apr 2026',       status:'red'},
+  {id:'mkt_share',  icon:'📊',name:'OpenAI Mkt Share', value:'69% → ~40% in 14 months',       status:'red'},
+  {id:'commitment', icon:'💸',name:'Commit vs Revenue',value:'$1.4T owed vs $25B ARR',         status:'red'},
+  {id:'insider',    icon:'🔑',name:'Insider Signals',  value:'CFO–CEO rift now public',        status:'red'},
+  {id:'capex_lang', icon:'🏗️',name:'M7 Capex Language',value:'Raising but mkt not rewarding', status:'yellow'},
+  {id:'ipo_status', icon:'🏦',name:'OpenAI IPO',       value:'No S-1 filed, delayed to 2027',  status:'yellow'},
+  {id:'oracle_prx', icon:'⚡',name:'Oracle/CoreWeave', value:'Dropped on OpenAI miss',         status:'yellow'},
+  {id:'nvidia_fwd', icon:'🖥️',name:'Nvidia Forward',  value:'Q1 FY27 report May 28',          status:'yellow'},
+  {id:'deepseek',   icon:'🤖',name:'DeepSeek Effect',  value:'V4 broke $500B capex math',      status:'yellow'},
+  {id:'stargate',   icon:'🌐',name:'Stargate Status',  value:'Stalling — disputes ongoing',    status:'yellow'},
+];
+
+const DEFAULT_SCENARIOS = [
+  {id:'fast',   name:'Fast Crash',     tf:'3–6 months (Aug–Oct 2026)',  pct:20,color:'#ff3b3b'},
+  {id:'slow',   name:'Slow Deflation', tf:'9–18 months (Jan–Oct 2027)', pct:55,color:'#f5c542'},
+  {id:'extend', name:'Bubble Extends', tf:'12–24 months (2027–2028)',   pct:25,color:'#2ecc71'},
+];
+
+const EVENTS = [
+  {name:'Nvidia Q1 FY2027 Earnings',date:'2026-05-28',desc:'Data center demand & guidance language. Critical forward signal.',color:'#7c6aff'},
+  {name:'Q2 2026 M7 Earnings',      date:'2026-07-28',desc:'First full quarter post-OpenAI miss. Watch for capex "discipline" language.',color:'#f5c542'},
+  {name:'OpenAI S-1 Filing',        date:'2026-09-01',desc:"Math becomes public: $1.4T commitments vs revenue. The Barron's moment.",color:'#ff3b3b'},
+  {name:'Q3 2026 M7 Earnings',      date:'2026-10-27',desc:'Second data point on AI ROI narrative. Crucial scenario split.',color:'#f5c542'},
+  {name:'OpenAI IPO Attempt',       date:'2026-11-01',desc:'Down-round or withdrawal = narrative breaks permanently and publicly.',color:'#ff3b3b'},
+];
+
+// ─── STATE ────────────────────────────────────────────────────────────────────
+
+function load(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch{return d}}
+function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{}}
+
+let S = {
+  phase:      load('phase', 4),
+  prob:       load('prob',  35),
+  history:    load('history', SEED_HISTORY),
+  indicators: load('indicators', DEFAULT_INDICATORS),
+  signals:    load('signals', DEFAULT_SIGNALS),
+  scenarios:  load('scenarios', DEFAULT_SCENARIOS),
+  notes:      load('notes', ''),
+  updated:    load('updated', null),
+  installDismissed: load('installDismissed', false),
+};
+
+S.indicators = DEFAULT_INDICATORS.map(def => {
+  const sv = S.indicators.find(i => i.id === def.id);
+  return sv ? {...def, value: sv.value} : def;
+});
+S.signals = DEFAULT_SIGNALS.map(def => {
+  const sv = S.signals.find(s => s.id === def.id);
+  return sv ? {...def, status: sv.status} : def;
+});
+SEED_HISTORY.forEach(seed => {
+  if (!S.history.find(h => h.d === seed.d)) S.history.unshift(seed);
+});
+S.history.sort((a,b) => a.d.localeCompare(b.d));
+
+// ─── UTILS ────────────────────────────────────────────────────────────────────
+
+function todayStr(){
+  const d=new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+function daysFrom(ds){
+  const t=new Date();t.setHours(0,0,0,0);
+  const d=new Date(ds);d.setHours(0,0,0,0);
+  return Math.round((d-t)/86400000);
+}
+function fmtDate(ds){return new Date(ds+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}
+function fmtShort(ds){return new Date(ds+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'})}
+function persist(){
+  const now=new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+  S.updated=now;
+  Object.keys(S).forEach(k=>save(k,S[k]));
+}
+
+// ─── INSTALL ──────────────────────────────────────────────────────────────────
+
+if(S.installDismissed) document.getElementById('installBanner').classList.add('hidden');
+function dismissInstall(){S.installDismissed=true;persist();document.getElementById('installBanner').classList.add('hidden')}
+
+// ─── PHASE ────────────────────────────────────────────────────────────────────
+
+function renderPhase(){
+  const p=PHASES[S.phase-1];
+  document.getElementById('phaseNum').textContent=S.phase;
+  document.getElementById('phaseNum').style.color=p.color;
+  document.getElementById('phaseSubtitle').textContent=p.short;
+  const today=new Date();today.setHours(0,0,0,0);
+  const start=new Date(PHASE4_START);start.setHours(0,0,0,0);
+  const days=Math.max(0,Math.round((today-start)/86400000));
+  document.getElementById('dayTag').textContent=`DAY ${days} · PHASE ${S.phase}`;
+}
+
+// ─── GAUGE ────────────────────────────────────────────────────────────────────
+
+function gaugeColor(p){return p<30?'#2ecc71':p<55?'#f5c542':'#ff3b3b'}
+
+function renderGauge(){
+  const p=S.prob;
+  const r=35,circ=2*Math.PI*r;
+  const el=document.getElementById('gaugeFill');
+  el.style.strokeDasharray=circ;
+  el.style.strokeDashoffset=circ*(1-p/100);
+  const c=gaugeColor(p);
+  el.style.stroke=c;
+  const gt=document.getElementById('gaugeText');
+  gt.textContent=p+'%'; gt.style.color=c;
+  if(S.history.length>1){
+    const first=S.history[0].v, delta=p-first;
+    const dEl=document.getElementById('probDelta');
+    if(delta>0){dEl.textContent=`↑ +${delta}% since start`;dEl.style.color='#ff3b3b';}
+    else if(delta<0){dEl.textContent=`↓ ${delta}% since start`;dEl.style.color='#2ecc71';}
+    else{dEl.textContent='— unchanged';dEl.style.color='var(--sub)';}
+  }
+}
+
+let pendingProbVal = null;
+function adjustProb(d){
+  pendingProbVal = Math.max(0,Math.min(100,S.prob+d));
+  S.prob = pendingProbVal;
+  renderGauge();
+  const today=todayStr();
+  const existing=S.history.find(h=>h.d===today);
+  if(existing){ existing.v=S.prob; renderHistory(); persist(); }
+  else {
+    document.getElementById('logModalSub').textContent=`Probability changed to ${S.prob}%. Add a note about why?`;
+    document.getElementById('logNoteInput').value='';
+    openModal('logModal');
+  }
+}
+
+// ─── HISTORY CHART ────────────────────────────────────────────────────────────
+
+function renderHistory(){
+  const history=S.history;
+  if(!history.length) return;
+  const first=history[0].v, last=history[history.length-1].v;
+  const delta=last-first;
+  const tEl=document.getElementById('chartTrend');
+  if(delta>0){tEl.textContent=`↑ +${delta}% since start`;tEl.style.color='#ff3b3b';}
+  else if(delta<0){tEl.textContent=`↓ ${Math.abs(delta)}% falling`;tEl.style.color='#2ecc71';}
+  else{tEl.textContent='→ flat';tEl.style.color='var(--sub)';}
+
+  const vals=history.map(h=>h.v);
+  const dataMin=Math.min(...vals), dataMax=Math.max(...vals);
+  const spread=Math.max(dataMax-dataMin, 8);
+  const minV=Math.max(0, dataMin - spread*0.35);
+  const maxV=Math.min(100, dataMax + spread*0.35);
+
+  const W=280,H=100,ML=30,MR=6,MT=8,MB=18;
+  const CW=W-ML-MR,CH=H-MT-MB;
+  function cx(i){return ML+(i/(history.length-1||1))*CW;}
+  function cy(v){return MT+(1-(v-minV)/(maxV-minV))*CH;}
+
+  const pts=history.map((h,i)=>({x:cx(i),y:cy(h.v),v:h.v,d:h.d}));
+
+  function smoothPath(pts){
+    if(pts.length===1) return `M${pts[0].x} ${pts[0].y}`;
+    let d=`M${pts[0].x.toFixed(1)} ${pts[0].y.toFixed(1)}`;
+    for(let i=0;i<pts.length-1;i++){
+      const p0=pts[Math.max(i-1,0)],p1=pts[i],p2=pts[i+1],p3=pts[Math.min(i+2,pts.length-1)];
+      const cp1x=p1.x+(p2.x-p0.x)/6,cp1y=p1.y+(p2.y-p0.y)/6;
+      const cp2x=p2.x-(p3.x-p1.x)/6,cp2y=p2.y-(p3.y-p1.y)/6;
+      d+=` C${cp1x.toFixed(1)} ${cp1y.toFixed(1)} ${cp2x.toFixed(1)} ${cp2y.toFixed(1)} ${p2.x.toFixed(1)} ${p2.y.toFixed(1)}`;
+    }
+    return d;
+  }
+
+  const linePath=smoothPath(pts);
+  const lp=pts[pts.length-1];
+  const areaPath=`${linePath} L${lp.x.toFixed(1)} ${MT+CH} L${pts[0].x.toFixed(1)} ${MT+CH} Z`;
+  const lc=gaugeColor(last);
+
+  const gridStep=Math.ceil((maxV-minV)/3/5)*5||5;
+  const gridStart=Math.ceil(minV/gridStep)*gridStep;
+  const gridVals=[];
+  for(let g=gridStart;g<=maxV;g+=gridStep) gridVals.push(g);
+
+  const datePts=[pts[0]];
+  if(pts.length>2) datePts.push(pts[Math.floor(pts.length/2)]);
+  if(pts.length>1) datePts.push(pts[pts.length-1]);
+
+  document.getElementById('chartWrap').innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="display:block">
+    <defs>
+      <linearGradient id="ag" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="${lc}" stop-opacity="0.35"/>
+        <stop offset="100%" stop-color="${lc}" stop-opacity="0.02"/>
+      </linearGradient>
+      <clipPath id="cp"><rect x="${ML}" y="${MT}" width="${CW}" height="${CH}"/></clipPath>
+    </defs>
+    ${gridVals.map(g=>`
+      <line x1="${ML}" y1="${cy(g).toFixed(1)}" x2="${W-MR}" y2="${cy(g).toFixed(1)}" stroke="#1a1a2e" stroke-width="1"/>
+      <text x="${ML-4}" y="${(cy(g)+3.5).toFixed(1)}" font-size="8" fill="#4a4a65" text-anchor="end">${g}%</text>
+    `).join('')}
+    <path d="${areaPath}" fill="url(#ag)" clip-path="url(#cp)"/>
+    <path d="${linePath}" fill="none" stroke="${lc}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#cp)"/>
+    ${pts.map((p,i)=>{
+      const isLast=i===pts.length-1;
+      const c=gaugeColor(p.v);
+      return `<circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${isLast?5:3}" fill="${c}" stroke="#07070f" stroke-width="${isLast?2:1.5}"/>
+              ${isLast?`<circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="9" fill="${c}" fill-opacity="0.12"/>`:''}`
+    }).join('')}
+    ${datePts.map((p,i)=>{
+      const anchor=i===0?'start':i===datePts.length-1?'end':'middle';
+      const isLast=i===datePts.length-1;
+      return `<text x="${p.x.toFixed(1)}" y="${H-3}" font-size="8.5" fill="${isLast?'#7c6aff':'#4a4a65'}" font-weight="${isLast?'600':'400'}" text-anchor="${anchor}">${fmtShort(history[i===0?0:i===1?Math.floor(pts.length/2):pts.length-1].d)}</text>`;
+    }).join('')}
+  </svg>`;
+
+  const recent=[...history].reverse().slice(0,5);
+  const logEl=document.getElementById('historyLog');
+  logEl.innerHTML='';
+  recent.forEach((h,i)=>{
+    const prev=i<recent.length-1?recent[i+1]:null;
+    const chg=prev?h.v-prev.v:0;
+    const chgHtml=chg!==0?`<span class="log-change" style="color:${chg>0?'#ff3b3b':'#2ecc71'}">${chg>0?'+':''}${chg}%</span>`:'';
+    const row=document.createElement('div');
+    row.className='log-row';
+    row.innerHTML=`<span class="log-date">${fmtShort(h.d)}</span><span class="log-note">${h.note||'—'}</span><span class="log-val" style="color:${gaugeColor(h.v)}">${h.v}% ${chgHtml}</span>`;
+    logEl.appendChild(row);
+  });
+}
+
+// ─── LOG NOTE ─────────────────────────────────────────────────────────────────
+
+function saveLogNote(){
+  const note=document.getElementById('logNoteInput').value.trim();
+  const today=todayStr();
+  const existing=S.history.find(h=>h.d===today);
+  if(existing){existing.v=S.prob;existing.note=note;}
+  else{S.history.push({d:today,v:S.prob,note});}
+  S.history.sort((a,b)=>a.d.localeCompare(b.d));
+  renderHistory();persist();
+  closeModal('logModal');
+}
+
+// ─── CATALYST ─────────────────────────────────────────────────────────────────
+
+function renderCatalyst(){
+  const future=EVENTS.filter(e=>daysFrom(e.date)>=0).sort((a,b)=>daysFrom(a.date)-daysFrom(b.date));
+  if(!future.length) return;
+  const n=future[0];
+  const days=daysFrom(n.date);
+  document.getElementById('catalystName').textContent=n.name.toUpperCase();
+  document.getElementById('catalystDate').textContent=fmtDate(n.date);
+  document.getElementById('catalystDays').textContent=days;
+  const urgent=days<=7;
+  document.getElementById('catalystCard').style.borderColor=urgent?'var(--red)':'var(--accent)';
+  document.getElementById('catalystDays').style.color=urgent?'var(--red)':'var(--accent)';
+}
+
+// ─── INDICATORS ───────────────────────────────────────────────────────────────
+
+function indLevel(ind){return ind.value>=ind.dangerAt?'red':ind.value>=ind.warnAt?'yellow':'green'}
+function indBarPct(ind){return Math.min(100,Math.max(0,(ind.value-ind.min)/(ind.maxDisplay-ind.min)*100))}
+
+function renderIndicators(){
+  const grid=document.getElementById('gaugeGrid');
+  grid.innerHTML='';
+  S.indicators.forEach((ind,i)=>{
+    const lv=indLevel(ind);
+    const bp=indBarPct(ind);
+    const bc=lv==='red'?'var(--red)':lv==='yellow'?'var(--yellow)':'var(--green)';
+    const badge=lv==='red'?'<span class="ind-badge badge-red">EXTREME</span>':
+                lv==='yellow'?'<span class="ind-badge badge-yellow">WARNING</span>':
+                '<span class="ind-badge badge-green">NORMAL</span>';
+    const card=document.createElement('div');
+    card.className=`ind-card lv-${lv}`;
+    card.innerHTML=`
+      <div class="ind-top">
+        <div><div class="ind-name">${ind.icon} ${ind.name}</div><div class="ind-desc">${ind.desc}</div></div>
+        <div style="text-align:right"><div class="ind-val">${ind.value}${ind.unit}</div>${badge}</div>
+      </div>
+      <div class="ind-bar-wrap"><div class="ind-bar-fill" style="width:${bp}%;background:${bc}"></div></div>
+      <div class="ind-refs">
+        <span class="ind-ref">${ind.r1l}: ${ind.r1v}${ind.unit}</span>
+        <span class="ind-ref">${ind.r2l}: ${ind.r2v}${ind.unit}</span>
+        <span class="ind-ref cur">Now: ${ind.value}${ind.unit}</span>
+      </div>`;
+    card.onclick=()=>openIndModal(i);
+    grid.appendChild(card);
+  });
+}
+
+// ─── SIGNALS ──────────────────────────────────────────────────────────────────
+
+function renderSignals(){
+  const grid=document.getElementById('signalsGrid');
+  grid.innerHTML='';
+  S.signals.forEach((sig,i)=>{
+    const card=document.createElement('div');
+    card.className=`sig-card sig-${sig.status}`;
+    card.innerHTML=`<div class="sig-dot"></div><div class="sig-icon">${sig.icon}</div><div class="sig-name">${sig.name}</div><div class="sig-val">${sig.value}</div>`;
+    card.onclick=()=>openSigModal(i);
+    grid.appendChild(card);
+  });
+}
+
+// ─── SCENARIOS ────────────────────────────────────────────────────────────────
+
+function renderScenarios(){
+  const el=document.getElementById('scenariosEl');
+  el.innerHTML='';
+  S.scenarios.forEach(s=>{
+    el.innerHTML+=`<div class="sc-row">
+      <div class="sc-header">
+        <div><span class="sc-name">${s.name}</span><span class="sc-tf">${s.tf}</span></div>
+        <span class="sc-pct" style="color:${s.color}">${s.pct}%</span>
+      </div>
+      <div class="sc-bg"><div class="sc-fill" style="width:${s.pct}%;background:${s.color}"></div></div>
+    </div>`;
+  });
+}
+
+// ─── EVENTS ───────────────────────────────────────────────────────────────────
+
+function renderEvents(){
+  const el=document.getElementById('eventsEl');
+  el.innerHTML='';
+  const sorted=[...EVENTS].sort((a,b)=>new Date(a.date)-new Date(b.date));
+  sorted.forEach((ev,i)=>{
+    const days=daysFrom(ev.date),past=days<0;
+    let cd='';
+    if(past) cd=`<span class="ev-cd" style="background:#111;color:var(--sub)">PAST</span>`;
+    else if(days===0) cd=`<span class="ev-cd" style="background:var(--red-dim);color:var(--red)">TODAY</span>`;
+    else if(days<=7) cd=`<span class="ev-cd" style="background:var(--red-dim);color:var(--red)">${days}d</span>`;
+    else cd=`<span class="ev-cd" style="background:var(--card2);color:var(--sub)">${days}d</span>`;
+    const row=document.createElement('div');
+    row.className='ev-row';
+    row.innerHTML=`
+      <div class="ev-dot-col">
+        <div class="ev-dot" style="background:${past?'var(--sub2)':ev.color};${!past?'box-shadow:0 0 5px '+ev.color:''}"></div>
+        ${i<sorted.length-1?'<div class="ev-line"></div>':''}
+      </div>
+      <div class="ev-content">
+        <div class="ev-name" style="color:${past?'var(--sub)':'var(--text)'}">${ev.name}</div>
+        <div class="ev-date">${fmtDate(ev.date)}</div>
+        <div class="ev-desc">${ev.desc}</div>
+      </div>${cd}`;
+    el.appendChild(row);
+  });
+}
+
+// ─── LIVE DATA ────────────────────────────────────────────────────────────────
+
+async function fetchLiveData() {
+  try {
+    const res = await fetch('./data.json?_=' + Date.now(), {cache: 'no-store'});
+    if (!res.ok) return;
+    const data = await res.json();
+
+    // Update header timestamp from data.json
+    const upd = new Date(data.updated);
+    document.getElementById('lastUpdated').textContent =
+      'Live ' + upd.toLocaleDateString('en-US', {month:'short', day:'numeric',
+        hour:'2-digit', minute:'2-digit'});
+
+    // Auto-sync quantitative indicators
+    const m = data.market || {}, mc = data.macro || {};
+    if (mc.buffett)              syncInd('buffett',  mc.buffett);
+    if (mc.cape)                 syncInd('cape',     mc.cape);
+    if (m.NVDA  && m.NVDA.pe)   syncInd('nvda_pe',  m.NVDA.pe);
+    if (m.SOXX  && m.SOXX.pe)   syncInd('soxx_pe',  m.SOXX.pe);
+    if (m.SOXX  && m.SOXX.ytd_pct !== undefined) syncInd('soxx_ytd', m.SOXX.ytd_pct);
+    renderIndicators();
+
+    if (data.alerts && data.alerts.length) renderAlerts(data.alerts);
+    if (data.market) renderMarket(data.market, data.updated);
+    if (data.news && data.news.length) renderNews(data.news);
+  } catch(e) {
+    // data.json not available — graceful fallback to seed data
+  }
+}
+
+function syncInd(id, val) {
+  const ind = S.indicators.find(i => i.id === id);
+  if (ind) ind.value = Math.round(val * 10) / 10;
+}
+
+function renderMarket(market, updatedAt) {
+  const order = ['NVDA', 'SOXX', 'ORCL', 'CRWV'];
+  const grid = document.getElementById('mktGrid');
+  grid.innerHTML = '';
+  order.forEach(sym => {
+    const m = market[sym];
+    if (!m) return;
+    const up = m.change_pct >= 0;
+    const ytdUp = m.ytd_pct >= 0;
+    const c  = up ? 'var(--green)' : 'var(--red)';
+    const yc = ytdUp ? 'var(--green)' : 'var(--red)';
+    const card = document.createElement('div');
+    card.className = 'mkt-card';
+    const price = m.price.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+    card.innerHTML = `
+      <div class="mkt-stripe" style="background:${c}"></div>
+      <div class="mkt-ticker" style="color:${c}">${sym}</div>
+      <div class="mkt-cname">${m.name}</div>
+      <div class="mkt-price">$${price}</div>
+      <div class="mkt-chg" style="color:${c}">${up?'+':''}${m.change_pct.toFixed(2)}% today</div>
+      <div class="mkt-ytd" style="color:${yc}">YTD ${ytdUp?'+':''}${m.ytd_pct.toFixed(1)}%</div>
+      ${m.pe > 0 ? `<div class="mkt-pe">P/E ${m.pe}x</div>` : ''}`;
+    grid.appendChild(card);
+  });
+  document.getElementById('marketSection').classList.remove('hidden');
+  if (updatedAt) {
+    const d = new Date(updatedAt);
+    document.getElementById('mktTime').textContent =
+      d.toLocaleDateString('en-US', {month:'short', day:'numeric',
+        hour:'2-digit', minute:'2-digit'});
+  }
+}
+
+function renderAlerts(alerts) {
+  const wrap = document.getElementById('alertWrap');
+  wrap.innerHTML = '';
+  alerts.forEach(a => {
+    const div = document.createElement('div');
+    div.className = `alert-item lv-${a.level}`;
+    div.innerHTML = `<span class="al-badge">${a.level}</span><span class="al-msg">${a.msg}</span>`;
+    wrap.appendChild(div);
+  });
+  wrap.classList.remove('hidden');
+}
+
+function fmtNewsDate(dateStr) {
+  if (!dateStr) return '';
+  try {
+    const d = new Date(dateStr);
+    const diff = Math.floor((Date.now() - d) / 86400000);
+    if (diff === 0) return 'Today';
+    if (diff === 1) return 'Yesterday';
+    if (diff < 7)  return `${diff}d ago`;
+    return d.toLocaleDateString('en-US', {month:'short', day:'numeric'});
+  } catch { return ''; }
+}
+
+function renderNews(news) {
+  const list = document.getElementById('newsList');
+  list.innerHTML = '';
+  news.slice(0, 12).forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'news-item';
+    const date = fmtNewsDate(item.date);
+    const titleHtml = item.url
+      ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer">${item.title}</a>`
+      : item.title;
+    div.innerHTML = `
+      <div class="news-ttl">${titleHtml}</div>
+      <div class="news-meta">${item.source}${date ? ' · ' + date : ''}</div>`;
+    list.appendChild(div);
+  });
+  document.getElementById('newsSection').classList.remove('hidden');
+}
+
+// ─── MODALS ───────────────────────────────────────────────────────────────────
+
+function openModal(id){document.getElementById(id).classList.add('open')}
+function closeModal(id){document.getElementById(id).classList.remove('open')}
+document.querySelectorAll('.modal-ov').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open')}));
+
+let activeSigIdx=null;
+function openSigModal(i){
+  activeSigIdx=i;
+  const s=S.signals[i];
+  document.getElementById('sigModalTitle').textContent=s.name;
+  document.getElementById('sigModalSub').textContent=s.value;
+  openModal('sigModal');
+}
+function setSignal(st){
+  if(activeSigIdx===null) return;
+  S.signals[activeSigIdx].status=st;
+  renderSignals();persist();closeModal('sigModal');
+}
+
+function openPhaseModal(){
+  const opts=document.getElementById('phaseOpts');
+  opts.innerHTML='';
+  PHASES.forEach(p=>{
+    const d=document.createElement('div');
+    d.className='modal-opt';
+    d.style.borderColor=S.phase===p.n?p.color:'';
+    d.innerHTML=`<div class="modal-opt-dot" style="background:${p.color};box-shadow:0 0 5px ${p.color}"></div>
+      <div><div class="modal-opt-lbl" style="color:${p.color}">Phase ${p.n} — ${p.title}</div>
+      <div class="modal-opt-desc">${p.desc}</div></div>`;
+    d.onclick=()=>{S.phase=p.n;renderPhase();persist();closeModal('phaseModal')};
+    opts.appendChild(d);
+  });
+  openModal('phaseModal');
+}
+
+let activeIndIdx=null;
+function openIndModal(i){
+  activeIndIdx=i;
+  const ind=S.indicators[i];
+  document.getElementById('indModalTitle').textContent=ind.name;
+  document.getElementById('indModalSub').textContent=`${ind.r2l} peak: ${ind.r2v}${ind.unit}  ·  ${ind.r1l}: ${ind.r1v}${ind.unit}`;
+  document.getElementById('indInput').value=ind.value;
+  openModal('indModal');
+  setTimeout(()=>document.getElementById('indInput').focus(),150);
+}
+function saveIndValue(){
+  if(activeIndIdx===null) return;
+  const raw=parseFloat(document.getElementById('indInput').value);
+  if(!isNaN(raw)){S.indicators[activeIndIdx].value=raw;renderIndicators();persist();}
+  closeModal('indModal');
+}
+document.getElementById('indInput').addEventListener('keydown',e=>{if(e.key==='Enter')saveIndValue()});
+
+// ─── NOTES ────────────────────────────────────────────────────────────────────
+
+const notesEl=document.getElementById('notesArea');
+notesEl.value=S.notes;
+let notesTimer;
+notesEl.addEventListener('input',()=>{S.notes=notesEl.value;clearTimeout(notesTimer);notesTimer=setTimeout(persist,800)});
+
+// ─── INIT ─────────────────────────────────────────────────────────────────────
+
+if(S.updated) document.getElementById('lastUpdated').textContent='Updated '+S.updated;
+
+renderPhase();
+renderGauge();
+renderHistory();
+renderCatalyst();
+renderIndicators();
+renderSignals();
+renderScenarios();
+renderEvents();
+
+fetchLiveData();
+</script>
+</body>
+</html>
