@@ -1,37 +1,37 @@
 {
-  "updated": "2026-05-18T16:17:50.747080+00:00",
+  "updated": "2026-05-19T16:14:28.835814+00:00",
   "market": {
     "NVDA": {
       "name": "Nvidia",
-      "price": 222.5,
-      "pe": 45.5,
-      "change_pct": -1.25,
-      "ytd_pct": 17.8
+      "price": 220.44,
+      "pe": 45.1,
+      "change_pct": -0.85,
+      "ytd_pct": 16.7
     },
     "SOXX": {
       "name": "Semiconductor ETF",
-      "price": 495.61,
-      "pe": 45.5,
-      "change_pct": -2.54,
-      "ytd_pct": 58.1
+      "price": 492.38,
+      "pe": 45.2,
+      "change_pct": -0.7,
+      "ytd_pct": 57.1
     },
     "ORCL": {
       "name": "Oracle",
-      "price": 185.37,
-      "pe": 33.2,
-      "change_pct": -3.93,
-      "ytd_pct": -4.7
+      "price": 182.84,
+      "pe": 32.9,
+      "change_pct": -2.02,
+      "ytd_pct": -6.0
     },
     "CRWV": {
       "name": "CoreWeave",
-      "price": 100.04,
+      "price": 97.31,
       "pe": 0.0,
-      "change_pct": -6.77,
-      "ytd_pct": 26.1
+      "change_pct": -6.22,
+      "ytd_pct": 22.7
     }
   },
   "macro": {
-    "treasury_10y": 4.6
+    "treasury_10y": 4.67
   },
   "news": [
     {
@@ -41,22 +41,22 @@
       "date": "Tue, 05 May 2026 07:00:00 GMT"
     },
     {
-      "title": "OpenAI reportedly missed revenue targets. Shares of Oracle and these chip stocks are falling",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQUTh6UWN0LUdiWWpBLS0xSERXMjJLTldpV1BMLXRzaW5pZFNibWJFaTdrblJKd3RDVFl3Tm5DYVFQUXJUcXI3cXctR3VUOTk3eVFVYWxCanJ4X3NBVWFqZ2tIYXZ0VHdMSU81ZHFhVnpDRFJ3MHZNbTBwZVpSVnpBU194WmhTb3BfeXFaRjl0LU9wMHBnZkdmQ2xFQk9QTDRfT2paeFlGcDhMSmQ3eDRlZWQyR2ZyQWlPNTExQXlrT0ZqakNFb19Z0gHMAUFVX3lxTFBIckFiYlY0Tno4bWhiWjVCYlN6aDY5cl9HajVCZ21UdmlyQkRHZEg5YnF3d2ZsNFZ0Qi0zUnFjMlVSMkt5SVRtXzk2ZGhTaDR0TEh4NUt1MXBOYldic3dEdlNiR3ZnQ28xMjZiYUEyeVlkRk9GR0hkVmxObnhZaVhsa1N5QUNYbG1jdmd6TGZtTER5LWpkb2d4czhrcG5XOVR4UzZab1hEb1JXSUtzdjMwOE1KUXJLTWpucGNDci1wd0I5THNrZFJ4akRQLQ?oc=5",
-      "source": "CNBC",
-      "date": "Tue, 28 Apr 2026 07:00:00 GMT"
-    },
-    {
       "title": "OpenAI Misses Key Revenue, User Targets in High-Stakes Sprint Toward IPO",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOeDhJdk5kS0ZjcEV1MDF6U2piMWlUMzFYbGl2Y0hoQVEyajFzWDRLazF4U1p0alhaTWNnU0NKckM5c1dxVEc2WWZ4MDRsY19NR0Z3NGZYX3ZpV0E2XzB4RXpRRU1EcmltaEczcDJ4VzB6bGt6VUxzWENlcTh5NndmcFc5N2FuVzlvUHNfU3JTWHlJSllSNVJiRmhLSEhpNTdpSGhuRUxRNE9zQ2Np?oc=5",
       "source": "WSJ",
       "date": "Tue, 28 Apr 2026 07:00:00 GMT"
     },
     {
-      "title": "Cerebras hits market with near record-setting price as shares open at $350",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQRF9SVVhLLWRRYXNIUHFONnZFSngwV2NjYjhCMWVVejZ2RS1YQV82RFhzN2Mwcy1FTHN0aXlwQnFTVVppY1FHeUdORkxsX0FMQUtwN3p6OG1HckhwLWNyYm5UVHZEendmeW13QmlwRXRlMC1tUUZQTlJsN3R6MkxvdVNla2ZyMFdXR09GRkZ5WlZ5Y3BuQnVMaWNBUGMzZ3drNnFnTG5ETlpSNjlEUmg5ag?oc=5",
-      "source": "Seeking Alpha",
-      "date": "Thu, 14 May 2026 17:03:24 GMT"
+      "title": "OpenAI reportedly missed revenue targets. Shares of Oracle and these chip stocks are falling",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQUTh6UWN0LUdiWWpBLS0xSERXMjJLTldpV1BMLXRzaW5pZFNibWJFaTdrblJKd3RDVFl3Tm5DYVFQUXJUcXI3cXctR3VUOTk3eVFVYWxCanJ4X3NBVWFqZ2tIYXZ0VHdMSU81ZHFhVnpDRFJ3MHZNbTBwZVpSVnpBU194WmhTb3BfeXFaRjl0LU9wMHBnZkdmQ2xFQk9QTDRfT2paeFlGcDhMSmQ3eDRlZWQyR2ZyQWlPNTExQXlrT0ZqakNFb19Z0gHMAUFVX3lxTFBIckFiYlY0Tno4bWhiWjVCYlN6aDY5cl9HajVCZ21UdmlyQkRHZEg5YnF3d2ZsNFZ0Qi0zUnFjMlVSMkt5SVRtXzk2ZGhTaDR0TEh4NUt1MXBOYldic3dEdlNiR3ZnQ28xMjZiYUEyeVlkRk9GR0hkVmxObnhZaVhsa1N5QUNYbG1jdmd6TGZtTER5LWpkb2d4czhrcG5XOVR4UzZab1hEb1JXSUtzdjMwOE1KUXJLTWpucGNDci1wd0I5THNrZFJ4akRQLQ?oc=5",
+      "source": "CNBC",
+      "date": "Tue, 28 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Tech stocks drop on a report that OpenAI missed revenue targets",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNemF0dHhmMUdGeUYxd2MwU2xRekdEbTdhWGJrcFkzMjhMTzdFbW9qV2JDVkpyOXR4dGxwN2hkQTZWRWxwbk9JemhRcDNHaWxiWWY2TzZabFY1OGdRZF9NOHVvSVc2YURMelYxbGRlR2J2TG9oTkVHV29SN0Fyay1ZTzFTdDBWZFdIUEUzdXJ1T2ZfWmt5TmQxOEhOQnJNTXVQdlI5bWRJRnc?oc=5",
+      "source": "Business Insider",
+      "date": "Tue, 28 Apr 2026 07:00:00 GMT"
     },
     {
       "title": "Big tech is sacrificing its cashflows to prop up the AI boom",
@@ -90,7 +90,7 @@
     },
     {
       "title": "As Tech Stocks Churn, Nvidia and Other Semiconductor Plays Look Cheap",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOVlBISDhCdUxldXBrWjR5V1BtSF9IOVpCamZQTjhRNVJYVEVHcGlTdDBZRW9vMWlyak85WlZIeVlkSDJtTGxfX2xIc001NXg5UU5Ya0dJRjZ5eTZRNGFVc05zY043SFFYM2RtSjJMX2dEcTFOeUlDS1JRQ2FCMF9zRVo4UWJRcE01VU1BQlFUZHJvRVc2ZGJ6REcwakJSOWNDZEdOalJ0MGE4QQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTzUwMEN0TlJMRGwwT2lJR01KTTI1T1Y1a2p3TjlTVWJwLUVBaExkWk1weEVDTE5lQW5lOVVzVjhKUEhENTNXV3dUcWdta3J5STgybjZVb1NBckVxZUlBRzZoTkVweWpWenNUdUYyN1J1YWRZUEVpYzRlNjRTbHZUbUxVSEdDNjNKaDdxY2FOQzN3TzlzUHFXYUdjc2Z3eFNnRlhlY0dIbk5kUQ?oc=5",
       "source": "Morningstar Canada",
       "date": "Mon, 16 Feb 2026 08:00:00 GMT"
     },
@@ -101,10 +101,10 @@
       "date": "Fri, 17 Apr 2026 07:00:00 GMT"
     },
     {
-      "title": "SanDisk Looks Overvalued, Stock Set for 32% Drop",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNdW9kcnJ1NU1jT2RCNklKS1M0LTRuNDlTSzIwZmVKRUdiSG11RlB4b3o4X0hxYjROM2htZGlhQ3VRb08zZ3J0dDVxMW5ZaElIRGZaMDU1SmNGUlA1UHZiM1JnM1hkWlAtS3E3YkpNQzN2SjJQekZ6b3BIUFVlQXhleTRrTnRvMGMxOXlObzZIVUsyRzZZ?oc=5",
-      "source": "24/7 Wall St.",
-      "date": "Wed, 29 Apr 2026 07:00:00 GMT"
+      "title": "Should You Buy Nvidia Before Nov. 19?",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE14MFJkZkdpQzVuSG4tSWx4cG1jM2tBVjNuYjdnRVQ2YUZQdHhGQ2hqalNDdjNtUV9TN19mS2FRRjJGeTBqMjdrbDhBel90eEZYdlpHMVBfQ0FuU2hFT2NpTjJyWVE0VGE1SGZvUV9iN0U?oc=5",
+      "source": "Yahoo Finance",
+      "date": "Sun, 02 Nov 2025 07:00:00 GMT"
     },
     {
       "title": "Why OpenAI whiffs should still worry Oracle and CoreWeave investors",
@@ -122,17 +122,17 @@
       "title": "Oracle, CoreWeave back OpenAI after report says ChatGPT developer missed sales, user targets",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPRnJmVVBqVHAxeTEwOHpyUTVrc3haQ1lac3J2R2xXWmg5UDhkZC1CbXF4V1Izd2ZuRDM5UVlhYzVKVFRQeExoSDdOSHd6dExyQVFqUmxKcmRTdTJlZ09ud19ZemZLeGM1RjZzZmtkTHQ2VGNXWGl2ZVpUZm1FTndBaw?oc=5",
       "source": "AOL.com",
-      "date": "Tue, 28 Apr 2026 07:00:00 GMT"
+      "date": "Tue, 28 Apr 2026 13:19:27 GMT"
     }
   ],
   "alerts": [
     {
       "level": "yellow",
-      "msg": "ORCL down -3.9% \u2014 watch for OpenAI news"
+      "msg": "ORCL down -2.0% \u2014 watch for OpenAI news"
     },
     {
       "level": "yellow",
-      "msg": "CRWV down -6.8% \u2014 CoreWeave under pressure"
+      "msg": "CRWV down -6.2% \u2014 CoreWeave under pressure"
     }
   ],
   "bubble_history": [
@@ -339,7 +339,7 @@
     {
       "m": 40,
       "date": "2026-05",
-      "v": 11.4
+      "v": 11.3
     }
   ]
 }
