@@ -157,6 +157,7 @@ NEWS_QUERIES = [
     'AI bubble capex Microsoft Google Meta Amazon',
     'Nvidia semiconductor overvalued 2026',
     'OpenAI CoreWeave Oracle financial',
+    'Michael Burry Cassandra Unchained AI bubble bezzle 2026',
 ]
 
 def fetch_news():

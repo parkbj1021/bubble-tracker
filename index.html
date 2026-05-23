@@ -189,6 +189,16 @@
     .news-ttl a:active{opacity:.7}
     .news-meta{font-size:10px;color:var(--sub);margin-top:3px}
 
+    /* BURRY WATCH */
+    .burry-wrap{padding:14px 18px;border-bottom:1px solid var(--border)}
+    .burry-item{padding:9px 0;border-bottom:1px solid var(--border)}
+    .burry-item:last-child{border-bottom:none}
+    .burry-header{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:3px}
+    .burry-title{font-size:12px;font-weight:600;line-height:1.4;flex:1}
+    .burry-tag{font-size:9px;font-weight:700;padding:2px 6px;border-radius:5px;flex-shrink:0;text-transform:uppercase}
+    .burry-quote{font-size:11px;color:var(--sub);line-height:1.5;font-style:italic;margin-top:3px}
+    .burry-meta{font-size:10px;color:var(--sub2);margin-top:3px}
+
     /* NOTES */
     .notes-wrap{padding:14px 18px}
     .notes-area{width:100%;background:var(--card);border:1px solid var(--border);border-radius:12px;color:var(--text);font-size:13px;padding:12px;resize:none;font-family:inherit;line-height:1.5;min-height:80px}
@@ -346,6 +356,12 @@
   <div class="news-list" id="newsList"></div>
 </div>
 
+<!-- BURRY WATCH -->
+<div class="burry-wrap">
+  <div class="section-label">Burry Watch — Cassandra Unchained</div>
+  <div id="burryList"></div>
+</div>
+
 <!-- NOTES -->
 <div class="notes-wrap">
   <div class="section-label">Today's Notes</div>
@@ -432,6 +448,7 @@ const SEED_HISTORY = [
   {d:'2026-05-07', v:32, note:'Oracle & CoreWeave drop on OpenAI news'},
   {d:'2026-05-13', v:35, note:'Morningstar: OpenAI unlikely to IPO this year'},
   {d:'2026-05-15', v:35, note:''},
+  {d:'2026-05-22', v:38, note:'Burry: Heretic\'s Guide Part III — Tracepalooza & The Bezzle'},
 ];
 
 const DEFAULT_INDICATORS = [
@@ -440,10 +457,13 @@ const DEFAULT_INDICATORS = [
   {id:'sp_conc',  icon:'🏔️',name:'S&P Top-10 Weight',  desc:'Top 10 stocks share of S&P 500',    value:40,  unit:'%',min:15, warnAt:28, dangerAt:34, maxDisplay:46, r1l:'Avg',   r1v:20, r2l:'2000 peak',r2v:27},
   {id:'ai_gdp',   icon:'🏗️',name:'AI Capex / GDP',     desc:'AI infrastructure as % of US GDP',  value:3.5, unit:'%',min:0,  warnAt:1.0,dangerAt:1.5, maxDisplay:6,  r1l:'Safe',  r1v:0.5,r2l:'Dot-com',r2v:1.5},
   {id:'soxx_pe',  icon:'🔧',name:'SOXX P/E Ratio',     desc:'iShares Semiconductor ETF P/E',      value:59,  unit:'x',min:15, warnAt:35, dangerAt:50, maxDisplay:80, r1l:'Normal',r1v:22, r2l:'Dot-com',r2v:80},
-  {id:'soxx_ytd', icon:'📈',name:'SOXX YTD Gain',      desc:'Philadelphia Semiconductor Index YTD',value:75, unit:'%',min:0,  warnAt:30, dangerAt:50, maxDisplay:100,r1l:'Normal',r1v:15, r2l:'Burry flag',r2v:50},
+  {id:'soxx_ytd', icon:'📈',name:'SOXX YTD Gain',      desc:'Philadelphia Semiconductor Index YTD',value:65, unit:'%',min:0,  warnAt:30, dangerAt:50, maxDisplay:100,r1l:'Normal',r1v:15, r2l:'Burry\'s 1999',r2v:65},
   {id:'nvda_pe',  icon:'🖥️',name:'Nvidia P/E',         desc:'NVDA trailing price / earnings',     value:45,  unit:'x',min:15, warnAt:40, dangerAt:60, maxDisplay:120,r1l:'Normal',r1v:25, r2l:'2022 peak',r2v:70},
-  {id:'m7_capex',    icon:'💰',name:'M7 Capex / Revenue', desc:'Meta 54% · MSFT 47% · GOOG 46% avg',      value:48,  unit:'%',min:10, warnAt:30, dangerAt:40, maxDisplay:65, r1l:'Normal',r1v:15, r2l:'Danger',  r2v:40},
+  {id:'m7_capex',    icon:'💰',name:'M7 Capex / Revenue', desc:'Burry: avg 24% earnings overstated; Oracle 48-62%', value:48,  unit:'%',min:10, warnAt:30, dangerAt:40, maxDisplay:65, r1l:'Normal',r1v:15, r2l:'Danger',  r2v:40},
   {id:'treasury10y', icon:'📋',name:'10-Yr Treasury',    desc:'Rising yield compresses equity valuations', value:4.45,unit:'%',min:0,  warnAt:3.5, dangerAt:4.5, maxDisplay:7,  r1l:'Low',   r1v:2.0, r2l:'Restrict.',r2v:5.0},
+  {id:'vc_ai',       icon:'💹',name:'AI Share of VC',    desc:'% of VC funding to AI (Torsten Slok/Apollo)', value:87, unit:'%',min:0,  warnAt:40, dangerAt:70, maxDisplay:100,r1l:'Normal',r1v:15, r2l:'Dot-com \'99',r2v:40},
+  {id:'hy_ai',       icon:'🏦',name:'AI HY Bond Share',  desc:'% of high-yield bond issuance tied to AI',   value:38, unit:'%',min:0,  warnAt:20, dangerAt:35, maxDisplay:60, r1l:'Normal',r1v:5,  r2l:'Dot-com peak',r2v:45},
+  {id:'earn_fraud',  icon:'📑',name:'M7 Earnings Overstate',desc:'Burry est. avg overstatement from AI depreciation', value:24, unit:'%',min:0, warnAt:10, dangerAt:20, maxDisplay:65, r1l:'Zero',  r1v:0,  r2l:'Oracle',   r2v:55},
 ];
 
 const DEFAULT_SIGNALS = [
@@ -456,7 +476,9 @@ const DEFAULT_SIGNALS = [
   {id:'oracle_prx', icon:'⚡',name:'Oracle/CoreWeave', value:'Dropped on OpenAI miss',         status:'yellow'},
   {id:'nvidia_fwd', icon:'🖥️',name:'Nvidia Forward',  value:'Q1 FY27 report May 28',          status:'yellow'},
   {id:'deepseek',   icon:'🤖',name:'DeepSeek Effect',  value:'V4 broke $500B capex math',      status:'yellow'},
-  {id:'stargate',   icon:'🌐',name:'Stargate Status',  value:'Stalling — disputes ongoing',    status:'yellow'},
+  {id:'stargate',    icon:'🌐',name:'Stargate Status',  value:'Stalling — disputes ongoing',   status:'yellow'},
+  {id:'burry_bezzle',icon:'🔍',name:'Burry Bezzle',    value:'$226B overstatement 2026-28',   status:'red'},
+  {id:'circular_rev',icon:'🔄',name:'Circular Revenue',value:'$49B AI in → $2B real demand',  status:'red'},
 ];
 
 const DEFAULT_SCENARIOS = [
@@ -473,6 +495,18 @@ const EVENTS = [
   {name:'OpenAI IPO Attempt',       date:'2026-11-01',desc:'Down-round or withdrawal = narrative breaks permanently and publicly.',color:'#ff3b3b'},
 ];
 
+const BURRY_POSTS = [
+  {date:'2026-05-22',type:'Substack',title:"Heretic's Guide Part III: Tracepalooza & The Bezzle",quote:'Maps full circular AI revenue loop (Tracepalooza). Names the accumulated accounting manipulation as Galbraith\'s bezzle — $226B overstatement awaiting sudden unwind.',tag:'NEW',tagColor:'#ff3b3b'},
+  {date:'2026-05-22',type:'Substack Chat',title:"SpaceX/OpenAI/Anthropic IPOs won't mark the bubble top",quote:'"The way IPOs are done, with just a small little bit put out to get a big pop, the market impact is minimal. The narratives will far outweigh."',tag:'NEW',tagColor:'#ff3b3b'},
+  {date:'2026-05-19',type:'Substack / CNBC',title:'"Mass Whale Fall" — Long MELI, ADBE, PYPL, LULU, ZTS',quote:'"These stocks are part of the mass whale fall happening away from the main spectacle." Bought AI-abandoned names at lows while staying short SOXX.',tag:'KEY',tagColor:'#f5c542'},
+  {date:'2026-05-17',type:'Substack',title:"D'ai of the Triffids: Office Software Triage (Part 1 of 6)",quote:'Castle/Stone/Chapel matrix for 46 SaaS & payments stocks. AI selloff driven by private credit funds hedging distressed positions — not by fundamentals.',tag:'',tagColor:''},
+  {date:'2026-05-11',type:'Substack',title:'"For any stocks going parabolic reduce positions almost entirely"',quote:'"The idea is to raise cash, and prepare to put it to work when it makes more sense to do so." Warns shorting rally directly is too expensive for most investors.',tag:'ACTION',tagColor:'#f5a030'},
+  {date:'2026-05-08',type:'Substack',title:'Feels like "last months of the 1999-2000 bubble"',quote:'"Absolutely non-stop AI. No one discussing anything else throughout the day." SOX +65% YTD. Top-10 AI stocks +784% in 12 months vs dot-com\'s +622%.',tag:'KEY',tagColor:'#f5c542'},
+  {date:'2026-05-04',type:'Substack',title:'Added SOXX Jan 2027 $330 puts — new leveraged short',quote:'SOXX trading ~60% above 200-day MA. Also holds NVDA puts (1M shares) and PLTR puts (5M shares). 87% of VC now flows to AI vs <40% in dot-com era.',tag:'TRADE',tagColor:'#7c6aff'},
+  {date:'2025-12-03',type:'CNBC / Substack',title:'AI bubble unwinds within ~2 years — depreciation is the mechanism',quote:'Companies depreciating AI chips over 5-6 years vs real life of 2-3 years. Overstating profits by ~$176B across hyperscalers 2026-28. "Blessed fraud."',tag:'THESIS',tagColor:'#7c6aff'},
+  {date:'2025-11-24',type:'Substack launch',title:'Launches "Cassandra Unchained" — deregisters Scion',quote:'"OpenAI is the linchpin here. True end demand is ridiculously small. Almost all customers are funded by their dealers. The future will regard this as a picture of fraud, not a flywheel."',tag:'THESIS',tagColor:'#7c6aff'},
+];
+
 // ─── STATE ────────────────────────────────────────────────────────────────────
 
 function load(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch{return d}}
@@ -480,7 +514,7 @@ function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{}}
 
 let S = {
   phase:      load('phase', 4),
-  prob:       load('prob',  35),
+  prob:       load('prob',  38),
   history:    load('history', SEED_HISTORY),
   indicators: load('indicators', DEFAULT_INDICATORS),
   signals:    load('signals', DEFAULT_SIGNALS),
@@ -790,6 +824,26 @@ function renderEvents(){
   });
 }
 
+// ─── BURRY WATCH ──────────────────────────────────────────────────────────────
+
+function renderBurryWatch(){
+  const list=document.getElementById('burryList');
+  list.innerHTML='';
+  BURRY_POSTS.forEach(p=>{
+    const div=document.createElement('div');
+    div.className='burry-item';
+    const tagHtml=p.tag?`<span class="burry-tag" style="background:${p.tagColor}22;color:${p.tagColor};border:1px solid ${p.tagColor}55">${p.tag}</span>`:'';
+    div.innerHTML=`
+      <div class="burry-header">
+        <div class="burry-title">${p.title}</div>
+        ${tagHtml}
+      </div>
+      <div class="burry-quote">${p.quote}</div>
+      <div class="burry-meta">${fmtDate(p.date)} · ${p.type}</div>`;
+    list.appendChild(div);
+  });
+}
+
 // ─── BUBBLE COMPARISON ────────────────────────────────────────────────────────
 
 const BUBBLE_REF = {
@@ -1061,6 +1115,7 @@ renderIndicators();
 renderSignals();
 renderScenarios();
 renderEvents();
+renderBurryWatch();
 
 fetchLiveData();
 </script>
