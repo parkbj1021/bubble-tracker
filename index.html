@@ -449,6 +449,7 @@ const SEED_HISTORY = [
   {d:'2026-05-13', v:35, note:'Morningstar: OpenAI unlikely to IPO this year'},
   {d:'2026-05-15', v:35, note:''},
   {d:'2026-05-22', v:38, note:'Burry: Heretic\'s Guide Part III — Tracepalooza & The Bezzle'},
+  {d:'2026-05-26', v:40, note:'Burry doubles NVDA/SOXX shorts post-earnings; adds QQQ Jan 2027 $550 puts'},
 ];
 
 const DEFAULT_INDICATORS = [
@@ -488,7 +489,7 @@ const DEFAULT_SCENARIOS = [
 ];
 
 const EVENTS = [
-  {name:'Nvidia Q1 FY2027 Earnings',date:'2026-05-28',desc:'Data center demand & guidance language. Critical forward signal.',color:'#7c6aff'},
+  {name:'Nvidia Q1 FY2027 Earnings',date:'2026-05-20',desc:'Beat: $81.6B rev (+85% YoY). Guidance strong. Burry doubled shorts after report.',color:'#7c6aff'},
   {name:'Q2 2026 M7 Earnings',      date:'2026-07-28',desc:'First full quarter post-OpenAI miss. Watch for capex "discipline" language.',color:'#f5c542'},
   {name:'OpenAI S-1 Filing',        date:'2026-09-01',desc:"Math becomes public: $1.4T commitments vs revenue. The Barron's moment.",color:'#ff3b3b'},
   {name:'Q3 2026 M7 Earnings',      date:'2026-10-27',desc:'Second data point on AI ROI narrative. Crucial scenario split.',color:'#f5c542'},
@@ -496,8 +497,11 @@ const EVENTS = [
 ];
 
 const BURRY_POSTS = [
-  {date:'2026-05-22',type:'Substack',title:"Heretic's Guide Part III: Tracepalooza & The Bezzle",quote:'Maps full circular AI revenue loop (Tracepalooza). Names the accumulated accounting manipulation as Galbraith\'s bezzle — $226B overstatement awaiting sudden unwind.',tag:'NEW',tagColor:'#ff3b3b'},
-  {date:'2026-05-22',type:'Substack Chat',title:"SpaceX/OpenAI/Anthropic IPOs won't mark the bubble top",quote:'"The way IPOs are done, with just a small little bit put out to get a big pop, the market impact is minimal. The narratives will far outweigh."',tag:'NEW',tagColor:'#ff3b3b'},
+  {date:'2026-05-26',type:'Substack Note',title:'GME / Ryan Cohen — "Never confuse debt for creativity"',quote:'"Scalpel vs meat cleaver." Sold GME entirely after Cohen\'s $55.5B debt-fueled eBay bid. Warns debt-as-strategy is a terminal tell in bubble tops.',tag:'NEW',tagColor:'#ff3b3b'},
+  {date:'2026-05-25',type:'Substack',title:'"Short Thoughts May 25" — The Golden Ratio Warning',quote:'Plants space leaves at 137.5° to maximize sunlight. Markets following repeating rational narratives collapse when the pattern finally closes. "The AI trade is the pattern."',tag:'NEW',tagColor:'#ff3b3b'},
+  {date:'2026-05-24',type:'13F / Substack',title:'Post-earnings: Doubles NVDA shorts, adds QQQ Jan 2027 $550 puts',quote:'After NVDA Q1 FY27 ($81.6B rev, +85% YoY), Burry expanded: NVDA $115/$125 puts (doubled), SOXX Jan $330 puts (added), QQQ Jan 2027 $550 puts (new). "A blowout that changes nothing."',tag:'TRADE',tagColor:'#7c6aff'},
+  {date:'2026-05-22',type:'Substack',title:"Heretic's Guide Part III: Tracepalooza & The Bezzle",quote:'Maps full circular AI revenue loop (Tracepalooza). Names the accumulated accounting manipulation as Galbraith\'s bezzle — $226B overstatement awaiting sudden unwind.',tag:'',tagColor:''},
+  {date:'2026-05-22',type:'Substack Chat',title:"SpaceX/OpenAI/Anthropic IPOs won't mark the bubble top",quote:'"The way IPOs are done, with just a small little bit put out to get a big pop, the market impact is minimal. The narratives will far outweigh."',tag:'',tagColor:''},
   {date:'2026-05-19',type:'Substack / CNBC',title:'"Mass Whale Fall" — Long MELI, ADBE, PYPL, LULU, ZTS',quote:'"These stocks are part of the mass whale fall happening away from the main spectacle." Bought AI-abandoned names at lows while staying short SOXX.',tag:'KEY',tagColor:'#f5c542'},
   {date:'2026-05-17',type:'Substack',title:"D'ai of the Triffids: Office Software Triage (Part 1 of 6)",quote:'Castle/Stone/Chapel matrix for 46 SaaS & payments stocks. AI selloff driven by private credit funds hedging distressed positions — not by fundamentals.',tag:'',tagColor:''},
   {date:'2026-05-11',type:'Substack',title:'"For any stocks going parabolic reduce positions almost entirely"',quote:'"The idea is to raise cash, and prepare to put it to work when it makes more sense to do so." Warns shorting rally directly is too expensive for most investors.',tag:'ACTION',tagColor:'#f5a030'},
@@ -514,7 +518,7 @@ function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{}}
 
 let S = {
   phase:      load('phase', 4),
-  prob:       load('prob',  38),
+  prob:       load('prob',  40),
   history:    load('history', SEED_HISTORY),
   indicators: load('indicators', DEFAULT_INDICATORS),
   signals:    load('signals', DEFAULT_SIGNALS),
