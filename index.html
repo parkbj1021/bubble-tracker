@@ -450,6 +450,8 @@ const SEED_HISTORY = [
   {d:'2026-05-15', v:35, note:''},
   {d:'2026-05-22', v:38, note:'Burry: Heretic\'s Guide Part III — Tracepalooza & The Bezzle'},
   {d:'2026-05-26', v:40, note:'Burry doubles NVDA/SOXX shorts post-earnings; adds QQQ Jan 2027 $550 puts'},
+  {d:'2026-05-28', v:42, note:'Burry: "blowoff top" — rolls SOXX & QQQ puts, adds capital to shorts'},
+  {d:'2026-05-29', v:43, note:'Burry teases Part IV: annuity money → Apollo → xAI GPU chain. PLTR +9% (Dell earnings)'},
 ];
 
 const DEFAULT_INDICATORS = [
@@ -475,11 +477,13 @@ const DEFAULT_SIGNALS = [
   {id:'capex_lang', icon:'🏗️',name:'M7 Capex Language',value:'Raising but mkt not rewarding', status:'yellow'},
   {id:'ipo_status', icon:'🏦',name:'OpenAI IPO',       value:'No S-1 filed, delayed to 2027',  status:'yellow'},
   {id:'oracle_prx', icon:'⚡',name:'Oracle/CoreWeave', value:'Dropped on OpenAI miss',         status:'yellow'},
-  {id:'nvidia_fwd', icon:'🖥️',name:'Nvidia Forward',  value:'Q1 FY27 report May 28',          status:'yellow'},
+  {id:'nvidia_fwd', icon:'🖥️',name:'Nvidia Forward',  value:'Beat Q1 FY27; Burry: "clearly Cisco"',status:'red'},
   {id:'deepseek',   icon:'🤖',name:'DeepSeek Effect',  value:'V4 broke $500B capex math',      status:'yellow'},
   {id:'stargate',    icon:'🌐',name:'Stargate Status',  value:'Stalling — disputes ongoing',   status:'yellow'},
   {id:'burry_bezzle',icon:'🔍',name:'Burry Bezzle',    value:'$226B overstatement 2026-28',   status:'red'},
   {id:'circular_rev',icon:'🔄',name:'Circular Revenue',value:'$49B AI in → $2B real demand',  status:'red'},
+  {id:'annuity_pipe',icon:'👵',name:'Annuity Pipeline', value:'Retiree $ → Apollo → xAI GPUs', status:'red'},
+  {id:'blowoff_top', icon:'🚀',name:'Blowoff Top',      value:'Burry: May 28 — explicitly called',status:'red'},
 ];
 
 const DEFAULT_SCENARIOS = [
@@ -497,8 +501,10 @@ const EVENTS = [
 ];
 
 const BURRY_POSTS = [
-  {date:'2026-05-26',type:'Substack Note',title:'GME / Ryan Cohen — "Never confuse debt for creativity"',quote:'"Scalpel vs meat cleaver." Sold GME entirely after Cohen\'s $55.5B debt-fueled eBay bid. Warns debt-as-strategy is a terminal tell in bubble tops.',tag:'NEW',tagColor:'#ff3b3b'},
-  {date:'2026-05-25',type:'Substack',title:'"Short Thoughts May 25" — The Golden Ratio Warning',quote:'Plants space leaves at 137.5° to maximize sunlight. Markets following repeating rational narratives collapse when the pattern finally closes. "The AI trade is the pattern."',tag:'NEW',tagColor:'#ff3b3b'},
+  {date:'2026-05-29',type:'Substack',title:'"Short Thoughts May 29" — The Annuity Pipeline (Part IV teaser)',quote:'Drops single diagram: "Retiree/Apollo/Nvidia/Bermuda/AMAPS/xAI Pipeline." Grandma\'s annuity → Athene US ($74.2B reserves) → Bermuda captive → AMAPS → xAI GPU cluster. Full breakdown in Part IV (June).',tag:'NEW',tagColor:'#ff3b3b'},
+  {date:'2026-05-28',type:'Substack',title:'"Software & Payments Part II" — Rolls puts, calls it a blowoff top',quote:'Rolled SOXX Jan $330 puts and QQQ Jan $550 puts at a debit — more capital deployed, same strikes. First time explicitly using "blowoff top." Expanded SW50 with SNPS, CDNS, FROG, IOT.',tag:'NEW',tagColor:'#ff3b3b'},
+  {date:'2026-05-26',type:'Substack Note',title:'GME / Ryan Cohen — "Never confuse debt for creativity"',quote:'"Scalpel vs meat cleaver." Sold GME entirely after Cohen\'s $55.5B debt-fueled eBay bid. Warns debt-as-strategy is a terminal tell in bubble tops.',tag:'',tagColor:''},
+  {date:'2026-05-25',type:'Substack',title:'"Short Thoughts May 25" — The Golden Ratio Warning',quote:'Plants space leaves at 137.5° to maximize sunlight. Markets following repeating rational narratives collapse when the pattern finally closes. "The AI trade is the pattern."',tag:'',tagColor:''},
   {date:'2026-05-24',type:'13F / Substack',title:'Post-earnings: Doubles NVDA shorts, adds QQQ Jan 2027 $550 puts',quote:'After NVDA Q1 FY27 ($81.6B rev, +85% YoY), Burry expanded: NVDA $115/$125 puts (doubled), SOXX Jan $330 puts (added), QQQ Jan 2027 $550 puts (new). "A blowout that changes nothing."',tag:'TRADE',tagColor:'#7c6aff'},
   {date:'2026-05-22',type:'Substack',title:"Heretic's Guide Part III: Tracepalooza & The Bezzle",quote:'Maps full circular AI revenue loop (Tracepalooza). Names the accumulated accounting manipulation as Galbraith\'s bezzle — $226B overstatement awaiting sudden unwind.',tag:'',tagColor:''},
   {date:'2026-05-22',type:'Substack Chat',title:"SpaceX/OpenAI/Anthropic IPOs won't mark the bubble top",quote:'"The way IPOs are done, with just a small little bit put out to get a big pop, the market impact is minimal. The narratives will far outweigh."',tag:'',tagColor:''},
@@ -518,7 +524,7 @@ function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{}}
 
 let S = {
   phase:      load('phase', 4),
-  prob:       load('prob',  40),
+  prob:       load('prob',  43),
   history:    load('history', SEED_HISTORY),
   indicators: load('indicators', DEFAULT_INDICATORS),
   signals:    load('signals', DEFAULT_SIGNALS),
