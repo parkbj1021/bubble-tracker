@@ -1,37 +1,37 @@
 {
-  "updated": "2026-06-22T17:24:50.579842+00:00",
+  "updated": "2026-06-23T15:43:42.123393+00:00",
   "market": {
     "NVDA": {
       "name": "Nvidia",
-      "price": 209.28,
-      "pe": 32.0,
-      "change_pct": -0.67,
-      "ytd_pct": 11.0
+      "price": 201.36,
+      "pe": 30.8,
+      "change_pct": -3.49,
+      "ytd_pct": 6.8
     },
     "SOXX": {
       "name": "Semiconductor ETF",
-      "price": 649.99,
-      "pe": 46.5,
-      "change_pct": 1.65,
-      "ytd_pct": 107.4
+      "price": 605.06,
+      "pe": 43.3,
+      "change_pct": -7.63,
+      "ytd_pct": 93.1
     },
     "ORCL": {
       "name": "Oracle",
-      "price": 174.95,
-      "pe": 30.1,
-      "change_pct": -5.07,
-      "ytd_pct": -10.1
+      "price": 169.27,
+      "pe": 29.0,
+      "change_pct": -3.31,
+      "ytd_pct": -13.0
     },
     "CRWV": {
       "name": "CoreWeave",
-      "price": 109.63,
+      "price": 105.63,
       "pe": 0.0,
-      "change_pct": -7.05,
-      "ytd_pct": 38.2
+      "change_pct": -5.09,
+      "ytd_pct": 33.2
     }
   },
   "macro": {
-    "treasury_10y": 4.51
+    "treasury_10y": 4.48
   },
   "news": [
     {
@@ -47,28 +47,28 @@
       "date": "Mon, 08 Jun 2026 07:00:00 GMT"
     },
     {
-      "title": "As the tech mega-IPO race heats up, has OpenAI missed its moment?",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNS1d4UEtDMW8xUjBSeFNpWktuQlV0V01IcTFIUVh5U0VxT1I4WWxXRHU3NDFXRmM0MERiN1JNclpYUXVGM3pzTlpDd2dhR2JtR2pCMWs2bURSczFvVWdVdGdXUnZnZHhnY2hRNVBkRkMyUnlhMi1XZ09DLUUwTzFqeHVaSnl0RmF6ak1VdzNZX013Q09mdEZNUExWNFRIX1JqQk5tYV8wdTdWOXp3WnNhUTRLWQ?oc=5",
-      "source": "The Guardian",
-      "date": "Wed, 03 Jun 2026 07:00:00 GMT"
-    },
-    {
       "title": "The economist who said \u2018no bubble\u2019 just sounded the alarm: \u2018The season of chaos is at hand\u2019",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPQWJxZFB3NGlxQmFHbjRzelJnQUlyemZuWFI1MERkMWJDVXdkUG1PRVloVEt5djctNVdqdTk3bHlUZmdRUDJjcUpSWnpNUmoxLV92QlVTdGVkUGgxWDJJODFSTUpmMXl1U3VwVXhaVDh2Vk1EQThGTEFfQm1pWGpkRA?oc=5",
       "source": "Fortune",
       "date": "Fri, 12 Jun 2026 07:00:00 GMT"
     },
     {
-      "title": "Why the AI capex cycle may just be beginning",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNZ0YwZjIxUU9hTnF1cURBUkROY1gwc2Rta05UTy14allOaXFkV25YN3duZXUybVRVV1hkYlp4LTN0SDA4bWV0c2M5dDhEb3VrdW9IRWdkck1xdDZKckhGQjg1QXdoVGhrcGlSenNMR2tHUGdYblRtZEZSVGowRnVSSmZjOXowZ3B3em9MdXFIMmJJWFlDNE0zeDU4VXM2SHladUZjNjN4eWpkQkhuN2JMTFhELXV2c0E?oc=5",
-      "source": "GlobeNewswire",
-      "date": "Thu, 11 Jun 2026 07:00:00 GMT"
+      "title": "As the tech mega-IPO race heats up, has OpenAI missed its moment?",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNS1d4UEtDMW8xUjBSeFNpWktuQlV0V01IcTFIUVh5U0VxT1I4WWxXRHU3NDFXRmM0MERiN1JNclpYUXVGM3pzTlpDd2dhR2JtR2pCMWs2bURSczFvVWdVdGdXUnZnZHhnY2hRNVBkRkMyUnlhMi1XZ09DLUUwTzFqeHVaSnl0RmF6ak1VdzNZX013Q09mdEZNUExWNFRIX1JqQk5tYV8wdTdWOXp3WnNhUTRLWQ?oc=5",
+      "source": "The Guardian",
+      "date": "Wed, 03 Jun 2026 07:00:00 GMT"
     },
     {
       "title": "Tech's massive AI spend is under scrutiny ahead of earnings. Here's what to watch",
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBfTXBFdFVkdnJ6WUU1N2owZjFMQTdqbG5oaVNDVTlodi0yNHE4cG8tSmI4S0VubTRVd2dqS3UwcmM5NjRnSEQzWV9Ec0xBNEZQRTZKSFVnSVhLQVppdHZ6eUJ2V1BJa3o4b1Mzd3hESFMzV0dfcGhr0gF8QVVfeXFMUGdmZFZleS14cUdSRnN0d2IwVFZQdWNaMFlrYjBPOWhqS1NfX2ZXVkZ2bGNPbzRWNVJBVTlBSlQ5OXZnc0d0akxkdEZ2Zkl0bFJmd21vZ3A2TnFjU2VteVYwZTliZ3E4ajBDWWkwb01PUWM3cjF3V25NeGYyZw?oc=5",
       "source": "CNBC",
       "date": "Tue, 27 Jan 2026 08:00:00 GMT"
+    },
+    {
+      "title": "Why the AI capex cycle may just be beginning",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNZ0YwZjIxUU9hTnF1cURBUkROY1gwc2Rta05UTy14allOaXFkV25YN3duZXUybVRVV1hkYlp4LTN0SDA4bWV0c2M5dDhEb3VrdW9IRWdkck1xdDZKckhGQjg1QXdoVGhrcGlSenNMR2tHUGdYblRtZEZSVGowRnVSSmZjOXowZ3B3em9MdXFIMmJJWFlDNE0zeDU4VXM2SHladUZjNjN4eWpkQkhuN2JMTFhELXV2c0E?oc=5",
+      "source": "GlobeNewswire",
+      "date": "Thu, 11 Jun 2026 07:00:00 GMT"
     },
     {
       "title": "Beyond the Bubble: Why AI Infrastructure Will Compound Long after the Hype",
@@ -81,6 +81,12 @@
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9Rb2o0YmFmYXIyTFJVRHc0eVNWTDRycmlqMEhHZmQ1SEZNWThiVmVoUEliVjlJQnA0c0g0dHZpTGFRM2tBQnRGNXJwdWY0THNlaXVqcXJYOVRienFJTHFjWTNycENhNy1jZS1nb0N1QTZrdDY3VWtDWTZhMA?oc=5",
       "source": "AI: Reset to Zero",
       "date": "Sun, 08 Feb 2026 08:00:00 GMT"
+    },
+    {
+      "title": "Nvidia (NVDA) Stock Weighs AI Growth Story Against Mixed Valuation Signals",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOWnJSREdFMlNaUnFPbnIwTDVMc3pwRkQyRjVZWHpJNTh1cjF3MldaYk1YcDVSM3paSzl3M1Y5cHB0V2dZTXRzd3JSTXY5T2JUVGZla2FrcDhhLUNGdzZabW1FYUUyVC1XX25uZV90dEg0aS1ZRnVlbHMwZHZoS1RvTDR1SXpzUXZOUGV2YU1nMEhZcVZSWkdoNEVGdHU4UGtTWGhwUWVBa0RkTVgyMnVmVDFiSTFGM21VQk5VZkRFZFFzVHctS0Y4WFVrONIB0AFBVV95cUxNVkx5Zk5fR1Fkek9BaVkwX1VaMHB0UjRTelRTVzg0Q2F0cUUyVFFNUU1mY1hWUzV3bDhaMDN5Z3U1aFFJMkwtV19xMVhmc1hKWXM1Qm9nVEotNm1CTVFNWGlrbGxubVd5MENMV21ybFdtV3pBeE5FajJWOVEwZmFpY1d1YW4tSzVSOUtxNUFTbmhtbFFoUVRDYWVVRWxkWmdaMFA3UXczOFNpbjFmazZNRlNiTTV5aUhGQVljWTBDNUJERHB0YXcwUEF6VWNuTk1a?oc=5",
+      "source": "simplywall.st",
+      "date": "Tue, 23 Jun 2026 13:38:14 GMT"
     },
     {
       "title": "Sorry, Dr. Burry. I\u2019d Rather Own Nvidia at a Premium Than Adobe at a Discount",
@@ -99,12 +105,6 @@
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5MSWticmVUcmhzVVpBMWg0bFpvRGpXR1FIdzhKMmVOdVVETlV0MzVfemFuMzBwX3Q2Ykh4TFRjakstUDZVX2N6NEpsSWxZZU54bTZnQmNMal9Fdkw3ei04N2htZldJYkhl?oc=5",
       "source": "Morningstar",
       "date": "Tue, 09 Jun 2026 07:00:00 GMT"
-    },
-    {
-      "title": "Is Nvidia Stock Overvalued in 2026? Or Is NVDA Still Worth Buying?",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOaWs2ekxVQkdNSHRWMThvdTRMWS1nLWVNTFFTc1pZX0pfUWV1bjczUWg1cF9wZzlDOW1MSGVJVDZhanFCekRZOUgtQ3lGZHZxbnlWVlE2S1BVVHpyWW9CdnQ0ZU1Xbkk2NjJNVHVzVHNXbVhVYmNDVU9zZEhQdEFSdmhic3FOUDZ6dk1XX2x2WlBKT0JzeXlfUENDdmlWM2JjdGJzNC1FY2lhZG9yaHROYjZwSHFuYVdUbjc2aEo1WnU?oc=5",
-      "source": "WEEX",
-      "date": "Tue, 16 Jun 2026 08:05:10 GMT"
     },
     {
       "title": "Why OpenAI whiffs should still worry Oracle and CoreWeave investors",
@@ -127,16 +127,16 @@
   ],
   "alerts": [
     {
-      "level": "red",
-      "msg": "ORCL dropped -5.1% today \u2014 OpenAI/Oracle contract stress signal"
+      "level": "yellow",
+      "msg": "ORCL down -3.3% \u2014 watch for OpenAI news"
+    },
+    {
+      "level": "yellow",
+      "msg": "CRWV down -5.1% \u2014 CoreWeave under pressure"
     },
     {
       "level": "red",
-      "msg": "CRWV dropped -7.0% \u2014 AI infrastructure financing stress"
-    },
-    {
-      "level": "red",
-      "msg": "SOXX up 107% YTD \u2014 Burry's 1999 warning level exceeded"
+      "msg": "SOXX up 93% YTD \u2014 Burry's 1999 warning level exceeded"
     }
   ],
   "bubble_history": [
@@ -348,7 +348,7 @@
     {
       "m": 41,
       "date": "2026-06",
-      "v": 10.74
+      "v": 10.33
     }
   ]
 }
