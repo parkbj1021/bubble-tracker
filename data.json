@@ -1,33 +1,33 @@
 {
-  "updated": "2026-07-09T15:51:09.508138+00:00",
+  "updated": "2026-07-10T15:25:23.458234+00:00",
   "market": {
     "NVDA": {
       "name": "Nvidia",
-      "price": 201.94,
-      "pe": 30.9,
-      "change_pct": -1.07,
-      "ytd_pct": 6.9
+      "price": 208.33,
+      "pe": 31.9,
+      "change_pct": 2.74,
+      "ytd_pct": 10.3
     },
     "SOXX": {
       "name": "Semiconductor ETF",
-      "price": 591.6,
-      "pe": 41.8,
-      "change_pct": 5.26,
-      "ytd_pct": 88.8
+      "price": 578.52,
+      "pe": 40.9,
+      "change_pct": -0.55,
+      "ytd_pct": 84.6
     },
     "ORCL": {
       "name": "Oracle",
-      "price": 146.59,
-      "pe": 25.1,
-      "change_pct": 4.34,
-      "ytd_pct": -24.6
+      "price": 141.06,
+      "pe": 24.2,
+      "change_pct": -1.85,
+      "ytd_pct": -27.5
     },
     "CRWV": {
       "name": "CoreWeave",
-      "price": 92.83,
+      "price": 89.96,
       "pe": 0.0,
-      "change_pct": 3.14,
-      "ytd_pct": 17.0
+      "change_pct": 0.29,
+      "ytd_pct": 13.4
     }
   },
   "macro": {
@@ -35,22 +35,22 @@
   },
   "news": [
     {
-      "title": "Critic questions AI profitability as OpenAI delays IPO plans",
-      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOWDlKMWlYM3Q5bFhQa0lTb1lSMngtMzBnT253MDBzNlk1RnAyU3B3YmJneDZxaHlicE9TbktfcE1ZRU9kWmZNUjRaUVowWk9KRlRVcVVnYXp6OEJqYVg4UlNJODMxYkwwM2IzLTZVX3dlMUhVbnd0TjhNX3lzclVGalduakZaSmx3Tk9BMDFFakNPckZYRHpDYzhvaVVLamYydEtJVktWa2lPVnoyMUZWY25RdldvbldwMUVlS05hOFhMekc0VnIyOWFaaFM4LU5WWHdrOWZvT1FxMHN6ZWJXMV9GcFJxaUo5MVpPSTc1Y3d4eld0?oc=5",
-      "source": "MSN",
-      "date": "Wed, 08 Jul 2026 13:03:25 GMT"
-    },
-    {
-      "title": "OpenAI Files for IPO: $850B Tag, $25B Revenue [2026]",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1fdkxKZWxKdUdvZ2FJeEFGclo4dTRNdmdFX1daSE1qWVJvQVlQMHlBaXFkNHJDTHRCbS04TXhjVHpVUG1KU3E2TDRXb1lVT2ppUzdXY3ZqTUZoZXdjdXM4aEQyUlpBeUthU1UyRld5X0k?oc=5",
-      "source": "tech-insider.org",
-      "date": "Thu, 11 Jun 2026 07:00:00 GMT"
+      "title": "OpenAI Missed Multiple Revenue Targets\u2014Here\u2019s Why It Likely Won\u2019t IPO This Year",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPREJId2hzTWFNWXUwN3JWNFRMLUthS2Y2LTViZWt1Rm0tQ0tIbEptaFFjX3Z1YUZ0TnJReHFLcTI1WjFqT0VtbEFpNlU1UVEwSThuWmtPaXVWbC1iR2VrUkhBR2RNZ1dtMXlBRlhyX0NCV0w4NXpyTDM3WEppZXBnU3ZHT09HdDlTOFQzeEVQT1JTVVJkYXRXSFktZ1pKZFlWWEVwQWNFZEZYSDBERW9UZnVacnllRUwxenEzUC1R?oc=5",
+      "source": "Morningstar",
+      "date": "Fri, 01 May 2026 07:00:00 GMT"
     },
     {
       "title": "OpenAI IPO Delay: A Symptom Of A Tech Bubble? (Private:OPENAI)",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQYVhLRFJrNE1GNmFjUHZwLUZxV3E3cGZ4ODJwejJkcjZYcUcwNXhfSEUtNDU4Tm1FYUNYTnVjSUFjODlqbUF2OUd0V0FJNU12dGdBS0YzQmtjV3lQclVTNDN2c1BYODE0WEM4VXBIZ2ZfaWRDa3M1a3JnbXotWks1d0xyMUtWS3hsblZxeA?oc=5",
       "source": "Seeking Alpha",
       "date": "Fri, 26 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "title": "OpenAI Files for IPO: $850B Tag, $25B Revenue [2026]",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1fdkxKZWxKdUdvZ2FJeEFGclo4dTRNdmdFX1daSE1qWVJvQVlQMHlBaXFkNHJDTHRCbS04TXhjVHpVUG1KU3E2TDRXb1lVT2ppUzdXY3ZqTUZoZXdjdXM4aEQyUlpBeUthU1UyRld5X0k?oc=5",
+      "source": "tech-insider.org",
+      "date": "Thu, 11 Jun 2026 07:00:00 GMT"
     },
     {
       "title": "AI Investment Boom 2026: Bubble or Sustainable Growth Opportunity?",
@@ -65,12 +65,6 @@
       "date": "Tue, 27 Jan 2026 08:00:00 GMT"
     },
     {
-      "title": "Big Tech set to spend $650 billion in 2026 as AI investments soar",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOcGFYMkRUU20tZXcwTjlzNEdxNXF4MlBBVTQ5a3pKQzhwSHlEQjVkZFhLTGdHOGtzTFVJR3puVF9GN2lfTWZzTzZpc29vSHVsRi1vVmpOZnhNRTJCVzRPX2owU20zRFZaYUY2Rk9lRXZmZGJxMWhrcUF5MlE0MHcwaVNBYXB2M1Vkamx1VUpaOEVHNHpGQTNUSmYzcW05SXQ2Ni0zWllhM0F6aG9ERGpN?oc=5",
-      "source": "Yahoo Finance",
-      "date": "Fri, 06 Feb 2026 08:00:00 GMT"
-    },
-    {
       "title": "Big tech is sacrificing its cashflows to prop up the AI boom",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVlNaOF9TcTNiY0ZhWUljNWV0dnhsUVZjQzlvcGszZ0JlY3AtN29kRjdfQVo5M1E1azI1cGRUZFhrQk1yb0V2b2Vzem5uWW81Ql9UYzRKM0lZR2hsV19fMGxCYjRBMW03Wks1M0xubl8wWkxDVGVEVG45Qmg2X2U1SDVuRGQ2ZTNMVlp2TmtsdTVtU0E3OHozbldIN0VnVEppSEtvRHZkY2V2Zw?oc=5",
       "source": "The Economist",
@@ -83,34 +77,40 @@
       "date": "Tue, 04 Nov 2025 20:18:01 GMT"
     },
     {
+      "title": "Why the AI capex cycle may just be beginning",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNZ0YwZjIxUU9hTnF1cURBUkROY1gwc2Rta05UTy14allOaXFkV25YN3duZXUybVRVV1hkYlp4LTN0SDA4bWV0c2M5dDhEb3VrdW9IRWdkck1xdDZKckhGQjg1QXdoVGhrcGlSenNMR2tHUGdYblRtZEZSVGowRnVSSmZjOXowZ3B3em9MdXFIMmJJWFlDNE0zeDU4VXM2SHladUZjNjN4eWpkQkhuN2JMTFhELXV2c0E?oc=5",
+      "source": "GlobeNewswire",
+      "date": "Thu, 11 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Marvell Technology Climbs 7% on the AI Chip Recovery: Is It Overvalued Next to Broadcom and Nvidia?",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPNldwWmswd2pFVHZoS0N0TmhrVFFiWkk2WXB6TzJ0b1QyNEdOU3B0dzVRckg3eXBhQlg0MXZvUXl1bGJid0JmVUJQVTl2eEJzeDg3YmZKLTNKbV90b1lIcEFkXy1QR25IdGM3Z1djWndvdVRDc1BLOVhjQUtkWndWZUlCRkotVzhEQXN5Ni1ocVI0d3cxbmp3Y1NuSjViOC1oZGJ0N3dsLXhPNFlmN2JvUFNrQWRESVVQTGZtV1FCMXg5THM2TXV6TmNvbDZ1YzZGeEZXa3ZDNA?oc=5",
+      "source": "24/7 Wall St.",
+      "date": "Thu, 09 Jul 2026 15:57:53 GMT"
+    },
+    {
       "title": "Is Nvidia Undervalued or AMD Overvalued \u2014 or Both?",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOR3RxZTRQeDZEX01nVTBQV3Y1enY3V3NKemRzYkhWYUpZTUt4Y21SeTY5VTFKRm9RX0NqQ3V0LXVCUWlyRU9IdXNyYVJ3N2JWOEFNaVY1aWI0THR2Yzl4WmlfdTJhUWpqNXhMczJkRVlWZERKS0U2clRHTHFVY3c4anU2clRvUnplN3dpTHpaS1FKdFFfNXdCOVlNVk9panFYTmpXR193?oc=5",
       "source": "Yahoo Finance",
       "date": "Sun, 05 Jul 2026 14:38:48 GMT"
     },
     {
-      "title": "Michael Burry says he's shorting Caterpillar for the first time after it nearly doubled in the AI-driven rally of 2026",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOcnl6cXZ3b0cxZEJFTFJSNW9ySGpXalVsZldLbGJzQmF0aWRDQXNIdWd1V2l5Mk9rdVVjcnFUNVdwUE80bEhKLWs3T0k3VkJuemxyc2c3TTJ5bWlicDQyeFI0R09GcmNzVU5yQUFBbWR5aTFuM0lqTjdhUWR0ZE1hRVBsVV95LXFsMTJwZndHcjdkTThXS3JrSTh3WVhJVk9TVHFNT2h0UWLSAa4BQVVfeXFMUExNcjJHZDZQbHVuUllfdnhqUl9wZUQyejNJWTVaS0VZeWw1LXBFbGU3aXVSU0ZxM1lqUG9nLTYtZjFKbF8zT1NadHo0YnRwcnM4cFpLaEhfLU5SQ0ZNeXBFajM0aVN0M3I0eUFDNTdkZV9SaWx5NHZXODM5NV9lazlvQWxnR0R1a2d3X2VVWWQ4WWs3U1NTMmZ4TFRfUC1vRXl5X1pHNkVycFlDc2ln?oc=5",
-      "source": "CNBC",
-      "date": "Tue, 30 Jun 2026 07:00:00 GMT"
-    },
-    {
-      "title": "HELN.S PE Ratio & Valuation, Is HELN.S Overvalued",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBZb0ZrbU9EUnk1TzQ4LUdNT25fc2poeFdTU3JFejNsZ2dCM0NpeV93STVTV25EbG1jZmdpc2Vub0RBS3pfeUl1LS1pUWxWU1NsSC1mSVJLTzNUNTBu?oc=5",
+      "title": "KAR PE Ratio & Valuation, Is KAR Overvalued",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE50eGRnUkxYdzdkVDJjTUM1ZlUtV1dJRVBrVWR6c1N5U2o2QkZqSEpsdTh1UHVtazZlekxCMWlvTnJHWEhsRXBKODl4cHY3VjBtb2Qwd2QybjY?oc=5",
       "source": "Intellectia AI",
-      "date": "Tue, 07 Jul 2026 00:31:06 GMT"
-    },
-    {
-      "title": "Why OpenAI whiffs should still worry Oracle and CoreWeave investors",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPRWRWYU8yNEdIcFlKYkNYczg5X2Vka0ZiS2l1TThBVkZRS3NqeGpsU3RJamJaVXdCVmlONHhCa3labTVCaFJpejJfdmw1eFVKWjQ4MzlKdG1WOVE2WVRWSEJOR1kteS1LUFB6aldGczV1ZkZTTldLZWFwMGJJbTlZTmU0cmJON1RXR1pjSVoxczJLNTlFc2RiT1VFeTZuekZrRXhIMUVqbU8yZXNCRkZ0NWVxTQ?oc=5",
-      "source": "Yahoo Finance",
-      "date": "Wed, 29 Apr 2026 07:00:00 GMT"
+      "date": "Tue, 07 Jul 2026 18:44:10 GMT"
     },
     {
       "title": "OpenAI IPO Fears Hit Oracle and Other Stocks Exposed to the ChatGPT Maker",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNUUtSd19xQ2ZudEYxOFQxRk5INnd3U1BjaUtuVzR4cFpFS1BZakktcUVieGh3OWY4VmsxaUppbTZvM0xaNi0xUVo5amJ0TGtSWThYUi10cWVXSkd5YmRlRC1iUU9jOTJjSkJfRGFhcW5qTndXNHRES1NDT1dzYmp3eA?oc=5",
       "source": "Barron's",
       "date": "Fri, 26 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Why OpenAI whiffs should still worry Oracle and CoreWeave investors",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPRWRWYU8yNEdIcFlKYkNYczg5X2Vka0ZiS2l1TThBVkZRS3NqeGpsU3RJamJaVXdCVmlONHhCa3labTVCaFJpejJfdmw1eFVKWjQ4MzlKdG1WOVE2WVRWSEJOR1kteS1LUFB6aldGczV1ZkZTTldLZWFwMGJJbTlZTmU0cmJON1RXR1pjSVoxczJLNTlFc2RiT1VFeTZuekZrRXhIMUVqbU8yZXNCRkZ0NWVxTQ?oc=5",
+      "source": "Yahoo Finance",
+      "date": "Wed, 29 Apr 2026 07:00:00 GMT"
     },
     {
       "title": "Oracle, CoreWeave lead AI selloff on OpenAI growth concerns",
@@ -128,7 +128,7 @@
   "alerts": [
     {
       "level": "yellow",
-      "msg": "SOXX up 89% YTD \u2014 entering Burry's danger zone"
+      "msg": "SOXX up 85% YTD \u2014 entering Burry's danger zone"
     }
   ],
   "bubble_history": [
@@ -345,7 +345,7 @@
     {
       "m": 42,
       "date": "2026-07",
-      "v": 10.35
+      "v": 10.67
     }
   ]
 }
