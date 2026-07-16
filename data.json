@@ -1,39 +1,45 @@
 {
-  "updated": "2026-07-15T14:41:22.062585+00:00",
+  "updated": "2026-07-16T14:51:45.680812+00:00",
   "market": {
     "NVDA": {
       "name": "Nvidia",
-      "price": 210.21,
-      "pe": 32.2,
-      "change_pct": -0.75,
-      "ytd_pct": 11.4
+      "price": 207.09,
+      "pe": 31.8,
+      "change_pct": -2.56,
+      "ytd_pct": 9.8
     },
     "SOXX": {
       "name": "Semiconductor ETF",
-      "price": 549.71,
-      "pe": 38.9,
-      "change_pct": -3.21,
-      "ytd_pct": 75.4
+      "price": 536.39,
+      "pe": 37.9,
+      "change_pct": -3.4,
+      "ytd_pct": 71.2
     },
     "ORCL": {
       "name": "Oracle",
-      "price": 132.06,
-      "pe": 22.7,
-      "change_pct": 3.22,
-      "ytd_pct": -31.9
+      "price": 126.45,
+      "pe": 21.7,
+      "change_pct": -4.56,
+      "ytd_pct": -34.8
     },
     "CRWV": {
       "name": "CoreWeave",
-      "price": 77.27,
+      "price": 73.8,
       "pe": 0.0,
-      "change_pct": -3.34,
-      "ytd_pct": -2.6
+      "change_pct": -4.31,
+      "ytd_pct": -7.0
     }
   },
   "macro": {
-    "treasury_10y": 4.56
+    "treasury_10y": 4.59
   },
   "news": [
+    {
+      "title": "OpenAI Just Signaled It Might Delay Its IPO. AI Stocks Are Tumbling. Is the Bubble Bursting?",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOaVhjMEVzZVdBUmJBSVdxajByMGZCMnF1Q3Rnd2hWYVRhRzFpMGtUckt0MXU4RG1QVng1NmIyQVllZjJxMnZFNlNXWi11QUxoQmctSGI1RjNTMjhodmRpT2o1Zl94YXdZX3QzUVdKRGFoanVQZl9VOWdwWTJjU3dHTEp4cWZQVkF1TDlyQWVmR245VFRDVk9SbzB5U2E?oc=5",
+      "source": "Yahoo Finance",
+      "date": "Fri, 26 Jun 2026 07:00:00 GMT"
+    },
     {
       "title": "OpenAI Missed Multiple Revenue Targets\u2014Here\u2019s Why It Likely Won\u2019t IPO This Year",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPREJId2hzTWFNWXUwN3JWNFRMLUthS2Y2LTViZWt1Rm0tQ0tIbEptaFFjX3Z1YUZ0TnJReHFLcTI1WjFqT0VtbEFpNlU1UVEwSThuWmtPaXVWbC1iR2VrUkhBR2RNZ1dtMXlBRlhyX0NCV0w4NXpyTDM3WEppZXBnU3ZHT09HdDlTOFQzeEVQT1JTVVJkYXRXSFktZ1pKZFlWWEVwQWNFZEZYSDBERW9UZnVacnllRUwxenEzUC1R?oc=5",
@@ -51,12 +57,6 @@
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1fdkxKZWxKdUdvZ2FJeEFGclo4dTRNdmdFX1daSE1qWVJvQVlQMHlBaXFkNHJDTHRCbS04TXhjVHpVUG1KU3E2TDRXb1lVT2ppUzdXY3ZqTUZoZXdjdXM4aEQyUlpBeUthU1UyRld5X0k?oc=5",
       "source": "tech-insider.org",
       "date": "Thu, 11 Jun 2026 07:00:00 GMT"
-    },
-    {
-      "title": "As the tech mega-IPO race heats up, has OpenAI missed its moment?",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNS1d4UEtDMW8xUjBSeFNpWktuQlV0V01IcTFIUVh5U0VxT1I4WWxXRHU3NDFXRmM0MERiN1JNclpYUXVGM3pzTlpDd2dhR2JtR2pCMWs2bURSczFvVWdVdGdXUnZnZHhnY2hRNVBkRkMyUnlhMi1XZ09DLUUwTzFqeHVaSnl0RmF6ak1VdzNZX013Q09mdEZNUExWNFRIX1JqQk5tYV8wdTdWOXp3WnNhUTRLWQ?oc=5",
-      "source": "The Guardian",
-      "date": "Wed, 03 Jun 2026 07:00:00 GMT"
     },
     {
       "title": "Tech's massive AI spend is under scrutiny ahead of earnings. Here's what to watch",
@@ -107,16 +107,16 @@
       "date": "Tue, 23 Jun 2026 07:00:00 GMT"
     },
     {
-      "title": "OpenAI IPO Fears Hit Oracle and Other Stocks Exposed to the ChatGPT Maker",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNUUtSd19xQ2ZudEYxOFQxRk5INnd3U1BjaUtuVzR4cFpFS1BZakktcUVieGh3OWY4VmsxaUppbTZvM0xaNi0xUVo5amJ0TGtSWThYUi10cWVXSkd5YmRlRC1iUU9jOTJjSkJfRGFhcW5qTndXNHRES1NDT1dzYmp3eA?oc=5",
-      "source": "Barron's",
-      "date": "Fri, 26 Jun 2026 07:00:00 GMT"
-    },
-    {
       "title": "Why OpenAI whiffs should still worry Oracle and CoreWeave investors",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPRWRWYU8yNEdIcFlKYkNYczg5X2Vka0ZiS2l1TThBVkZRS3NqeGpsU3RJamJaVXdCVmlONHhCa3labTVCaFJpejJfdmw1eFVKWjQ4MzlKdG1WOVE2WVRWSEJOR1kteS1LUFB6aldGczV1ZkZTTldLZWFwMGJJbTlZTmU0cmJON1RXR1pjSVoxczJLNTlFc2RiT1VFeTZuekZrRXhIMUVqbU8yZXNCRkZ0NWVxTQ?oc=5",
       "source": "Yahoo Finance",
       "date": "Wed, 29 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "OpenAI IPO Fears Hit Oracle and Other Stocks Exposed to the ChatGPT Maker",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNUUtSd19xQ2ZudEYxOFQxRk5INnd3U1BjaUtuVzR4cFpFS1BZakktcUVieGh3OWY4VmsxaUppbTZvM0xaNi0xUVo5amJ0TGtSWThYUi10cWVXSkd5YmRlRC1iUU9jOTJjSkJfRGFhcW5qTndXNHRES1NDT1dzYmp3eA?oc=5",
+      "source": "Barron's",
+      "date": "Fri, 26 Jun 2026 07:00:00 GMT"
     },
     {
       "title": "Oracle, CoreWeave lead AI selloff on OpenAI growth concerns",
@@ -128,11 +128,15 @@
   "alerts": [
     {
       "level": "yellow",
-      "msg": "CRWV down -3.3% \u2014 CoreWeave under pressure"
+      "msg": "ORCL down -4.6% \u2014 watch for OpenAI news"
     },
     {
       "level": "yellow",
-      "msg": "SOXX up 75% YTD \u2014 entering Burry's danger zone"
+      "msg": "CRWV down -4.3% \u2014 CoreWeave under pressure"
+    },
+    {
+      "level": "yellow",
+      "msg": "SOXX up 71% YTD \u2014 entering Burry's danger zone"
     }
   ],
   "bubble_history": [
@@ -349,7 +353,7 @@
     {
       "m": 42,
       "date": "2026-07",
-      "v": 10.78
+      "v": 10.62
     }
   ]
 }
