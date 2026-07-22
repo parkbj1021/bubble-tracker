@@ -1,37 +1,37 @@
 {
-  "updated": "2026-07-21T14:54:29.234116+00:00",
+  "updated": "2026-07-22T14:54:12.495102+00:00",
   "market": {
     "NVDA": {
       "name": "Nvidia",
-      "price": 205.54,
-      "pe": 31.5,
-      "change_pct": 1.11,
-      "ytd_pct": 9.0
+      "price": 208.14,
+      "pe": 31.9,
+      "change_pct": 0.41,
+      "ytd_pct": 10.4
     },
     "SOXX": {
       "name": "Semiconductor ETF",
-      "price": 547.4,
-      "pe": 38.7,
-      "change_pct": 4.44,
-      "ytd_pct": 74.7
+      "price": 553.67,
+      "pe": 39.1,
+      "change_pct": 0.18,
+      "ytd_pct": 76.7
     },
     "ORCL": {
       "name": "Oracle",
-      "price": 124.98,
-      "pe": 21.4,
-      "change_pct": 2.97,
-      "ytd_pct": -35.5
+      "price": 126.43,
+      "pe": 21.7,
+      "change_pct": -0.49,
+      "ytd_pct": -34.8
     },
     "CRWV": {
       "name": "CoreWeave",
-      "price": 76.9,
+      "price": 82.94,
       "pe": 0.0,
-      "change_pct": 5.26,
-      "ytd_pct": -3.1
+      "change_pct": 4.22,
+      "ytd_pct": 4.6
     }
   },
   "macro": {
-    "treasury_10y": 4.63
+    "treasury_10y": 4.66
   },
   "news": [
     {
@@ -39,12 +39,6 @@
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUDZBS1hqNkRhWjJzd0R4MEdVYWd4ZEtDcDNCQ1Zxa1N2bmxoRzR4QW8tSnQyLUplYjAtbkIzVWZOcEMxTjFBOF9lWlp6SXZsQnljS2NRYXBHZDhDbFlZbnVjVHV1T21uSWVZX2tLQkpXRk9MdDZnNjJva1h5ellsTUN6RG9XalFjQlR6Q1JqQzlCbm1NNU0tZkVpSVVSVDA?oc=5",
       "source": "Futurism",
       "date": "Mon, 20 Jul 2026 18:30:59 GMT"
-    },
-    {
-      "title": "OpenAI\u2019s Darkest Week: Apple Lawsuit, Oracle Downgrade, AI Price War",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBJMzEzQ19uc1F1dHZLQmF3OUZjWlpYVzA3LXFwRlJJUHd6cnpUR1JPQnozaVN4c3c5WlNjdHJYTnMwTnF4VVpYSVRXTjVXRU1z?oc=5",
-      "source": "odaily.news",
-      "date": "Tue, 21 Jul 2026 13:46:20 GMT"
     },
     {
       "title": "OpenAI Missed Multiple Revenue Targets\u2014Here\u2019s Why It Likely Won\u2019t IPO This Year",
@@ -57,6 +51,12 @@
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQYVhLRFJrNE1GNmFjUHZwLUZxV3E3cGZ4ODJwejJkcjZYcUcwNXhfSEUtNDU4Tm1FYUNYTnVjSUFjODlqbUF2OUd0V0FJNU12dGdBS0YzQmtjV3lQclVTNDN2c1BYODE0WEM4VXBIZ2ZfaWRDa3M1a3JnbXotWks1d0xyMUtWS3hsblZxeA?oc=5",
       "source": "Seeking Alpha",
       "date": "Fri, 26 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "title": "OpenAI Files for IPO: $850B Tag, $25B Revenue [2026]",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1fdkxKZWxKdUdvZ2FJeEFGclo4dTRNdmdFX1daSE1qWVJvQVlQMHlBaXFkNHJDTHRCbS04TXhjVHpVUG1KU3E2TDRXb1lVT2ppUzdXY3ZqTUZoZXdjdXM4aEQyUlpBeUthU1UyRld5X0k?oc=5",
+      "source": "tech-insider.org",
+      "date": "Thu, 11 Jun 2026 07:00:00 GMT"
     },
     {
       "title": "Tech's massive AI spend is under scrutiny ahead of earnings. Here's what to watch",
@@ -95,22 +95,16 @@
       "date": "Thu, 09 Jul 2026 07:00:00 GMT"
     },
     {
-      "title": "Nvidia (NVDA) Stock Weighs AI Growth Story Against Mixed Valuation Signals",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOWnJSREdFMlNaUnFPbnIwTDVMc3pwRkQyRjVZWHpJNTh1cjF3MldaYk1YcDVSM3paSzl3M1Y5cHB0V2dZTXRzd3JSTXY5T2JUVGZla2FrcDhhLUNGdzZabW1FYUUyVC1XX25uZV90dEg0aS1ZRnVlbHMwZHZoS1RvTDR1SXpzUXZOUGV2YU1nMEhZcVZSWkdoNEVGdHU4UGtTWGhwUWVBa0RkTVgyMnVmVDFiSTFGM21VQk5VZkRFZFFzVHctS0Y4WFVrONIB0AFBVV95cUxNVkx5Zk5fR1Fkek9BaVkwX1VaMHB0UjRTelRTVzg0Q2F0cUUyVFFNUU1mY1hWUzV3bDhaMDN5Z3U1aFFJMkwtV19xMVhmc1hKWXM1Qm9nVEotNm1CTVFNWGlrbGxubVd5MENMV21ybFdtV3pBeE5FajJWOVEwZmFpY1d1YW4tSzVSOUtxNUFTbmhtbFFoUVRDYWVVRWxkWmdaMFA3UXczOFNpbjFmazZNRlNiTTV5aUhGQVljWTBDNUJERHB0YXcwUEF6VWNuTk1a?oc=5",
-      "source": "simplywall.st",
-      "date": "Tue, 23 Jun 2026 13:38:14 GMT"
-    },
-    {
       "title": "7 Best Semiconductor Stocks for 2026",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPdVlocTJ6U2RLbGpQUnpwLWxwSjQ4ZlI3cjR5U204TDlkakhISEo5d3ItaGFVQ1VSdk1UdXBFc1JGYnVqT1ZoN2RKQUREM3dxeDRYbzF5Rl9XeHl6WXZzWWNkY1NRS0pvd0RDYVVLbFRTNHdzR2xyZXpaam1naEc3Y3dR?oc=5",
       "source": "US News Money",
       "date": "Tue, 16 Jun 2026 07:00:00 GMT"
     },
     {
-      "title": "Why OpenAI whiffs should still worry Oracle and CoreWeave investors",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPRWRWYU8yNEdIcFlKYkNYczg5X2Vka0ZiS2l1TThBVkZRS3NqeGpsU3RJamJaVXdCVmlONHhCa3labTVCaFJpejJfdmw1eFVKWjQ4MzlKdG1WOVE2WVRWSEJOR1kteS1LUFB6aldGczV1ZkZTTldLZWFwMGJJbTlZTmU0cmJON1RXR1pjSVoxczJLNTlFc2RiT1VFeTZuekZrRXhIMUVqbU8yZXNCRkZ0NWVxTQ?oc=5",
-      "source": "Yahoo Finance",
-      "date": "Wed, 29 Apr 2026 07:00:00 GMT"
+      "title": "As Tech Stocks Churn, Nvidia and Other Semiconductor Plays Look Cheap",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTzUwMEN0TlJMRGwwT2lJR01KTTI1T1Y1a2p3TjlTVWJwLUVBaExkWk1weEVDTE5lQW5lOVVzVjhKUEhENTNXV3dUcWdta3J5STgybjZVb1NBckVxZUlBRzZoTkVweWpWenNUdUYyN1J1YWRZUEVpYzRlNjRTbHZUbUxVSEdDNjNKaDdxY2FOQzN3TzlzUHFXYUdjc2Z3eFNnRlhlY0dIbk5kUQ?oc=5",
+      "source": "Morningstar",
+      "date": "Mon, 16 Feb 2026 08:00:00 GMT"
     },
     {
       "title": "OpenAI IPO Fears Hit Oracle and Other Stocks Exposed to the ChatGPT Maker",
@@ -123,12 +117,18 @@
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQZzhBYkt1cUNmMmJzRWZxWGRTb3hNMm02LXN2Z2ZfMUN4dmNyTmV0ODNPRWRkVXlrM0pGNFBpZ3R4X3QzdVV5YW5vaWszSTl3R2IxaEtXaHBib09qMTNjUktjMEVzVjlrMkRVTGpjQldyQVVqekFuWWpQWGZfbVhjQlNtRkNvdFlpbWhhOWtfZTdZVUd6cWMtYnA5ZC0xNHc0eUNfLTlBYUxoUkt2OUpxY2V2NWF4SlNkN2xEN1dkOEpQRDdfM0RJ?oc=5",
       "source": "Reuters",
       "date": "Tue, 28 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "OpenAI miss sparks sell-off for Oracle, Nvidia, CoreWeave stocks",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPc1RLd0RMQnd6bm1Cb0pGVUNoRnhFdEFmNTQxWE5pZkhNN3lILUNLa3Z0R0JnRkZTMXZlblhxaS03WDQ2ZGFiNWFYcF9YN3NQMnpJQnI1VlNUaThXNWkyRGsyXzBOemREclJLQVptOG5FbzVEbXRiUVZsQ0s4eE9sSk5VQVMxUk80Uks0eE5MYUpNRkM1bzBCZ3cyVGdISWdHQVpSNHVaOHI4VkJtemc?oc=5",
+      "source": "Yahoo Finance",
+      "date": "Tue, 28 Apr 2026 07:00:00 GMT"
     }
   ],
   "alerts": [
     {
       "level": "yellow",
-      "msg": "SOXX up 75% YTD \u2014 entering Burry's danger zone"
+      "msg": "SOXX up 77% YTD \u2014 entering Burry's danger zone"
     }
   ],
   "bubble_history": [
@@ -345,7 +345,7 @@
     {
       "m": 42,
       "date": "2026-07",
-      "v": 10.54
+      "v": 10.68
     }
   ]
 }
