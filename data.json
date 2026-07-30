@@ -1,37 +1,37 @@
 {
-  "updated": "2026-07-29T15:25:15.731802+00:00",
+  "updated": "2026-07-30T15:00:52.972712+00:00",
   "market": {
     "NVDA": {
       "name": "Nvidia",
-      "price": 192.67,
-      "pe": 29.5,
-      "change_pct": -2.2,
-      "ytd_pct": 2.1
+      "price": 194.42,
+      "pe": 29.7,
+      "change_pct": 2.32,
+      "ytd_pct": 3.1
     },
     "SOXX": {
       "name": "Semiconductor ETF",
-      "price": 474.27,
-      "pe": 33.5,
-      "change_pct": -3.5,
-      "ytd_pct": 51.4
+      "price": 499.74,
+      "pe": 35.3,
+      "change_pct": 7.47,
+      "ytd_pct": 59.5
     },
     "ORCL": {
       "name": "Oracle",
-      "price": 117.82,
-      "pe": 20.2,
-      "change_pct": -1.82,
-      "ytd_pct": -39.2
+      "price": 125.74,
+      "pe": 21.6,
+      "change_pct": 6.8,
+      "ytd_pct": -35.2
     },
     "CRWV": {
       "name": "CoreWeave",
-      "price": 62.32,
+      "price": 72.91,
       "pe": 0.0,
-      "change_pct": -7.37,
-      "ytd_pct": -21.4
+      "change_pct": 19.88,
+      "ytd_pct": -8.1
     }
   },
   "macro": {
-    "treasury_10y": 4.63
+    "treasury_10y": 4.66
   },
   "news": [
     {
@@ -83,16 +83,16 @@
       "date": "Tue, 04 Nov 2025 20:18:01 GMT"
     },
     {
-      "title": "Is Nvidia Undervalued or AMD Overvalued \u2014 or Both?",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOR3RxZTRQeDZEX01nVTBQV3Y1enY3V3NKemRzYkhWYUpZTUt4Y21SeTY5VTFKRm9RX0NqQ3V0LXVCUWlyRU9IdXNyYVJ3N2JWOEFNaVY1aWI0THR2Yzl4WmlfdTJhUWpqNXhMczJkRVlWZERKS0U2clRHTHFVY3c4anU2clRvUnplN3dpTHpaS1FKdFFfNXdCOVlNVk9panFYTmpXR193?oc=5",
-      "source": "Yahoo Finance",
-      "date": "Sun, 05 Jul 2026 07:00:00 GMT"
-    },
-    {
       "title": "Marvell Technology Climbs 7% on the AI Chip Recovery: Is It Overvalued Next to Broadcom and Nvidia?",
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPNldwWmswd2pFVHZoS0N0TmhrVFFiWkk2WXB6TzJ0b1QyNEdOU3B0dzVRckg3eXBhQlg0MXZvUXl1bGJid0JmVUJQVTl2eEJzeDg3YmZKLTNKbV90b1lIcEFkXy1QR25IdGM3Z1djWndvdVRDc1BLOVhjQUtkWndWZUlCRkotVzhEQXN5Ni1ocVI0d3cxbmp3Y1NuSjViOC1oZGJ0N3dsLXhPNFlmN2JvUFNrQWRESVVQTGZtV1FCMXg5THM2TXV6TmNvbDZ1YzZGeEZXa3ZDNA?oc=5",
       "source": "24/7 Wall St.",
       "date": "Thu, 09 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Michael Burry Just Revealed His Next Big Short, and It's a Bet Against Nvidia, Micron, and AMD",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQbTdVOVZXNlBnNnotQTV5UUNTWGhkUF9ybGl0WGZJZGdIUGFZSnpQSUdDN2pwVy05cEk5bFNBaVlpZm82ZFB6QjBkanZoZUFQSHVUYm83TG05THg1WkNhZ21NNDlzMVZDdFkzclNPTG02UEFPa21RMzlac1F1SXRkU0ZTMU95Wi1Gay1SYVV5MHhYa3hxUURWQ2lmeXhEQQ?oc=5",
+      "source": "Yahoo Finance",
+      "date": "Tue, 07 Jul 2026 07:00:00 GMT"
     },
     {
       "title": "As Tech Stocks Churn, Nvidia and Other Semiconductor Plays Look Cheap",
@@ -121,16 +121,11 @@
     {
       "title": "Oracle Stock Is Paying the Price for OpenAI\u2019s Failures",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPUEVwdWE1S3lVdE1NTG52NkFBWWF3SXgtekdGd2JQREt5WnQ5LU9yRkd5YjVMMTMwRk5ubXg4S3hNNlVwSlFOenJrYW5BbDJua0JJY0tZeW5GVmVQVV9sOWR4cTZURmJVLUM3cUZCM1Ywem51Q1VKcy1uYkVhekFHbGFQem1ncFBKZWV5WF9LSQ?oc=5",
-      "source": "Barron's",
+      "source": "barrons.com",
       "date": "Tue, 28 Apr 2026 07:00:00 GMT"
     }
   ],
-  "alerts": [
-    {
-      "level": "red",
-      "msg": "CRWV dropped -7.4% \u2014 AI infrastructure financing stress"
-    }
-  ],
+  "alerts": [],
   "bubble_history": [
     {
       "m": 0,
@@ -345,7 +340,7 @@
     {
       "m": 42,
       "date": "2026-07",
-      "v": 9.88
+      "v": 9.97
     }
   ]
 }
