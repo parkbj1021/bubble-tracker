@@ -1,51 +1,39 @@
 {
-  "updated": "2026-08-05T15:06:42.578275+00:00",
+  "updated": "2026-08-06T15:05:30.551147+00:00",
   "market": {
     "NVDA": {
       "name": "Nvidia",
-      "price": 219.37,
-      "pe": 32.6,
-      "change_pct": 3.51,
-      "ytd_pct": 16.3
+      "price": 217.79,
+      "pe": 33.4,
+      "change_pct": -0.65,
+      "ytd_pct": 15.5
     },
     "SOXX": {
       "name": "Semiconductor ETF",
-      "price": 532.08,
-      "pe": 37.6,
-      "change_pct": -1.87,
-      "ytd_pct": 69.8
+      "price": 539.47,
+      "pe": 38.1,
+      "change_pct": 1.65,
+      "ytd_pct": 72.2
     },
     "ORCL": {
       "name": "Oracle",
-      "price": 144.41,
-      "pe": 24.1,
-      "change_pct": -0.92,
-      "ytd_pct": -25.5
+      "price": 145.38,
+      "pe": 24.9,
+      "change_pct": 0.69,
+      "ytd_pct": -25.0
     },
     "CRWV": {
       "name": "CoreWeave",
-      "price": 91.93,
+      "price": 87.94,
       "pe": 0.0,
-      "change_pct": 0.03,
-      "ytd_pct": 15.9
+      "change_pct": -2.17,
+      "ytd_pct": 10.9
     }
   },
   "macro": {
-    "treasury_10y": 4.63
+    "treasury_10y": 4.64
   },
   "news": [
-    {
-      "title": "OpenAI Missed Multiple Revenue Targets\u2014Here\u2019s Why It Likely Won\u2019t IPO This Year",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPREJId2hzTWFNWXUwN3JWNFRMLUthS2Y2LTViZWt1Rm0tQ0tIbEptaFFjX3Z1YUZ0TnJReHFLcTI1WjFqT0VtbEFpNlU1UVEwSThuWmtPaXVWbC1iR2VrUkhBR2RNZ1dtMXlBRlhyX0NCV0w4NXpyTDM3WEppZXBnU3ZHT09HdDlTOFQzeEVQT1JTVVJkYXRXSFktZ1pKZFlWWEVwQWNFZEZYSDBERW9UZnVacnllRUwxenEzUC1R?oc=5",
-      "source": "global.morningstar.com",
-      "date": "Fri, 01 May 2026 07:00:00 GMT"
-    },
-    {
-      "title": "Why NVIDIA's OpenAI Backstop Missed the Mark",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQUDVvNl82eFNZMzMxZzBCeEhoSGlPTHdmbDJwbVpZOGJ4RXBRWEtnOHhENkJEaXpSdmhWYzB2MzdHU296WnpuNkVfU3VST3pmNTk1SHlIaTZ0MFRmbFFPUmR3OVlORE12RzVoY1VsWnU4UGdXTzAySGtRcmpZdlc4QldyanJyUUdkLXVDS1ExeTc?oc=5",
-      "source": "Futuriom",
-      "date": "Wed, 29 Jul 2026 16:04:19 GMT"
-    },
     {
       "title": "OpenAI Appears to Be Missing Its Sales Goals by a Vast Margin",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUDZBS1hqNkRhWjJzd0R4MEdVYWd4ZEtDcDNCQ1Zxa1N2bmxoRzR4QW8tSnQyLUplYjAtbkIzVWZOcEMxTjFBOF9lWlp6SXZsQnljS2NRYXBHZDhDbFlZbnVjVHV1T21uSWVZX2tLQkpXRk9MdDZnNjJva1h5ellsTUN6RG9XalFjQlR6Q1JqQzlCbm1NNU0tZkVpSVVSVDA?oc=5",
@@ -53,10 +41,22 @@
       "date": "Mon, 20 Jul 2026 07:00:00 GMT"
     },
     {
-      "title": "OpenAI Files for IPO: $850B Tag, $25B Revenue [2026]",
+      "title": "OpenAI IPO: $850B Valuation, $25B Revenue [2026]",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1fdkxKZWxKdUdvZ2FJeEFGclo4dTRNdmdFX1daSE1qWVJvQVlQMHlBaXFkNHJDTHRCbS04TXhjVHpVUG1KU3E2TDRXb1lVT2ppUzdXY3ZqTUZoZXdjdXM4aEQyUlpBeUthU1UyRld5X0k?oc=5",
       "source": "tech-insider.org",
       "date": "Thu, 11 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "title": "As the tech mega-IPO race heats up, has OpenAI missed its moment?",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNS1d4UEtDMW8xUjBSeFNpWktuQlV0V01IcTFIUVh5U0VxT1I4WWxXRHU3NDFXRmM0MERiN1JNclpYUXVGM3pzTlpDd2dhR2JtR2pCMWs2bURSczFvVWdVdGdXUnZnZHhnY2hRNVBkRkMyUnlhMi1XZ09DLUUwTzFqeHVaSnl0RmF6ak1VdzNZX013Q09mdEZNUExWNFRIX1JqQk5tYV8wdTdWOXp3WnNhUTRLWQ?oc=5",
+      "source": "The Guardian",
+      "date": "Wed, 03 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "title": "OpenAI Just Signaled It Might Delay Its IPO. AI Stocks Are Tumbling. Is the Bubble Bursting?",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOaVhjMEVzZVdBUmJBSVdxajByMGZCMnF1Q3Rnd2hWYVRhRzFpMGtUckt0MXU4RG1QVng1NmIyQVllZjJxMnZFNlNXWi11QUxoQmctSGI1RjNTMjhodmRpT2o1Zl94YXdZX3QzUVdKRGFoanVQZl9VOWdwWTJjU3dHTEp4cWZQVkF1TDlyQWVmR245VFRDVk9SbzB5U2E?oc=5",
+      "source": "Yahoo Finance",
+      "date": "Fri, 26 Jun 2026 07:00:00 GMT"
     },
     {
       "title": "The biggest gamble in the U.S. economy is starting to look riskier",
@@ -103,7 +103,7 @@
     {
       "title": "As Tech Stocks Churn, Nvidia and Other Semiconductor Plays Look Cheap",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTzUwMEN0TlJMRGwwT2lJR01KTTI1T1Y1a2p3TjlTVWJwLUVBaExkWk1weEVDTE5lQW5lOVVzVjhKUEhENTNXV3dUcWdta3J5STgybjZVb1NBckVxZUlBRzZoTkVweWpWenNUdUYyN1J1YWRZUEVpYzRlNjRTbHZUbUxVSEdDNjNKaDdxY2FOQzN3TzlzUHFXYUdjc2Z3eFNnRlhlY0dIbk5kUQ?oc=5",
-      "source": "global.morningstar.com",
+      "source": "Morningstar",
       "date": "Mon, 16 Feb 2026 08:00:00 GMT"
     },
     {
@@ -128,7 +128,7 @@
   "alerts": [
     {
       "level": "yellow",
-      "msg": "SOXX up 70% YTD \u2014 entering Burry's danger zone"
+      "msg": "SOXX up 72% YTD \u2014 entering Burry's danger zone"
     }
   ],
   "bubble_history": [
@@ -350,7 +350,7 @@
     {
       "m": 43,
       "date": "2026-08",
-      "v": 11.25
+      "v": 11.17
     }
   ]
 }
