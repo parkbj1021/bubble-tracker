@@ -1,39 +1,45 @@
 {
-  "updated": "2026-08-06T15:05:30.551147+00:00",
+  "updated": "2026-08-07T14:04:06.846526+00:00",
   "market": {
     "NVDA": {
       "name": "Nvidia",
-      "price": 217.79,
-      "pe": 33.4,
-      "change_pct": -0.65,
-      "ytd_pct": 15.5
+      "price": 222.3,
+      "pe": 34.0,
+      "change_pct": 1.51,
+      "ytd_pct": 17.9
     },
     "SOXX": {
       "name": "Semiconductor ETF",
-      "price": 539.47,
-      "pe": 38.1,
-      "change_pct": 1.65,
-      "ytd_pct": 72.2
+      "price": 535.18,
+      "pe": 42.9,
+      "change_pct": 0.5,
+      "ytd_pct": 70.8
     },
     "ORCL": {
       "name": "Oracle",
-      "price": 145.38,
-      "pe": 24.9,
-      "change_pct": 0.69,
-      "ytd_pct": -25.0
+      "price": 143.05,
+      "pe": 24.6,
+      "change_pct": -0.29,
+      "ytd_pct": -26.2
     },
     "CRWV": {
       "name": "CoreWeave",
-      "price": 87.94,
+      "price": 87.05,
       "pe": 0.0,
-      "change_pct": -2.17,
-      "ytd_pct": 10.9
+      "change_pct": 2.02,
+      "ytd_pct": 9.7
     }
   },
   "macro": {
-    "treasury_10y": 4.64
+    "treasury_10y": 4.63
   },
   "news": [
+    {
+      "title": "As the tech mega-IPO race heats up, has OpenAI missed its moment?",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNS1d4UEtDMW8xUjBSeFNpWktuQlV0V01IcTFIUVh5U0VxT1I4WWxXRHU3NDFXRmM0MERiN1JNclpYUXVGM3pzTlpDd2dhR2JtR2pCMWs2bURSczFvVWdVdGdXUnZnZHhnY2hRNVBkRkMyUnlhMi1XZ09DLUUwTzFqeHVaSnl0RmF6ak1VdzNZX013Q09mdEZNUExWNFRIX1JqQk5tYV8wdTdWOXp3WnNhUTRLWQ?oc=5",
+      "source": "theguardian.com",
+      "date": "Wed, 03 Jun 2026 07:00:00 GMT"
+    },
     {
       "title": "OpenAI Appears to Be Missing Its Sales Goals by a Vast Margin",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUDZBS1hqNkRhWjJzd0R4MEdVYWd4ZEtDcDNCQ1Zxa1N2bmxoRzR4QW8tSnQyLUplYjAtbkIzVWZOcEMxTjFBOF9lWlp6SXZsQnljS2NRYXBHZDhDbFlZbnVjVHV1T21uSWVZX2tLQkpXRk9MdDZnNjJva1h5ellsTUN6RG9XalFjQlR6Q1JqQzlCbm1NNU0tZkVpSVVSVDA?oc=5",
@@ -41,16 +47,10 @@
       "date": "Mon, 20 Jul 2026 07:00:00 GMT"
     },
     {
-      "title": "OpenAI IPO: $850B Valuation, $25B Revenue [2026]",
+      "title": "OpenAI Files for IPO: $850B Tag, $25B Revenue [2026]",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1fdkxKZWxKdUdvZ2FJeEFGclo4dTRNdmdFX1daSE1qWVJvQVlQMHlBaXFkNHJDTHRCbS04TXhjVHpVUG1KU3E2TDRXb1lVT2ppUzdXY3ZqTUZoZXdjdXM4aEQyUlpBeUthU1UyRld5X0k?oc=5",
       "source": "tech-insider.org",
       "date": "Thu, 11 Jun 2026 07:00:00 GMT"
-    },
-    {
-      "title": "As the tech mega-IPO race heats up, has OpenAI missed its moment?",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNS1d4UEtDMW8xUjBSeFNpWktuQlV0V01IcTFIUVh5U0VxT1I4WWxXRHU3NDFXRmM0MERiN1JNclpYUXVGM3pzTlpDd2dhR2JtR2pCMWs2bURSczFvVWdVdGdXUnZnZHhnY2hRNVBkRkMyUnlhMi1XZ09DLUUwTzFqeHVaSnl0RmF6ak1VdzNZX013Q09mdEZNUExWNFRIX1JqQk5tYV8wdTdWOXp3WnNhUTRLWQ?oc=5",
-      "source": "The Guardian",
-      "date": "Wed, 03 Jun 2026 07:00:00 GMT"
     },
     {
       "title": "OpenAI Just Signaled It Might Delay Its IPO. AI Stocks Are Tumbling. Is the Bubble Bursting?",
@@ -83,10 +83,10 @@
       "date": "Fri, 31 Oct 2025 07:00:00 GMT"
     },
     {
-      "title": "BZ=F PE Ratio & Valuation, Is BZ=F Overvalued",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5JNEViWnFnVy1DS19TTV94U19TR0IyS1J6RWFKZnpmVmZLQ0hmUnhZbjJ1clF0ckU0WE1xaE9teVgwX0JFOXI3SGZKUXhEN0xTSGhoWmVwWUk0dw?oc=5",
+      "title": "CVLY PE Ratio & Valuation, Is CVLY Overvalued",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1JZk9wRkx5Nkl5Y1BGYjNSYUNzam5pZ3ZpbFlhcFRIeUtybUg4TFFNVGNaakg5dnRqWEdpd1Iwd1VtSl93OWFYRUFfRXY2YzhzcFFtcFlodHlSUQ?oc=5",
       "source": "Intellectia AI",
-      "date": "Wed, 05 Aug 2026 05:39:24 GMT"
+      "date": "Thu, 06 Aug 2026 06:09:53 GMT"
     },
     {
       "title": "Is Nvidia Undervalued or AMD Overvalued \u2014 or Both?",
@@ -128,7 +128,7 @@
   "alerts": [
     {
       "level": "yellow",
-      "msg": "SOXX up 72% YTD \u2014 entering Burry's danger zone"
+      "msg": "SOXX up 71% YTD \u2014 entering Burry's danger zone"
     }
   ],
   "bubble_history": [
@@ -350,7 +350,7 @@
     {
       "m": 43,
       "date": "2026-08",
-      "v": 11.17
+      "v": 11.4
     }
   ]
 }
