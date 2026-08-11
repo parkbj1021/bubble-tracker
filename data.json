@@ -1,41 +1,47 @@
 {
-  "updated": "2026-08-10T14:11:31.265817+00:00",
+  "updated": "2026-08-11T14:11:12.170858+00:00",
   "market": {
     "NVDA": {
       "name": "Nvidia",
-      "price": 221.83,
-      "pe": 33.9,
-      "change_pct": -0.97,
-      "ytd_pct": 17.6
+      "price": 219.99,
+      "pe": 33.7,
+      "change_pct": 1.11,
+      "ytd_pct": 16.6
     },
     "SOXX": {
       "name": "Semiconductor ETF",
-      "price": 543.32,
-      "pe": 43.6,
-      "change_pct": 0.01,
-      "ytd_pct": 73.4
+      "price": 538.45,
+      "pe": 43.2,
+      "change_pct": 1.71,
+      "ytd_pct": 71.8
     },
     "ORCL": {
       "name": "Oracle",
-      "price": 149.42,
-      "pe": 25.6,
-      "change_pct": 1.63,
-      "ytd_pct": -22.8
+      "price": 147.22,
+      "pe": 25.3,
+      "change_pct": -2.53,
+      "ytd_pct": -24.0
     },
     "CRWV": {
       "name": "CoreWeave",
-      "price": 91.86,
+      "price": 90.22,
       "pe": 0.0,
-      "change_pct": 1.31,
-      "ytd_pct": 15.8
+      "change_pct": 2.31,
+      "ytd_pct": 13.8
     }
   },
   "macro": {
-    "treasury_10y": 4.69
+    "treasury_10y": 4.68
   },
   "news": [
     {
-      "title": "OpenAI Files for IPO: $850B Tag, $25B Revenue [2026]",
+      "title": "Ray Dalio on the AI bubble nearing 1929, 2000 levels and the lesson people always forget: 'wealth is not the same as money'",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPUkwxWTlHOTQtQVVSMC1QYk4yT0tzWmJxTkphNFphTTgzdWVveXdTanJWWnhFdmlKQ29MclkzYTNtazRWWDZla3NFblVWS0Z3ZjE2YnFoc1FlN1dnSlY2YW9aZU11eGhSNWxPNDR5VWpRTVlNLVBQZWV0UVBVcE1MUnQ3NnZkN3VuVUstZHZkRQ?oc=5",
+      "source": "Fortune",
+      "date": "Tue, 04 Aug 2026 07:00:00 GMT"
+    },
+    {
+      "title": "OpenAI IPO: $850B Valuation, $25B Revenue [2026]",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1fdkxKZWxKdUdvZ2FJeEFGclo4dTRNdmdFX1daSE1qWVJvQVlQMHlBaXFkNHJDTHRCbS04TXhjVHpVUG1KU3E2TDRXb1lVT2ppUzdXY3ZqTUZoZXdjdXM4aEQyUlpBeUthU1UyRld5X0k?oc=5",
       "source": "tech-insider.org",
       "date": "Thu, 11 Jun 2026 07:00:00 GMT"
@@ -51,12 +57,6 @@
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUDZBS1hqNkRhWjJzd0R4MEdVYWd4ZEtDcDNCQ1Zxa1N2bmxoRzR4QW8tSnQyLUplYjAtbkIzVWZOcEMxTjFBOF9lWlp6SXZsQnljS2NRYXBHZDhDbFlZbnVjVHV1T21uSWVZX2tLQkpXRk9MdDZnNjJva1h5ellsTUN6RG9XalFjQlR6Q1JqQzlCbm1NNU0tZkVpSVVSVDA?oc=5",
       "source": "Futurism",
       "date": "Mon, 20 Jul 2026 07:00:00 GMT"
-    },
-    {
-      "title": "OpenAI IPO Delay: A Symptom Of A Tech Bubble? (Private:OPENAI)",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQYVhLRFJrNE1GNmFjUHZwLUZxV3E3cGZ4ODJwejJkcjZYcUcwNXhfSEUtNDU4Tm1FYUNYTnVjSUFjODlqbUF2OUd0V0FJNU12dGdBS0YzQmtjV3lQclVTNDN2c1BYODE0WEM4VXBIZ2ZfaWRDa3M1a3JnbXotWks1d0xyMUtWS3hsblZxeA?oc=5",
-      "source": "Seeking Alpha",
-      "date": "Fri, 26 Jun 2026 07:00:00 GMT"
     },
     {
       "title": "Tech's massive AI spend is under scrutiny ahead of earnings. Here's what to watch",
@@ -128,7 +128,11 @@
   "alerts": [
     {
       "level": "yellow",
-      "msg": "SOXX up 73% YTD \u2014 entering Burry's danger zone"
+      "msg": "ORCL down -2.5% \u2014 watch for OpenAI news"
+    },
+    {
+      "level": "yellow",
+      "msg": "SOXX up 72% YTD \u2014 entering Burry's danger zone"
     }
   ],
   "bubble_history": [
@@ -350,7 +354,7 @@
     {
       "m": 43,
       "date": "2026-08",
-      "v": 11.37
+      "v": 11.28
     }
   ]
 }
