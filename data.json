@@ -1,50 +1,50 @@
 {
-  "updated": "2026-08-20T13:37:27.682450+00:00",
+  "updated": "2026-08-21T13:36:39.395847+00:00",
   "market": {
     "NVDA": {
       "name": "Nvidia",
-      "price": 219.5,
-      "pe": 33.6,
-      "change_pct": 0.91,
-      "ytd_pct": 16.4
+      "price": 217.49,
+      "pe": 33.3,
+      "change_pct": 0.3,
+      "ytd_pct": 15.3
     },
     "SOXX": {
       "name": "Semiconductor ETF",
-      "price": 523.61,
-      "pe": 42.0,
-      "change_pct": 0.76,
-      "ytd_pct": 67.1
+      "price": 524.59,
+      "pe": 42.1,
+      "change_pct": 0.43,
+      "ytd_pct": 67.4
     },
     "ORCL": {
       "name": "Oracle",
-      "price": 143.6,
-      "pe": 24.5,
-      "change_pct": -0.13,
-      "ytd_pct": -25.9
+      "price": 145.99,
+      "pe": 25.1,
+      "change_pct": 2.69,
+      "ytd_pct": -24.7
     },
     "CRWV": {
       "name": "CoreWeave",
-      "price": 92.25,
+      "price": 91.03,
       "pe": 0.0,
-      "change_pct": 1.52,
-      "ytd_pct": 16.3
+      "change_pct": 1.42,
+      "ytd_pct": 14.7
     }
   },
   "macro": {
-    "treasury_10y": 4.7
+    "treasury_10y": 4.71
   },
   "news": [
-    {
-      "title": "The Math Of The AI Bubble Is Changing",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8xVnR1U2V1M3p5QnMyS3hFazFhOVBFLTJNaGpLTy16enZJalQ3UjNOSVNUd0FNMGpRSXRMY3NwRzhaVk9qZnUwSkVDRURvOXoxVWdyU0Jzeml1OWd4Mjh6dXVHaVROZHMyOFlSWmdoa0R3akNDdWc?oc=5",
-      "source": "Seeking Alpha",
-      "date": "Tue, 18 Aug 2026 19:22:11 GMT"
-    },
     {
       "title": "Anthropic Could Reportedly Target $2 Trillion Valuation in October IPO\u2014Jim Cramer Dismisses 'Out of Hand' Bubble Fears Amid Revenue Potential",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNZVQyNnYwTWx6T05JZ1R0SWgydHZQVFp6SVR0aTFqLXBJV2ZlRWRnakM1b0ZkX3JIa0tKaGwyQVhTSXdjRFAxNGxuR2lYTEN3RkZZZWItQXpmSENKSGFKTGtLM1NvZFlDMHZqYmNTWERBTld5aGVfNzluSzFraFJuQWJOdUNwakdGWmNOb3pLbnJucE5vNUhMZGc3T3puV3Nk?oc=5",
       "source": "Yahoo Finance",
       "date": "Fri, 14 Aug 2026 11:01:04 GMT"
+    },
+    {
+      "title": "OpenAI IPO Delay: A Symptom Of A Tech Bubble? (Private:OPENAI)",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQYVhLRFJrNE1GNmFjUHZwLUZxV3E3cGZ4ODJwejJkcjZYcUcwNXhfSEUtNDU4Tm1FYUNYTnVjSUFjODlqbUF2OUd0V0FJNU12dGdBS0YzQmtjV3lQclVTNDN2c1BYODE0WEM4VXBIZ2ZfaWRDa3M1a3JnbXotWks1d0xyMUtWS3hsblZxeA?oc=5",
+      "source": "Seeking Alpha",
+      "date": "Fri, 26 Jun 2026 07:00:00 GMT"
     },
     {
       "title": "OpenAI IPO: $850B Valuation, $25B Revenue [2026]",
@@ -89,10 +89,10 @@
       "date": "Wed, 19 Aug 2026 06:30:00 GMT"
     },
     {
-      "title": "PFTA PE Ratio & Valuation, Is PFTA Overvalued",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9NMnlJd0k0MF9uU2ltSHctaEVNUEpZcE9EQWVjWF9JblRjME9QRWVyaHZka3dZSkY0NzdDeEhvSWtKdVZMS3ZEUFlkWmEzajJxWHNLZFUzcW9wUQ?oc=5",
+      "title": "CFFS PE Ratio & Valuation, Is CFFS Overvalued",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9hbFdPZzhUQkMya0tWSFl0UHo2bW1TQnpCeXNBTE9kZGR5RWxHVHkyV195QVJHQmdUa3hZN3d2dzVRTkJpdnc1SU9VOUlkRmI4RTRaaWNjVHVEZw?oc=5",
       "source": "Intellectia AI",
-      "date": "Wed, 19 Aug 2026 23:12:45 GMT"
+      "date": "Wed, 19 Aug 2026 23:40:35 GMT"
     },
     {
       "title": "Broadcom is Overvalued at 23.8X P/E: Should You Still Buy the Stock?",
@@ -350,7 +350,7 @@
     {
       "m": 43,
       "date": "2026-08",
-      "v": 11.27
+      "v": 11.16
     }
   ]
 }
