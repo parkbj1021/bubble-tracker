@@ -1,37 +1,37 @@
 {
-  "updated": "2026-09-14T18:15:07.400171+00:00",
+  "updated": "2026-09-15T17:23:16.800655+00:00",
   "market": {
     "NVDA": {
       "name": "Nvidia",
-      "price": 212.44,
-      "pe": 26.9,
-      "change_pct": -2.68,
-      "ytd_pct": 12.8
+      "price": 211.37,
+      "pe": 26.7,
+      "change_pct": 0.2,
+      "ytd_pct": 12.2
     },
     "SOXX": {
       "name": "Semiconductor ETF",
-      "price": 501.73,
-      "pe": 36.9,
-      "change_pct": -4.81,
-      "ytd_pct": 60.1
+      "price": 497.37,
+      "pe": 36.6,
+      "change_pct": 0.06,
+      "ytd_pct": 58.7
     },
     "ORCL": {
       "name": "Oracle",
-      "price": 144.22,
-      "pe": 22.6,
-      "change_pct": -4.03,
-      "ytd_pct": -25.6
+      "price": 143.05,
+      "pe": 22.4,
+      "change_pct": -1.2,
+      "ytd_pct": -26.2
     },
     "CRWV": {
       "name": "CoreWeave",
-      "price": 84.55,
+      "price": 81.53,
       "pe": 0.0,
-      "change_pct": -4.99,
-      "ytd_pct": 6.6
+      "change_pct": -1.75,
+      "ytd_pct": 2.8
     }
   },
   "macro": {
-    "treasury_10y": 4.96
+    "treasury_10y": 5.01
   },
   "news": [
     {
@@ -59,10 +59,10 @@
       "date": "Tue, 28 Apr 2026 07:00:00 GMT"
     },
     {
-      "title": "Amazon leads Big Tech\u2019s $1 trillion wipeout as AI bubble fears ignite sell-off",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9TSk1FQkRzNFdxbGJrZkFOLTYwZFotaWhCa2hZb01YSldtZlZmVHNhRWpWdkJURlFrNC1zQVhHUXE2UGUxbXJULWM3MGV4RWZUQ2ktRi1wVTJHVF9STnZwWUhOYUljUGJpbnkwUENiOEFCS3ZhYjNoeNIBfkFVX3lxTE5za1ZBTjFYRmR6d09ZT2RIVG9JOTdzdjhmRHZwQk41QkFHN3pEeXNOdk12M1FBMkxnRXIyNDJDTGJEczQxVDRoU193aXFtVlBQRkw0TmJTeHZEQWdpc01nOUJQZllJWElMUnR2TjRtVW1mUWxOa1RpUTd5U0hCZw?oc=5",
+      "title": "Tech's massive AI spend is under scrutiny ahead of earnings. Here's what to watch",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBfTXBFdFVkdnJ6WUU1N2owZjFMQTdqbG5oaVNDVTlodi0yNHE4cG8tSmI4S0VubTRVd2dqS3UwcmM5NjRnSEQzWV9Ec0xBNEZQRTZKSFVnSVhLQVppdHZ6eUJ2V1BJa3o4b1Mzd3hESFMzV0dfcGhr0gF8QVVfeXFMUGdmZFZleS14cUdSRnN0d2IwVFZQdWNaMFlrYjBPOWhqS1NfX2ZXVkZ2bGNPbzRWNVJBVTlBSlQ5OXZnc0d0akxkdEZ2Zkl0bFJmd21vZ3A2TnFjU2VteVYwZTliZ3E4ajBDWWkwb01PUWM3cjF3V25NeGYyZw?oc=5",
       "source": "CNBC",
-      "date": "Fri, 06 Feb 2026 08:00:00 GMT"
+      "date": "Tue, 27 Jan 2026 08:00:00 GMT"
     },
     {
       "title": "The biggest gamble in the U.S. economy is starting to look riskier",
@@ -71,16 +71,16 @@
       "date": "Fri, 31 Jul 2026 07:00:00 GMT"
     },
     {
-      "title": "Big Tech To Wall Street: AI Spending Boom To Intensify",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNbTBSNFpxMkFZNDRfbEJJZnB4SVk3eTREZ1BYOXVQZU5UaXZDU3VaMzRmRjAyQ2pQalI5TnllS2dyNGk3VG4wVHY5Z3prYWFQTFZKa0FKVWFlVE9aVHJoREhNS1A3TE9XNS1yZWZILVhQX0pQVEszWFdFWWRMQ1RQdlNodFB4NWhGRGY2WGxrU1ZuQ0Q0a1NWdTdGNVRHWFBGYXZjeUZiOA?oc=5",
-      "source": "Investor's Business Daily",
-      "date": "Fri, 31 Oct 2025 07:00:00 GMT"
-    },
-    {
       "title": "Big tech is sacrificing its cashflows to prop up the AI boom",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVlNaOF9TcTNiY0ZhWUljNWV0dnhsUVZjQzlvcGszZ0JlY3AtN29kRjdfQVo5M1E1azI1cGRUZFhrQk1yb0V2b2Vzem5uWW81Ql9UYzRKM0lZR2hsV19fMGxCYjRBMW03Wks1M0xubl8wWkxDVGVEVG45Qmg2X2U1SDVuRGQ2ZTNMVlp2TmtsdTVtU0E3OHozbldIN0VnVEppSEtvRHZkY2V2Zw?oc=5",
       "source": "The Economist",
       "date": "Wed, 13 May 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Big Tech To Wall Street: AI Spending Boom To Intensify",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNbTBSNFpxMkFZNDRfbEJJZnB4SVk3eTREZ1BYOXVQZU5UaXZDU3VaMzRmRjAyQ2pQalI5TnllS2dyNGk3VG4wVHY5Z3prYWFQTFZKa0FKVWFlVE9aVHJoREhNS1A3TE9XNS1yZWZILVhQX0pQVEszWFdFWWRMQ1RQdlNodFB4NWhGRGY2WGxrU1ZuQ0Q0a1NWdTdGNVRHWFBGYXZjeUZiOA?oc=5",
+      "source": "Investor's Business Daily",
+      "date": "Fri, 31 Oct 2025 07:00:00 GMT"
     },
     {
       "title": "Nvidia Stock Won't Be Overvalued by 2028: My Case for Buying NVDA Today",
@@ -91,7 +91,7 @@
     {
       "title": "Marvell Technology Climbs 7% on the AI Chip Recovery: Is It Overvalued Next to Broadcom and Nvidia?",
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPNldwWmswd2pFVHZoS0N0TmhrVFFiWkk2WXB6TzJ0b1QyNEdOU3B0dzVRckg3eXBhQlg0MXZvUXl1bGJid0JmVUJQVTl2eEJzeDg3YmZKLTNKbV90b1lIcEFkXy1QR25IdGM3Z1djWndvdVRDc1BLOVhjQUtkWndWZUlCRkotVzhEQXN5Ni1ocVI0d3cxbmp3Y1NuSjViOC1oZGJ0N3dsLXhPNFlmN2JvUFNrQWRESVVQTGZtV1FCMXg5THM2TXV6TmNvbDZ1YzZGeEZXa3ZDNA?oc=5",
-      "source": "24/7 Wall St.",
+      "source": "247wallst.com",
       "date": "Thu, 09 Jul 2026 07:00:00 GMT"
     },
     {
@@ -125,20 +125,7 @@
       "date": "Tue, 28 Apr 2026 07:00:00 GMT"
     }
   ],
-  "alerts": [
-    {
-      "level": "yellow",
-      "msg": "ORCL down -4.0% \u2014 watch for OpenAI news"
-    },
-    {
-      "level": "yellow",
-      "msg": "CRWV down -5.0% \u2014 CoreWeave under pressure"
-    },
-    {
-      "level": "yellow",
-      "msg": "SOXX up 60% YTD \u2014 entering Burry's danger zone"
-    }
-  ],
+  "alerts": [],
   "bubble_history": [
     {
       "m": 0,
@@ -363,7 +350,7 @@
     {
       "m": 44,
       "date": "2026-09",
-      "v": 10.91
+      "v": 10.86
     }
   ]
 }
