@@ -1,37 +1,37 @@
 {
-  "updated": "2026-09-28T19:53:37.858872+00:00",
+  "updated": "2026-09-29T18:22:00.529584+00:00",
   "market": {
     "NVDA": {
       "name": "Nvidia",
-      "price": 228.28,
-      "pe": 28.9,
-      "change_pct": 1.43,
-      "ytd_pct": 21.2
+      "price": 228.02,
+      "pe": 28.8,
+      "change_pct": -0.36,
+      "ytd_pct": 21.0
     },
     "SOXX": {
       "name": "Semiconductor ETF",
-      "price": 560.07,
-      "pe": 41.2,
-      "change_pct": -2.2,
-      "ytd_pct": 78.9
+      "price": 568.56,
+      "pe": 41.8,
+      "change_pct": 1.39,
+      "ytd_pct": 81.6
     },
     "ORCL": {
       "name": "Oracle",
-      "price": 132.81,
-      "pe": 20.8,
-      "change_pct": -3.13,
-      "ytd_pct": -31.5
+      "price": 137.69,
+      "pe": 21.6,
+      "change_pct": 3.84,
+      "ytd_pct": -29.0
     },
     "CRWV": {
       "name": "CoreWeave",
-      "price": 85.58,
+      "price": 86.27,
       "pe": 0.0,
-      "change_pct": -2.3,
-      "ytd_pct": 7.9
+      "change_pct": 1.4,
+      "ytd_pct": 8.8
     }
   },
   "macro": {
-    "treasury_10y": 5.24
+    "treasury_10y": 5.26
   },
   "news": [
     {
@@ -43,7 +43,7 @@
     {
       "title": "SpaceX, OpenAI, and Anthropic Are Worth More Than Every Single IPO in the Last 45 Years",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOc2UtR2s1ZnAxdEcxWFE3QV83cVJyVmVFTGlNOWJ6RG11NGtJVkpPT29WeXQ3YlIxYldHY0NDYVpsRm5oZ2x6QUJZam5MbnN2YUNuVzdDT1NzeTYxc1ZWa2x2bnNFMkhUOGNXUUhRX0FOWXFHc3VDWkQ3VWJXQ0JrOGctaXJRbnhuMUZSeVN0VnpUZnVHSHNZdTdlb1BWSExMeHFoTjBoM0tvSnhRdjZ4bk41dWN3Mm9lN0pNUDBMNjcwZzZ6c29F?oc=5",
-      "source": "247wallst.com",
+      "source": "24/7 Wall St.",
       "date": "Wed, 23 Sep 2026 15:40:00 GMT"
     },
     {
@@ -73,7 +73,7 @@
     {
       "title": "Big tech is sacrificing its cashflows to prop up the AI boom",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVlNaOF9TcTNiY0ZhWUljNWV0dnhsUVZjQzlvcGszZ0JlY3AtN29kRjdfQVo5M1E1azI1cGRUZFhrQk1yb0V2b2Vzem5uWW81Ql9UYzRKM0lZR2hsV19fMGxCYjRBMW03Wks1M0xubl8wWkxDVGVEVG45Qmg2X2U1SDVuRGQ2ZTNMVlp2TmtsdTVtU0E3OHozbldIN0VnVEppSEtvRHZkY2V2Zw?oc=5",
-      "source": "The Economist",
+      "source": "economist.com",
       "date": "Wed, 13 May 2026 07:00:00 GMT"
     },
     {
@@ -97,8 +97,14 @@
     {
       "title": "Marvell Technology Climbs 7% on the AI Chip Recovery: Is It Overvalued Next to Broadcom and Nvidia?",
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPNldwWmswd2pFVHZoS0N0TmhrVFFiWkk2WXB6TzJ0b1QyNEdOU3B0dzVRckg3eXBhQlg0MXZvUXl1bGJid0JmVUJQVTl2eEJzeDg3YmZKLTNKbV90b1lIcEFkXy1QR25IdGM3Z1djWndvdVRDc1BLOVhjQUtkWndWZUlCRkotVzhEQXN5Ni1ocVI0d3cxbmp3Y1NuSjViOC1oZGJ0N3dsLXhPNFlmN2JvUFNrQWRESVVQTGZtV1FCMXg5THM2TXV6TmNvbDZ1YzZGeEZXa3ZDNA?oc=5",
-      "source": "247wallst.com",
+      "source": "24/7 Wall St.",
       "date": "Thu, 09 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Are AI and Semiconductor Stocks a Once-in-a-Generation Opportunity or an Overvalued Bubble?",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUWZ6ZE5LLTRvV21uRkZlMG8wUDlmbGlnNWpycHJGejhZQTJpV3dNY19SdWJxbGM4eFJtNGlfQUxnTEdXendmTlNQWmhNdGN3eE9tNkVGYW92TUZVVVYzS1MzcHR6WWl6Znd6YVZXS2NvZWJKUGV0dDdlZDlseHBoUGZHcUIteFFQZ2IwZGwwMnZZTEtJY3hub29DVWJDUmpkZFFKeElGaXRxZl9feEFrQkQ2eEg0dER4bGc?oc=5",
+      "source": "KuCoin",
+      "date": "Thu, 18 Jun 2026 07:00:00 GMT"
     },
     {
       "title": "Why OpenAI whiffs should still worry Oracle and CoreWeave investors",
@@ -113,12 +119,6 @@
       "date": "Tue, 28 Apr 2026 07:00:00 GMT"
     },
     {
-      "title": "Oracle Stock Is Paying the Price for OpenAI\u2019s Failures",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPUEVwdWE1S3lVdE1NTG52NkFBWWF3SXgtekdGd2JQREt5WnQ5LU9yRkd5YjVMMTMwRk5ubXg4S3hNNlVwSlFOenJrYW5BbDJua0JJY0tZeW5GVmVQVV9sOWR4cTZURmJVLUM3cUZCM1Ywem51Q1VKcy1uYkVhekFHbGFQem1ncFBKZWV5WF9LSQ?oc=5",
-      "source": "Barron's",
-      "date": "Tue, 28 Apr 2026 07:00:00 GMT"
-    },
-    {
       "title": "OpenAI reportedly missed revenue targets. Shares of Oracle and these chip stocks are falling",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQUTh6UWN0LUdiWWpBLS0xSERXMjJLTldpV1BMLXRzaW5pZFNibWJFaTdrblJKd3RDVFl3Tm5DYVFQUXJUcXI3cXctR3VUOTk3eVFVYWxCanJ4X3NBVWFqZ2tIYXZ0VHdMSU81ZHFhVnpDRFJ3MHZNbTBwZVpSVnpBU194WmhTb3BfeXFaRjl0LU9wMHBnZkdmQ2xFQk9QTDRfT2paeFlGcDhMSmQ3eDRlZWQyR2ZyQWlPNTExQXlrT0ZqakNFb19Z0gHMAUFVX3lxTFBIckFiYlY0Tno4bWhiWjVCYlN6aDY5cl9HajVCZ21UdmlyQkRHZEg5YnF3d2ZsNFZ0Qi0zUnFjMlVSMkt5SVRtXzk2ZGhTaDR0TEh4NUt1MXBOYldic3dEdlNiR3ZnQ28xMjZiYUEyeVlkRk9GR0hkVmxObnhZaVhsa1N5QUNYbG1jdmd6TGZtTER5LWpkb2d4czhrcG5XOVR4UzZab1hEb1JXSUtzdjMwOE1KUXJLTWpucGNDci1wd0I5THNrZFJ4akRQLQ?oc=5",
       "source": "CNBC",
@@ -128,11 +128,7 @@
   "alerts": [
     {
       "level": "yellow",
-      "msg": "ORCL down -3.1% \u2014 watch for OpenAI news"
-    },
-    {
-      "level": "yellow",
-      "msg": "SOXX up 79% YTD \u2014 entering Burry's danger zone"
+      "msg": "SOXX up 82% YTD \u2014 entering Burry's danger zone"
     }
   ],
   "bubble_history": [
@@ -359,7 +355,7 @@
     {
       "m": 44,
       "date": "2026-09",
-      "v": 11.72
+      "v": 11.71
     }
   ]
 }
