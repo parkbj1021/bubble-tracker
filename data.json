@@ -1,37 +1,37 @@
 {
-  "updated": "2026-10-13T19:36:58.300184+00:00",
+  "updated": "2026-10-14T17:40:32.537991+00:00",
   "market": {
     "NVDA": {
       "name": "Nvidia",
-      "price": 227.94,
-      "pe": 28.8,
-      "change_pct": 0.72,
-      "ytd_pct": 21.0
+      "price": 221.2,
+      "pe": 28.0,
+      "change_pct": -3.2,
+      "ytd_pct": 17.4
     },
     "SOXX": {
       "name": "Semiconductor ETF",
-      "price": 541.87,
-      "pe": 31.9,
-      "change_pct": -0.55,
-      "ytd_pct": 73.0
+      "price": 520.57,
+      "pe": 30.6,
+      "change_pct": -4.29,
+      "ytd_pct": 66.2
     },
     "ORCL": {
       "name": "Oracle",
-      "price": 143.09,
-      "pe": 22.4,
-      "change_pct": 4.15,
-      "ytd_pct": -25.9
+      "price": 131.23,
+      "pe": 20.6,
+      "change_pct": -8.36,
+      "ytd_pct": -32.1
     },
     "CRWV": {
       "name": "CoreWeave",
-      "price": 77.28,
+      "price": 65.61,
       "pe": 0.0,
-      "change_pct": -3.71,
-      "ytd_pct": -2.6
+      "change_pct": -15.67,
+      "ytd_pct": -17.3
     }
   },
   "macro": {
-    "treasury_10y": 5.22
+    "treasury_10y": 5.21
   },
   "news": [
     {
@@ -89,16 +89,16 @@
       "date": "Tue, 18 Aug 2026 07:00:00 GMT"
     },
     {
-      "title": "5 Stocks to Sell in June",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPWUJoTVhTN0dnV3h3ZFlmdlZfSnRUVUFWM0s1UXpkQlVVVXR5aE1Eck45cDNNYzlvakpwMDNweUxPOFF1NnB4WFl1VmJrdnZ0MFdYRkZYN1hnS2dUcnNtLURaUVFtMF9JaDdJX1hReUJLT3NmbEh5SnhkZkRyaW1HN1RR?oc=5",
-      "source": "Morningstar",
-      "date": "Mon, 01 Jun 2026 07:00:00 GMT"
-    },
-    {
       "title": "Marvell Technology Climbs 7% on the AI Chip Recovery: Is It Overvalued Next to Broadcom and Nvidia?",
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPNldwWmswd2pFVHZoS0N0TmhrVFFiWkk2WXB6TzJ0b1QyNEdOU3B0dzVRckg3eXBhQlg0MXZvUXl1bGJid0JmVUJQVTl2eEJzeDg3YmZKLTNKbV90b1lIcEFkXy1QR25IdGM3Z1djWndvdVRDc1BLOVhjQUtkWndWZUlCRkotVzhEQXN5Ni1ocVI0d3cxbmp3Y1NuSjViOC1oZGJ0N3dsLXhPNFlmN2JvUFNrQWRESVVQTGZtV1FCMXg5THM2TXV6TmNvbDZ1YzZGeEZXa3ZDNA?oc=5",
       "source": "24/7 Wall St.",
       "date": "Thu, 09 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "title": "As Tech Stocks Churn, Nvidia and Other Semiconductor Plays Look Cheap",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTzUwMEN0TlJMRGwwT2lJR01KTTI1T1Y1a2p3TjlTVWJwLUVBaExkWk1weEVDTE5lQW5lOVVzVjhKUEhENTNXV3dUcWdta3J5STgybjZVb1NBckVxZUlBRzZoTkVweWpWenNUdUYyN1J1YWRZUEVpYzRlNjRTbHZUbUxVSEdDNjNKaDdxY2FOQzN3TzlzUHFXYUdjc2Z3eFNnRlhlY0dIbk5kUQ?oc=5",
+      "source": "Morningstar",
+      "date": "Mon, 16 Feb 2026 08:00:00 GMT"
     },
     {
       "title": "Nvidia, Oracle, CoreWeave and other AI stocks sink on OpenAI revenue report",
@@ -119,20 +119,24 @@
       "date": "Thu, 08 Oct 2026 18:45:51 GMT"
     },
     {
-      "title": "Oracle, CoreWeave lead AI selloff on OpenAI growth concerns",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQZzhBYkt1cUNmMmJzRWZxWGRTb3hNMm02LXN2Z2ZfMUN4dmNyTmV0ODNPRWRkVXlrM0pGNFBpZ3R4X3QzdVV5YW5vaWszSTl3R2IxaEtXaHBib09qMTNjUktjMEVzVjlrMkRVTGpjQldyQVVqekFuWWpQWGZfbVhjQlNtRkNvdFlpbWhhOWtfZTdZVUd6cWMtYnA5ZC0xNHc0eUNfLTlBYUxoUkt2OUpxY2V2NWF4SlNkN2xEN1dkOEpQRDdfM0RJ?oc=5",
-      "source": "Reuters",
-      "date": "Tue, 28 Apr 2026 07:00:00 GMT"
+      "title": "OpenAI\u2019s Revenue Appears $20 Billion Lighter Than Reported \u2014 and the Gap Is Accounting, Not Demand",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNcjN1TkpORjh3dlFtSU1RODh3dmFNSU1RYmROVG02OHJpM1NTOVZaN29OMGtOSTFXaHdLNm01bmkzMVZlWnBaWGV4ekdHM090U1A3WTlWZ2xTZUt1SXVmVENBTzFMeEZ6SzFqdEE1R3BZdHVPcmhIZzRDbFhwVF9VSFR6TU9mbWMzZExBV3NzTUE5d2wweWdVOVE5TEtJbmpnM3BzcVhYMnBWNm1ZMDM2bEhPT2F1QQ?oc=5",
+      "source": "Forkast News",
+      "date": "Fri, 09 Oct 2026 10:04:35 GMT"
     }
   ],
   "alerts": [
     {
-      "level": "yellow",
-      "msg": "CRWV down -3.7% \u2014 CoreWeave under pressure"
+      "level": "red",
+      "msg": "ORCL dropped -8.4% today \u2014 OpenAI/Oracle contract stress signal"
+    },
+    {
+      "level": "red",
+      "msg": "CRWV dropped -15.7% \u2014 AI infrastructure financing stress"
     },
     {
       "level": "yellow",
-      "msg": "SOXX up 73% YTD \u2014 entering Burry's danger zone"
+      "msg": "SOXX up 66% YTD \u2014 entering Burry's danger zone"
     }
   ],
   "bubble_history": [
@@ -364,7 +368,7 @@
     {
       "m": 45,
       "date": "2026-10",
-      "v": 11.71
+      "v": 11.36
     }
   ]
 }
