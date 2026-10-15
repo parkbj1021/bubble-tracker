@@ -1,37 +1,37 @@
 {
-  "updated": "2026-10-14T17:40:32.537991+00:00",
+  "updated": "2026-10-15T17:27:26.521981+00:00",
   "market": {
     "NVDA": {
       "name": "Nvidia",
-      "price": 221.2,
-      "pe": 28.0,
-      "change_pct": -3.2,
-      "ytd_pct": 17.4
+      "price": 217.18,
+      "pe": 28.4,
+      "change_pct": -1.86,
+      "ytd_pct": 15.3
     },
     "SOXX": {
       "name": "Semiconductor ETF",
-      "price": 520.57,
-      "pe": 30.6,
-      "change_pct": -4.29,
-      "ytd_pct": 66.2
+      "price": 507.84,
+      "pe": 29.9,
+      "change_pct": -2.23,
+      "ytd_pct": 62.2
     },
     "ORCL": {
       "name": "Oracle",
-      "price": 131.23,
-      "pe": 20.6,
-      "change_pct": -8.36,
-      "ytd_pct": -32.1
+      "price": 134.06,
+      "pe": 23.0,
+      "change_pct": 2.69,
+      "ytd_pct": -30.6
     },
     "CRWV": {
       "name": "CoreWeave",
-      "price": 65.61,
+      "price": 66.93,
       "pe": 0.0,
-      "change_pct": -15.67,
-      "ytd_pct": -17.3
+      "change_pct": 1.7,
+      "ytd_pct": -15.7
     }
   },
   "macro": {
-    "treasury_10y": 5.21
+    "treasury_10y": 5.08
   },
   "news": [
     {
@@ -53,10 +53,10 @@
       "date": "Thu, 11 Jun 2026 07:00:00 GMT"
     },
     {
-      "title": "Tech stocks drop on a report that OpenAI missed revenue targets",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNemF0dHhmMUdGeUYxd2MwU2xRekdEbTdhWGJrcFkzMjhMTzdFbW9qV2JDVkpyOXR4dGxwN2hkQTZWRWxwbk9JemhRcDNHaWxiWWY2TzZabFY1OGdRZF9NOHVvSVc2YURMelYxbGRlR2J2TG9oTkVHV29SN0Fyay1ZTzFTdDBWZFdIUEUzdXJ1T2ZfWmt5TmQxOEhOQnJNTXVQdlI5bWRJRnc?oc=5",
-      "source": "Business Insider",
-      "date": "Tue, 28 Apr 2026 07:00:00 GMT"
+      "title": "Sam Altman Is Pushing for a $1 Trillion IPO Valuation for OpenAI, Even as SoftBank Faces a $40 Billion Loan Deadline in 2027. Here's What That Tension Means for Microsoft and Nvidia Shareholders.",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOaG0zU2RnSjVxLUN1M0U1bkVFeGFmTGRIVnNnUDZCWGNxbk9NalRqY3p3bDczbHJkZURNYnJlWTI0N1gwbDdkbEJBYUJUME1KOG5Hb3FvZk5sb3lNRWFyVjdzTWFrQUlPTVgxN2NzNjIzcWVDbDdISExmM2FvTlMwR2RaOUg4cWxiTmRxWTNUYTJFYjc5WXBzLWFB?oc=5",
+      "source": "Yahoo Finance",
+      "date": "Thu, 13 Aug 2026 07:00:00 GMT"
     },
     {
       "title": "Meta, Microsoft and Amazon Test Limits of Investor Appetite for AI Spending",
@@ -89,16 +89,16 @@
       "date": "Tue, 18 Aug 2026 07:00:00 GMT"
     },
     {
+      "title": "5 Stocks to Sell in June",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPWUJoTVhTN0dnV3h3ZFlmdlZfSnRUVUFWM0s1UXpkQlVVVXR5aE1Eck45cDNNYzlvakpwMDNweUxPOFF1NnB4WFl1VmJrdnZ0MFdYRkZYN1hnS2dUcnNtLURaUVFtMF9JaDdJX1hReUJLT3NmbEh5SnhkZkRyaW1HN1RR?oc=5",
+      "source": "Morningstar",
+      "date": "Mon, 01 Jun 2026 07:00:00 GMT"
+    },
+    {
       "title": "Marvell Technology Climbs 7% on the AI Chip Recovery: Is It Overvalued Next to Broadcom and Nvidia?",
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPNldwWmswd2pFVHZoS0N0TmhrVFFiWkk2WXB6TzJ0b1QyNEdOU3B0dzVRckg3eXBhQlg0MXZvUXl1bGJid0JmVUJQVTl2eEJzeDg3YmZKLTNKbV90b1lIcEFkXy1QR25IdGM3Z1djWndvdVRDc1BLOVhjQUtkWndWZUlCRkotVzhEQXN5Ni1ocVI0d3cxbmp3Y1NuSjViOC1oZGJ0N3dsLXhPNFlmN2JvUFNrQWRESVVQTGZtV1FCMXg5THM2TXV6TmNvbDZ1YzZGeEZXa3ZDNA?oc=5",
       "source": "24/7 Wall St.",
       "date": "Thu, 09 Jul 2026 07:00:00 GMT"
-    },
-    {
-      "title": "As Tech Stocks Churn, Nvidia and Other Semiconductor Plays Look Cheap",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTzUwMEN0TlJMRGwwT2lJR01KTTI1T1Y1a2p3TjlTVWJwLUVBaExkWk1weEVDTE5lQW5lOVVzVjhKUEhENTNXV3dUcWdta3J5STgybjZVb1NBckVxZUlBRzZoTkVweWpWenNUdUYyN1J1YWRZUEVpYzRlNjRTbHZUbUxVSEdDNjNKaDdxY2FOQzN3TzlzUHFXYUdjc2Z3eFNnRlhlY0dIbk5kUQ?oc=5",
-      "source": "Morningstar",
-      "date": "Mon, 16 Feb 2026 08:00:00 GMT"
     },
     {
       "title": "Nvidia, Oracle, CoreWeave and other AI stocks sink on OpenAI revenue report",
@@ -113,30 +113,22 @@
       "date": "Fri, 09 Oct 2026 12:06:26 GMT"
     },
     {
-      "title": "Nvidia, Oracle and CoreWeave shares fall after OpenAI revenue data \u2014 CNBC",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPb2Zpa21ta25FRDQtRU9WNkZTQ0lqOTRQRzZDbl9EcEwxbmVCOUhIQ01aczVWR2xNM3VRVUR2ZU9HM0Z4VlVLekR1bjdKMzZvU29XQlFGLXlBYkN2ZVFHMDZ2eWZmaDVfRk9rb2xNdFFGcjBSMnBuRW5zRzFHQTVaYzRDMGVMVzBMa1hhd0NndTRSNzhSQUFURFJDZkhSZzZZZEpORkpR?oc=5",
-      "source": "UA.NEWS",
-      "date": "Thu, 08 Oct 2026 18:45:51 GMT"
+      "title": "$50B? $70B? How OpenAI\u2019s Accounting Confusion Wrecked the AI Trade",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOR3Z6N3VvVnBGS0NKR1dtVzlOVEROUm1hSC16S2I2TF9IUVJJT0pob0wyTGFSNFFScm5SN0g5Zk9HQVh6aTFpZXFYWHBYaVpyX1Bab1VwNjB6SE9LamdpcE4zZzJWNnJwaXVMa2ZOZWtaRVBRVENSWGNBbEFVWEJvWFR1NA?oc=5",
+      "source": "Barron's",
+      "date": "Fri, 09 Oct 2026 14:57:00 GMT"
     },
     {
-      "title": "OpenAI\u2019s Revenue Appears $20 Billion Lighter Than Reported \u2014 and the Gap Is Accounting, Not Demand",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNcjN1TkpORjh3dlFtSU1RODh3dmFNSU1RYmROVG02OHJpM1NTOVZaN29OMGtOSTFXaHdLNm01bmkzMVZlWnBaWGV4ekdHM090U1A3WTlWZ2xTZUt1SXVmVENBTzFMeEZ6SzFqdEE1R3BZdHVPcmhIZzRDbFhwVF9VSFR6TU9mbWMzZExBV3NzTUE5d2wweWdVOVE5TEtJbmpnM3BzcVhYMnBWNm1ZMDM2bEhPT2F1QQ?oc=5",
-      "source": "Forkast News",
-      "date": "Fri, 09 Oct 2026 10:04:35 GMT"
+      "title": "Oracle, CoreWeave lead AI selloff on OpenAI growth concerns",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQZzhBYkt1cUNmMmJzRWZxWGRTb3hNMm02LXN2Z2ZfMUN4dmNyTmV0ODNPRWRkVXlrM0pGNFBpZ3R4X3QzdVV5YW5vaWszSTl3R2IxaEtXaHBib09qMTNjUktjMEVzVjlrMkRVTGpjQldyQVVqekFuWWpQWGZfbVhjQlNtRkNvdFlpbWhhOWtfZTdZVUd6cWMtYnA5ZC0xNHc0eUNfLTlBYUxoUkt2OUpxY2V2NWF4SlNkN2xEN1dkOEpQRDdfM0RJ?oc=5",
+      "source": "Reuters",
+      "date": "Tue, 28 Apr 2026 07:00:00 GMT"
     }
   ],
   "alerts": [
     {
-      "level": "red",
-      "msg": "ORCL dropped -8.4% today \u2014 OpenAI/Oracle contract stress signal"
-    },
-    {
-      "level": "red",
-      "msg": "CRWV dropped -15.7% \u2014 AI infrastructure financing stress"
-    },
-    {
       "level": "yellow",
-      "msg": "SOXX up 66% YTD \u2014 entering Burry's danger zone"
+      "msg": "SOXX up 62% YTD \u2014 entering Burry's danger zone"
     }
   ],
   "bubble_history": [
@@ -368,7 +360,7 @@
     {
       "m": 45,
       "date": "2026-10",
-      "v": 11.36
+      "v": 11.15
     }
   ]
 }
