@@ -1,44 +1,44 @@
 {
-  "updated": "2026-11-05T20:22:15.231059+00:00",
+  "updated": "2026-11-06T19:44:56.276711+00:00",
   "market": {
     "NVDA": {
       "name": "Nvidia",
-      "price": 183.21,
-      "pe": 23.2,
-      "change_pct": -8.45,
-      "ytd_pct": -2.8
+      "price": 187.43,
+      "pe": 23.7,
+      "change_pct": 3.21,
+      "ytd_pct": -0.5
     },
     "SOXX": {
       "name": "Semiconductor ETF",
-      "price": 134.12,
-      "pe": 9.5,
-      "change_pct": -10.67,
-      "ytd_pct": 29.0
+      "price": 136.35,
+      "pe": 9.6,
+      "change_pct": 3.38,
+      "ytd_pct": 30.6
     },
     "ORCL": {
       "name": "Oracle",
-      "price": 115.25,
-      "pe": 18.1,
-      "change_pct": -6.85,
-      "ytd_pct": -40.3
+      "price": 114.74,
+      "pe": 18.0,
+      "change_pct": -0.38,
+      "ytd_pct": -40.6
     },
     "CRWV": {
       "name": "CoreWeave",
-      "price": 43.94,
+      "price": 45.6,
       "pe": 0.0,
-      "change_pct": -9.25,
-      "ytd_pct": -44.6
+      "change_pct": 4.46,
+      "ytd_pct": -42.5
     }
   },
   "macro": {
-    "treasury_10y": 4.84
+    "treasury_10y": 4.86
   },
   "news": [
     {
-      "title": "Threat of AI Bubble Looms Over Anthropic\u2019s Big IPO Moment",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNMkJpNGZSUU1LX2RFa2kwVW9WT3ptUy0wRWVyQTk1bUFxTXhYRzZ2WGo5RlBza05xS2ZOX0lfMzd3QWdpYjhQa1ZKY0FKNkVKdzR6YmxPM2lCVHJ5WWFBR2RMdnhKRlpHMENwemJNY1NCTHF5Q0xJcFpFV1J0ZlYtdVViekNMaU1xOEN0OA?oc=5",
-      "source": "CNET",
-      "date": "Mon, 26 Oct 2026 07:00:00 GMT"
+      "title": "Exit Liquidity",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE55Sjl1dVc3UThGaW1nQW03ZEtVNFdVTmJMMlVGbVBZR0ItRkRhN1JjZmxYa1ZXLXlkUlRfd0NOMnZQMVljV3V2cmZScEJIVzhrWVIxWnpB?oc=5",
+      "source": "Ed Zitron's Where's Your Ed At",
+      "date": "Wed, 28 Oct 2026 07:00:00 GMT"
     },
     {
       "title": "OpenAI Missed Multiple Revenue Targets\u2014Here\u2019s Why It Likely Won\u2019t IPO This Year",
@@ -59,12 +59,6 @@
       "date": "Thu, 11 Jun 2026 07:00:00 GMT"
     },
     {
-      "title": "Dan Ives Sees Cash Flow Rebound In MSFT, META, GOOGL, AMZN: Says AI Bubble Fears Thrown Out The Window",
-      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOU2lRSzRYSGk0Nnk5QnlJYkI5ZjEwUHNvWGVaWVJlMThQNjJOMHdscVNQWnotNjhpdHZkUGp5bFV4ZzhEMVk5b2YyeDZjaHBvTzFYbTJIcVVkRnUwNzdyaDlPbVJTQWNadG41RHdLSmw0dEZRR3lVZ3lVVmZVaERZSDg5MVliR3lMcmptSHFrelFESXY4blNFWVpBa2JrZFNkSnI4R0N5LUpHS1U4WUZhV3dsb1ZodVU4VVIySWJTcE9vSE9qdzNDcW9NTWhQUEhrYk55bjFEdmszT2U4SVNfR1Rhck9PcURKV3IyRnVtVWw?oc=5",
-      "source": "TradingView",
-      "date": "Thu, 05 Nov 2026 14:49:07 GMT"
-    },
-    {
       "title": "I'm Not Swayed By AI Bubble Burst Doomerism",
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNb3hUeXROblJ0QTlZNVlIeXpHRlB6cElJa2FLR0pUSWVsVjREZ0pEMElGLWxMOFhpV3hWbUcwNUVJZER1TEJQTXhDcEppTG1VX3Jma0lRLTVnRzh2QWtlZU80UFAzYUNpenZrVEIwWHpMckdRM1FPb203V2JjSWpzSFhXOFlnUUFkeTFDb2N3?oc=5",
       "source": "Seeking Alpha",
@@ -83,6 +77,12 @@
       "date": "Wed, 13 May 2026 07:00:00 GMT"
     },
     {
+      "title": "Big Tech set to spend $650 billion in 2026 as AI investments soar",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOcGFYMkRUU20tZXcwTjlzNEdxNXF4MlBBVTQ5a3pKQzhwSHlEQjVkZFhLTGdHOGtzTFVJR3puVF9GN2lfTWZzTzZpc29vSHVsRi1vVmpOZnhNRTJCVzRPX2owU20zRFZaYUY2Rk9lRXZmZGJxMWhrcUF5MlE0MHcwaVNBYXB2M1Vkamx1VUpaOEVHNHpGQTNUSmYzcW05SXQ2Ni0zWllhM0F6aG9ERGpN?oc=5",
+      "source": "Yahoo Finance",
+      "date": "Fri, 06 Feb 2026 08:00:00 GMT"
+    },
+    {
       "title": "7 Best Semiconductor Stocks for 2026 | Investing - U.S. News",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPdVlocTJ6U2RLbGpQUnpwLWxwSjQ4ZlI3cjR5U204TDlkakhISEo5d3ItaGFVQ1VSdk1UdXBFc1JGYnVqT1ZoN2RKQUREM3dxeDRYbzF5Rl9XeHl6WXZzWWNkY1NRS0pvd0RDYVVLbFRTNHdzR2xyZXpaam1naEc3Y3dR?oc=5",
       "source": "Money",
@@ -95,16 +95,16 @@
       "date": "Fri, 30 Oct 2026 07:00:00 GMT"
     },
     {
-      "title": "Nvidia Stock Won't Be Overvalued by 2028: My Case for Buying NVDA Today",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNX1lwekk2Z2E1dWd6NWlCSFJRMDMyU05tb29HOHRFMklubzdqR3NkMDhFVmpjMlZuTUNRSzdRNkNVREROclpSaEhvRzVSaTAySENnVmxtQkZVMlhoRlRMcnAwSGZuckpwMGdCeU9CQ1dlZlFrQkVRNXdiWFpHUTNZM2J1S3p0S0RwX1B2Z2gzZUdIZ0hTcmxpQQ?oc=5",
-      "source": "The Motley Fool",
-      "date": "Wed, 19 Aug 2026 07:00:00 GMT"
-    },
-    {
       "title": "Michael Burry Is Short NVDA, AMAT, SOXX \u2014 Sees Big Korea Chip Spending As \u2018Beginning Of The End\u2019",
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPRlhGM2IzWlMteWQzZnZWUUVvYktYbWVRTUhYYXRzZm04SnNZNWNURlFOVXJnZ01yT09OVGZJQWUwdVJsOHZVS0ljM2FYRzR2QkZtYUFtOUQwSjQwV0lYWG55d3VuUG1pSlpLT3g0Ui1WLVRYMEVRTkI1MldNYnVmci1yQnAyUlh1eFF6U0RIRHozdk0tbHdITWFB?oc=5",
       "source": "Yahoo Finance",
       "date": "Tue, 30 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "title": "5 Stocks to Sell in June",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPWUJoTVhTN0dnV3h3ZFlmdlZfSnRUVUFWM0s1UXpkQlVVVXR5aE1Eck45cDNNYzlvakpwMDNweUxPOFF1NnB4WFl1VmJrdnZ0MFdYRkZYN1hnS2dUcnNtLURaUVFtMF9JaDdJX1hReUJLT3NmbEh5SnhkZkRyaW1HN1RR?oc=5",
+      "source": "Morningstar",
+      "date": "Mon, 01 Jun 2026 07:00:00 GMT"
     },
     {
       "title": "Nvidia, Oracle, CoreWeave and other AI stocks sink on OpenAI revenue report",
@@ -125,20 +125,7 @@
       "date": "Tue, 28 Apr 2026 07:00:00 GMT"
     }
   ],
-  "alerts": [
-    {
-      "level": "red",
-      "msg": "ORCL dropped -6.8% today \u2014 OpenAI/Oracle contract stress signal"
-    },
-    {
-      "level": "red",
-      "msg": "CRWV dropped -9.2% \u2014 AI infrastructure financing stress"
-    },
-    {
-      "level": "red",
-      "msg": "NVDA dropped -8.4% \u2014 semiconductor demand signal"
-    }
-  ],
+  "alerts": [],
   "bubble_history": [
     {
       "m": 0,
@@ -373,7 +360,7 @@
     {
       "m": 46,
       "date": "2026-11",
-      "v": 9.4
+      "v": 9.63
     }
   ]
 }
