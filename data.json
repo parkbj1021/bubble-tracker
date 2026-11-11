@@ -1,44 +1,44 @@
 {
-  "updated": "2026-11-10T20:05:11.505367+00:00",
+  "updated": "2026-11-11T19:54:55.634126+00:00",
   "market": {
     "NVDA": {
       "name": "Nvidia",
-      "price": 166.16,
-      "pe": 21.0,
-      "change_pct": -7.0,
-      "ytd_pct": -11.8
+      "price": 175.83,
+      "pe": 22.2,
+      "change_pct": 4.17,
+      "ytd_pct": -6.7
     },
     "SOXX": {
       "name": "Semiconductor ETF",
-      "price": 145.4,
-      "pe": 30.8,
-      "change_pct": -0.93,
-      "ytd_pct": 39.3
+      "price": 156.79,
+      "pe": 33.2,
+      "change_pct": 6.96,
+      "ytd_pct": 50.2
     },
     "ORCL": {
       "name": "Oracle",
-      "price": 116.92,
-      "pe": 18.3,
-      "change_pct": -2.39,
-      "ytd_pct": -39.5
+      "price": 129.41,
+      "pe": 20.3,
+      "change_pct": 9.69,
+      "ytd_pct": -33.0
     },
     "CRWV": {
       "name": "CoreWeave",
-      "price": 47.17,
+      "price": 60.38,
       "pe": 0.0,
-      "change_pct": -3.69,
-      "ytd_pct": -40.5
+      "change_pct": 23.9,
+      "ytd_pct": -23.9
     }
   },
   "macro": {
-    "treasury_10y": 4.98
+    "treasury_10y": 5.0
   },
   "news": [
     {
-      "title": "Tech stocks drop after report that OpenAI\u2019s revenue is lower than expected",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5BOTNlajdpNk5VanVGYmx1ZDZBZUpSZGtoWktCQmhzcDVNQ3BtUzBDb3d3MlNndUQyVnFLMThGX3FTZ0RjWDIxM1EyUTJZbU5nM2Z1VFBLRFQxV1o3dFRkdHFzM0tLRHVJT1c1dG9B?oc=5",
-      "source": "CNN",
-      "date": "Thu, 08 Oct 2026 07:00:00 GMT"
+      "title": "OpenAI's third-quarter revenue hits $10 billion as Anthropic prepares its IPO",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQcWdWTmNjbThzYk1KTGNZaFduVF9XNm9Sc0QxcXpVVlNPaDVTeEZOaXgteXYzQzdrZ2dwM0JXUmFhQXRCT3djVU5aM25rbmRsUzJqWFBMbHIwWmFoUmw2cUFDcV9KeDZNcW1MSlkzT2RiLXVKN1Q2ZGlZYm5nMVJNUlhFbjVMMWNxSVZtOUNTbnFfdlBRbTdRY2M2UGpvR0M2RU1BaTV3?oc=5",
+      "source": "Startup Fortune",
+      "date": "Wed, 11 Nov 2026 04:53:53 GMT"
     },
     {
       "title": "OpenAI Missed Multiple Revenue Targets\u2014Here\u2019s Why It Likely Won\u2019t IPO This Year",
@@ -59,14 +59,8 @@
       "date": "Fri, 26 Jun 2026 07:00:00 GMT"
     },
     {
-      "title": "Dan Ives Sees Cash Flow Rebound In MSFT, META, GOOGL, AMZN: Says AI Bubble Fears Thrown Out The Window",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOVFlia2lnbVJ2YXJLWjVvVTZyVklqZ3liTjlBUXBvNFRuZHNkTmtWZGIxM0VYRVotUVlaSV9mdDV1aUh6RHJXUzJ0eWR1VFY3RThLUC01ajdWSHBaVWZYY1FmaE1ock8yOWFLbWRtQWtvSzlUMDF1eUVoa2dlUVlxd2hScGhma1dwNEd2bk9Zbmg?oc=5",
-      "source": "Yahoo Finance",
-      "date": "Thu, 05 Nov 2026 14:49:07 GMT"
-    },
-    {
       "title": "Amazon leads Big Tech\u2019s $1 trillion wipeout as AI bubble fears ignite sell-off",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9TSk1FQkRzNFdxbGJrZkFOLTYwZFotaWhCa2hZb01YSldtZlZmVHNhRWpWdkJURlFrNC1zQVhHUXE2UGUxbXJULWM3MGV4RWZUQ2ktRi1wVTJHVF9STnZwWUhOYUljUGJpbnkwUENiOEFCS3ZhYjNoeNIBfkFVX3lxTE5za1ZBTjFYRmR6d09ZT2RIVG9JOTdzdjhmRHZwQk41QkFHN3pEeXNOdk12M1FBMkxnRXIyNDJDTGJEczQxVDRoU193aXFtVlBQRkw0TmJTeHZEQWdpc01nOUJQZllJWElMUnR2TjRtVW1mUWxOa1RpUTd5U0hCZw?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9TSk1FQkRzNFdxbGJrZkFOLTYwZFotaWhCa2hZb01YSldtZlZmVHNhRWpWdkJURlFrNC1zQVhHUXE2UGUxbXJULWM3MGV4RWZUQ2ktRi1wVTJHVF9STnZwWUhOYUljUGJpbnkwUENiOEFCS3ZhYjNoeA?oc=5",
       "source": "CNBC",
       "date": "Fri, 06 Feb 2026 08:00:00 GMT"
     },
@@ -75,6 +69,12 @@
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVlNaOF9TcTNiY0ZhWUljNWV0dnhsUVZjQzlvcGszZ0JlY3AtN29kRjdfQVo5M1E1azI1cGRUZFhrQk1yb0V2b2Vzem5uWW81Ql9UYzRKM0lZR2hsV19fMGxCYjRBMW03Wks1M0xubl8wWkxDVGVEVG45Qmg2X2U1SDVuRGQ2ZTNMVlp2TmtsdTVtU0E3OHozbldIN0VnVEppSEtvRHZkY2V2Zw?oc=5",
       "source": "The Economist",
       "date": "Wed, 13 May 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Big Tech set to spend $650 billion in 2026 as AI investments soar",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOcGFYMkRUU20tZXcwTjlzNEdxNXF4MlBBVTQ5a3pKQzhwSHlEQjVkZFhLTGdHOGtzTFVJR3puVF9GN2lfTWZzTzZpc29vSHVsRi1vVmpOZnhNRTJCVzRPX2owU20zRFZaYUY2Rk9lRXZmZGJxMWhrcUF5MlE0MHcwaVNBYXB2M1Vkamx1VUpaOEVHNHpGQTNUSmYzcW05SXQ2Ni0zWllhM0F6aG9ERGpN?oc=5",
+      "source": "Yahoo Finance",
+      "date": "Fri, 06 Feb 2026 08:00:00 GMT"
     },
     {
       "title": "AI Capex and Bubble Fears (Meta, Alphabet, Anthropic IPO, Shiller P/E)",
@@ -125,16 +125,7 @@
       "date": "Tue, 28 Apr 2026 07:00:00 GMT"
     }
   ],
-  "alerts": [
-    {
-      "level": "yellow",
-      "msg": "ORCL down -2.4% \u2014 watch for OpenAI news"
-    },
-    {
-      "level": "yellow",
-      "msg": "CRWV down -3.7% \u2014 CoreWeave under pressure"
-    }
-  ],
+  "alerts": [],
   "bubble_history": [
     {
       "m": 0,
@@ -369,7 +360,7 @@
     {
       "m": 46,
       "date": "2026-11",
-      "v": 8.53
+      "v": 9.03
     }
   ]
 }
