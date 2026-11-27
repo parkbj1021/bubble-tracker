@@ -1,45 +1,39 @@
 {
-  "updated": "2026-11-26T22:00:23.039911+00:00",
+  "updated": "2026-11-27T21:43:37.555061+00:00",
   "market": {
     "NVDA": {
       "name": "Nvidia",
-      "price": 149.3,
-      "pe": 16.0,
-      "change_pct": -3.91,
-      "ytd_pct": -20.8
+      "price": 150.49,
+      "pe": 16.2,
+      "change_pct": 0.8,
+      "ytd_pct": -20.1
     },
     "SOXX": {
       "name": "Semiconductor ETF",
-      "price": 127.98,
-      "pe": 27.1,
-      "change_pct": -0.5,
-      "ytd_pct": 22.6
+      "price": 134.07,
+      "pe": 28.4,
+      "change_pct": 4.76,
+      "ytd_pct": 28.4
     },
     "ORCL": {
       "name": "Oracle",
-      "price": 103.88,
-      "pe": 16.3,
-      "change_pct": -5.13,
-      "ytd_pct": -46.2
+      "price": 107.13,
+      "pe": 16.8,
+      "change_pct": 3.13,
+      "ytd_pct": -44.5
     },
     "CRWV": {
       "name": "CoreWeave",
-      "price": 42.57,
+      "price": 44.15,
       "pe": 0.0,
-      "change_pct": -0.08,
-      "ytd_pct": -46.3
+      "change_pct": 3.71,
+      "ytd_pct": -44.3
     }
   },
   "macro": {
-    "treasury_10y": 4.85
+    "treasury_10y": 4.94
   },
   "news": [
-    {
-      "title": "Why Anthropic's blockbuster IPO couldn't escape the stock market correction",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE90YWJYMjBRbTlBb2JWM2hUektMRU45aWpYTGFweEdwYnpKbnUxZW5ZZmpRZldwOE1DTkNJNW03RmlXRXJ2eHpkam42WVdjSkVKSnhQTXVqZVpnaUFQdWlwQTVWZnRma3dYYUlqajRzdHlVQ1FxRVBIN2YwQ0hBMTTSAYQBQVVfeXFMT3NHN0pIT3ZMVktfX1pJRE5GV1JqUFcyQmhtSnczMjhLY2NNUXYyYUJIT3BtQ0JUeW5oLTBMenpSN0VVcVN1S245OHAxd29FMFdMZjY4ektWMW15Q29vMVhfRkh0TExJdS16OVdrOG1BbHN6cV9vWVpNZEdHa1RfNk5tUVZs?oc=5",
-      "source": "CNBC",
-      "date": "Fri, 20 Nov 2026 20:57:30 GMT"
-    },
     {
       "title": "Anthropic's blockbuster debut tests Wall Street's faith in AI boom",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVmU0cXVPRUhwcDZpRkRudEI3bjNfMllQVEN3M09VWFNmQUJTck1UUE9mVERRbmFicElZMWxKVnd3UWpTNGY3R1JiZ0NnRnNBRHhLMkxkVC1vUWVOVzQ3NzcwMkoycTR0MC1LUnBfdUIyWl9OZE5xYnlVVmQ5bzdVZmdnVHFjUjh6dHZrbVVQdEFPaDNCUC1KSkZEMUlhcU9OeWFiWi10SGwxNTBpNE16aTd1MA?oc=5",
@@ -50,31 +44,37 @@
       "title": "Simon Jack: Can Anthropic's record-breaking IPO stop the AI bubble bursting?",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1fZ0pYdHlmLTd2WnZJbmtNYl9RUmQ1ODFGREEzSkdNUXFOQmhnNXg3MmhWR2VzYksxblZqWVJ0SHlKVW1TbXZOWE1UbnNUdmNKMXp1eWFuTFh0QTQ?oc=5",
       "source": "BBC",
-      "date": "Wed, 18 Nov 2026 21:28:08 GMT"
+      "date": "Wed, 18 Nov 2026 08:00:00 GMT"
     },
     {
-      "title": "Anthropic And Nvidia Are Saying The AI Bubble Is Finally Popping",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNOExsYVF5bHI3Rm9XQTZoMTFJTVhEbFJ5bnhMdjJIdEVzRFBJc21STEhyVTdNLUpjZ3FYVVcwdWRMTWs3V1pHQXEzUTVPZXR3X2daWUV6UXFWMmE2aXR0eDlQVmUtYlc5ems1aWtEdGg0UzVFSlVNWXQ1NW94bFFzdnk4eGN5aml6Rkt3SE44R2k0WTNzR2JnUEU4bWk5d0xjSkRod3RrdWM?oc=5",
+      "title": "Opinion | I Spent a Year Talking to Anthropic Employees. Here\u2019s What They Believe.",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1hR0p1eTMya0NpcWxrVWhoRFFfQTF4S3pqaWdrc0xNei1rSGdmNFhoSThIaXc4cW1vaW5sTnpGYTlMdGxPeWZIeHBvMGt6TlNLcUQwby1BRDI2Z0JyU2dmZFU5bm9USkVJM1lyQnZjeUFqMndRQVE?oc=5",
+      "source": "The New York Times",
+      "date": "Wed, 18 Nov 2026 08:00:00 GMT"
+    },
+    {
+      "title": "OpenAI Missed Multiple Revenue Targets\u2014Here\u2019s Why It Likely Won\u2019t IPO This Year",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPWE9IR0s2SElITnpfbk9pandaNnBKNi0teUVYdndCRURkUFA3dDU0UldyOVhINTJ6VlNEZWtDTU1SclFWWlplOW9QZ0steTJ6NzBHd2xNem5zUEYtR2JCNFFMdVRXcTZGOC1xUHBjenJrOTliYTZhMk9VTzByNk9wajhKdkJPOGZOTjdOVEhFVXdGSVFrWHdpZUprYTdUcjZKR1VrLTczTXJrNmlCSHZGaQ?oc=5",
+      "source": "Morningstar",
+      "date": "Thu, 30 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "19 charts that explain the state of AI",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9BdEYzLWI0UDM3NjRTM1NGSjVsaFFSblZaY2sxRDJHcEJfeXZPUENRYmhVZ0ZiSjBEV2NydmtGcG1ZdmktN1dNRFQ2OHF2UVBLS0l5ZzRNWGpyaEZDYm9DVDdHNlE0aTZOOEx4a2FqYUxMOVlB?oc=5",
+      "source": "Understanding AI | Timothy B. Lee",
+      "date": "Wed, 18 Nov 2026 08:00:00 GMT"
+    },
+    {
+      "title": "I'm Not Swayed By AI Bubble Burst Doomerism",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNb3hUeXROblJ0QTlZNVlIeXpHRlB6cElJa2FLR0pUSWVsVjREZ0pEMElGLWxMOFhpV3hWbUcwNUVJZER1TEJQTXhDcEppTG1VX3Jma0lRLTVnRzh2QWtlZU80UFAzYUNpenZrVEIwWHpMckdRM1FPb203V2JjSWpzSFhXOFlnUUFkeTFDb2N3?oc=5",
       "source": "Seeking Alpha",
-      "date": "Fri, 20 Nov 2026 18:22:12 GMT"
+      "date": "Sun, 01 Nov 2026 07:00:00 GMT"
     },
     {
       "title": "Dan Ives Sees Cash Flow Rebound In MSFT, META, GOOGL, AMZN: Says AI Bubble Fears Thrown Out The Window",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOVFlia2lnbVJ2YXJLWjVvVTZyVklqZ3liTjlBUXBvNFRuZHNkTmtWZGIxM0VYRVotUVlaSV9mdDV1aUh6RHJXUzJ0eWR1VFY3RThLUC01ajdWSHBaVWZYY1FmaE1ock8yOWFLbWRtQWtvSzlUMDF1eUVoa2dlUVlxd2hScGhma1dwNEd2bk9Zbmg?oc=5",
-      "source": "Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOU2lRSzRYSGk0Nnk5QnlJYkI5ZjEwUHNvWGVaWVJlMThQNjJOMHdscVNQWnotNjhpdHZkUGp5bFV4ZzhEMVk5b2YyeDZjaHBvTzFYbTJIcVVkRnUwNzdyaDlPbVJTQWNadG41RHdLSmw0dEZRR3lVZ3lVVmZVaERZSDg5MVliR3lMcmptSHFrelFESXY4blNFWVpBa2JrZFNkSnI4R0N5LUpHS1U4WUZhV3dsb1ZodVU4VVIySWJTcE9vSE9qdzNDcW9NTWhQUEhrYk55bjFEdmszT2U4SVNfR1Rhck9PcURKV3IyRnVtVWw?oc=5",
+      "source": "TradingView",
       "date": "Thu, 05 Nov 2026 08:00:00 GMT"
-    },
-    {
-      "title": "Amazon leads Big Tech\u2019s $1 trillion wipeout as AI bubble fears ignite sell-off",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9TSk1FQkRzNFdxbGJrZkFOLTYwZFotaWhCa2hZb01YSldtZlZmVHNhRWpWdkJURlFrNC1zQVhHUXE2UGUxbXJULWM3MGV4RWZUQ2ktRi1wVTJHVF9STnZwWUhOYUljUGJpbnkwUENiOEFCS3ZhYjNoeNIBfkFVX3lxTE5za1ZBTjFYRmR6d09ZT2RIVG9JOTdzdjhmRHZwQk41QkFHN3pEeXNOdk12M1FBMkxnRXIyNDJDTGJEczQxVDRoU193aXFtVlBQRkw0TmJTeHZEQWdpc01nOUJQZllJWElMUnR2TjRtVW1mUWxOa1RpUTd5U0hCZw?oc=5",
-      "source": "CNBC",
-      "date": "Fri, 06 Feb 2026 08:00:00 GMT"
-    },
-    {
-      "title": "Big tech is sacrificing its cashflows to prop up the AI boom",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVlNaOF9TcTNiY0ZhWUljNWV0dnhsUVZjQzlvcGszZ0JlY3AtN29kRjdfQVo5M1E1azI1cGRUZFhrQk1yb0V2b2Vzem5uWW81Ql9UYzRKM0lZR2hsV19fMGxCYjRBMW03Wks1M0xubl8wWkxDVGVEVG45Qmg2X2U1SDVuRGQ2ZTNMVlp2TmtsdTVtU0E3OHozbldIN0VnVEppSEtvRHZkY2V2Zw?oc=5",
-      "source": "The Economist",
-      "date": "Wed, 13 May 2026 07:00:00 GMT"
     },
     {
       "title": "Meta, Microsoft and Amazon Test Limits of Investor Appetite for AI Spending",
@@ -89,16 +89,16 @@
       "date": "Wed, 23 Sep 2026 07:00:00 GMT"
     },
     {
-      "title": "Broadcom is Overvalued at 17.73X P/E: Buy, Sell or Hold the Stock?",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQclczZ0lPcVNhZ0l6YV9mdjZqWFVtRmhtYU1NSjM5eEJnWGxtaF92VjJfTlVZUXpWVlhXT2N0LXA3bHJuWWNSNDB4MWFSb3NtT0FyMllwQ3dsaXY4YUpvN1A3MVAweFpSNXN0cWpUZFlidjlEVnFYRUVGejZfOGxrT3NCbEJiUEQ3TzA1WHUyWHQ1N1p3cjJmeGFPbHFNZXI3bWJXRDNOUDZXQWtlTHpGRXJZUkY5Z0lhV05R?oc=5",
-      "source": "TradingView",
-      "date": "Fri, 20 Nov 2026 17:52:00 GMT"
-    },
-    {
       "title": "Should You Buy, Sell, or Hold Nvidia Stock in 2026?",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdUU5TGZfc2RrcV8wN2FVVTRuMWo4RVpKQXkzajllZzRhWFdySXhsY18ydjVhOTZYd3pVcUtwcEFEYTRxdm1GRVp1LUVCLWlvZXBDUk5BQVdqOGJSZXRMOUFCOEQ5N1N5RjlCa01zV1RiVDN3U29qbWVxeThWT0xfTXNBRWdwRTg2QVRzZTdjRmRXTXRNRHRlU0lmV19EWXVlSHJBUUMtUndFSlZ2?oc=5",
       "source": "LiteFinance",
       "date": "Fri, 30 Oct 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Nvidia Stock Won't Be Overvalued by 2028: My Case for Buying NVDA Today",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNX1lwekk2Z2E1dWd6NWlCSFJRMDMyU05tb29HOHRFMklubzdqR3NkMDhFVmpjMlZuTUNRSzdRNkNVREROclpSaEhvRzVSaTAySENnVmxtQkZVMlhoRlRMcnAwSGZuckpwMGdCeU9CQ1dlZlFrQkVRNXdiWFpHUTNZM2J1S3p0S0RwX1B2Z2gzZUdIZ0hTcmxpQQ?oc=5",
+      "source": "The Motley Fool",
+      "date": "Wed, 19 Aug 2026 07:00:00 GMT"
     },
     {
       "title": "Michael Burry Is Short NVDA, AMAT, SOXX \u2014 Sees Big Korea Chip Spending As \u2018Beginning Of The End\u2019",
@@ -107,16 +107,16 @@
       "date": "Tue, 30 Jun 2026 07:00:00 GMT"
     },
     {
+      "title": "Why OpenAI whiffs should still worry Oracle and CoreWeave investors",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPRWRWYU8yNEdIcFlKYkNYczg5X2Vka0ZiS2l1TThBVkZRS3NqeGpsU3RJamJaVXdCVmlONHhCa3labTVCaFJpejJfdmw1eFVKWjQ4MzlKdG1WOVE2WVRWSEJOR1kteS1LUFB6aldGczV1ZkZTTldLZWFwMGJJbTlZTmU0cmJON1RXR1pjSVoxczJLNTlFc2RiT1VFeTZuekZrRXhIMUVqbU8yZXNCRkZ0NWVxTQ?oc=5",
+      "source": "Yahoo Finance",
+      "date": "Wed, 29 Apr 2026 07:00:00 GMT"
+    },
+    {
       "title": "Nvidia, Oracle, CoreWeave and other AI stocks sink on OpenAI revenue report",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPOG8tazVEa2hVcWdlYU1pZk53QzNMLU1lVWk4c2U0NFRvMk5IMnJYMWdTZERsSHhkYWo1dkRlczFWcGdwRHJfbFJzQ09kUEo1elE4YVRQZWp0Z3lVbU1MUjJIVV9lbFFHbUxPUlJhUER6NzgwdjVFTHM4UVhGZ3pNd3pR0gGHAUFVX3lxTE9nLWxxNlZwaWJicm9JSVBTT3lHeElLRDJ2QklRT2FkelA0eXZSNDlyRWh6dWlhNFloNzZfOUtid3dmcEJsTGNNcTE5VnhEbURXWWo0UGktcmhXNV8tS1lHYndTellPVm00RmFpeFVLTnBqNENtUUtBdHV2NVdPU0Jnb1A1NnpzSQ?oc=5",
       "source": "CNBC",
       "date": "Thu, 08 Oct 2026 07:00:00 GMT"
-    },
-    {
-      "title": "Oracle, CoreWeave back OpenAI after report says ChatGPT developer missed sales, user targets",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQMExGYTY4c29xM0h6SGdqcW8yMUhTTkFwZy1hSklnd0p1VHJhR0kxeWkxZERDM0h5WDZ1OGc1Y2FBV1NCN0xKckc3ckxyV2lKdVFIVjNwb2E1ckNHMXJmaHoxNm82WmI0SzNNQWxWcHEwbkJwNWYyTzdYREU1Sm95dmdoUXhxUkxNTzJIcnZTVHhaeExZVlV5aVBrUmhPN2lURHFGbDdPM2J3Z3EzSVRoN2hSYWJzVXhIYy12dGU4TmdWM3ZHRUYwd3FiSk5yLVgtNmJCcTZBZTNhNWhRbVhWdA?oc=5",
-      "source": "Yahoo Finance",
-      "date": "Tue, 28 Apr 2026 07:00:00 GMT"
     },
     {
       "title": "Oracle, CoreWeave lead AI selloff on OpenAI growth concerns",
@@ -125,12 +125,7 @@
       "date": "Tue, 28 Apr 2026 07:00:00 GMT"
     }
   ],
-  "alerts": [
-    {
-      "level": "red",
-      "msg": "ORCL dropped -5.1% today \u2014 OpenAI/Oracle contract stress signal"
-    }
-  ],
+  "alerts": [],
   "bubble_history": [
     {
       "m": 0,
@@ -365,7 +360,7 @@
     {
       "m": 46,
       "date": "2026-11",
-      "v": 7.67
+      "v": 7.73
     }
   ]
 }
